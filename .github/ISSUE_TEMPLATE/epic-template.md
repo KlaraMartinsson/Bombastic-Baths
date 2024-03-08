@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-*Epic description:* 
+## Description
 
 ## User Stories
 - [ ] # 
