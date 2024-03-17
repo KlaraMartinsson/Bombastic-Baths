@@ -51,17 +51,27 @@ Wireframes where made at [Balsamiq](https://balsamiq.com/)
 
 <details>
 <summary>Home page</summary>
-<img src="placeholder">
+<img src="static/images/readme-images/homepage-wireframe.png">
 </details>
 
 <details>
 <summary>Products page</summary>
-<img src="placeholder">
+<img src="static/images/readme-images/products-wireframe.png">
 </details>
 
 <details>
 <summary>Product Details page</summary>
 <img src="placeholder">
+</details>
+
+<details>
+<summary>Bath Bombs page</summary>
+<img src="static/images/readme-images/bathbombs-wireframe.png">
+</details>
+
+<details>
+<summary>Gifts page</summary>
+<img src="static/images/readme-images/gifts-wireframe.png">
 </details>
 
 <details>
@@ -71,17 +81,17 @@ Wireframes where made at [Balsamiq](https://balsamiq.com/)
 
 <details>
 <summary>FAQ page</summary>
-<img src="placeholder">
+<img src="static/images/readme-images/faq-wireframe.png">
 </details>
 
 <details>
 <summary>Privacy Policy page</summary>
-<img src="placeholder">
+<img src="static/images/readme-images/privacypolicy-wireframe.png">
 </details>
 
 <details>
 <summary>Our Story page</summary>
-<img src="placeholder">
+<img src="static/images/readme-images/ourstory-wireframe.png">
 </details>
 
 <details>
