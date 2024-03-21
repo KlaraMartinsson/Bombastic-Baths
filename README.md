@@ -39,6 +39,10 @@ Be able to manage the products on the website, add new ones, update them or dele
 
 # User Experience
 
+## First Time Users
+
+## Returning visitiors
+
 ### Target Audience
 There is diffrent type of customers that would be willing to engage in the website, for example:
 1. Skincare Enthusiasts: Individuals who are passionate about skincare products, including bath bombs with diffrent kinds of benefits.
@@ -51,16 +55,74 @@ There is diffrent type of customers that would be willing to engage in the websi
 
 
 ### Agile Methodology
+I worked on Agile Methodology through the project with Githubs project and issues feature. Githubs project board are serving a nice visual representaion for tracking the progress. Githubs issue feature have been used to represent respective user, their acceptance criteria, tasks and labels for prioritising. Each user story has their own label using the MoSCoW priotisation of Must Have, Should Have, Could Have and Won't Have. Bugs are also documented as issues to keep track of and resolve.
 
 To view the projects progress, user stories and bugs, see the [Kanban board](https://github.com/users/KlaraMartinsson/projects/5)
 
 ### User Stories
 
-- [placeholder](placeholder)
-- [placeholder](placeholder)
-- [placeholder](placeholder)
-- [placeholder](placeholder)
-- [placeholder](placeholder)
+### [Epic 1: Viewing and Navigation](https://github.com/KlaraMartinsson/bombastic-baths/issues/1)
+This epic focuses on making the website's first impression captivating and easy to navigate. The goals is to create an attractive and user-friendly homepage that helps visitors find their ideal bath bombs. Ultimately ensuring a satisfying overall experience.
+
+- [USER STORY: UX/UI Design Consistency](https://github.com/KlaraMartinsson/bombastic-baths/issues/7)
+- [USER STORY: Navigation](https://github.com/KlaraMartinsson/bombastic-baths/issues/8)
+- [USER STORY: Responsive Design](https://github.com/KlaraMartinsson/bombastic-baths/issues/9)
+- [USER STORY: Browsing Products](https://github.com/KlaraMartinsson/bombastic-baths/issues/15)
+- [USER STORY: Product Details Page](https://github.com/KlaraMartinsson/bombastic-baths/issues/18)
+- [USER STORY: Categories](https://github.com/KlaraMartinsson/bombastic-baths/issues/19)
+- [USER STORY: Our Story Page](https://github.com/KlaraMartinsson/bombastic-baths/issues/20)
+- [USER STORY: Privacy Policy Page](https://github.com/KlaraMartinsson/bombastic-baths/issues/21)
+- [USER STORY: FAQs Page](https://github.com/KlaraMartinsson/bombastic-baths/issues/22)
+- [USER STORY: Error Pages](https://github.com/KlaraMartinsson/bombastic-baths/issues/23)
+- [USER STORY: Order Confirmation Page](https://github.com/KlaraMartinsson/bombastic-baths/issues/26)
+- [USER STORY: User Accessibility](https://github.com/KlaraMartinsson/bombastic-baths/issues/35)
+- [USER STORY: Product Recommendations](https://github.com/KlaraMartinsson/bombastic-baths/issues/41)
+- [USER STORY: Gift Kits](https://github.com/KlaraMartinsson/bombastic-baths/issues/43)
+
+### [Epic 2: User Interaction and Engagement](https://github.com/KlaraMartinsson/bombastic-baths/issues/2)
+This epic focusing on the interaction and engagement for users. Such as registrate for an account, handle their personal page and leave reviews.
+
+- [USER STORY: User Registration](https://github.com/KlaraMartinsson/bombastic-baths/issues/12)
+- [USER STORY: Easy User Login and Logout](https://github.com/KlaraMartinsson/bombastic-baths/issues/13)
+- [USER STORY: Email Confirmation for Registration](https://github.com/KlaraMartinsson/bombastic-baths/issues/14)
+- [USER STORY: Users Wishlist](https://github.com/KlaraMartinsson/bombastic-baths/issues/27)
+- [USER STORY: Rating and Review Products](https://github.com/KlaraMartinsson/bombastic-baths/issues/29)
+- [USER STORY: User Feedback](https://github.com/KlaraMartinsson/bombastic-baths/issues/31)
+- [USER STORY: User Profile](https://github.com/KlaraMartinsson/bombastic-baths/issues/32)
+- [USER STORY: Delete Profile](https://github.com/KlaraMartinsson/bombastic-baths/issues/33)
+- [USER STORY: LiveChat Support](https://github.com/KlaraMartinsson/bombastic-baths/issues/40)
+
+### [Epic 3: Purchasing and Checkout](https://github.com/KlaraMartinsson/bombastic-baths/issues/3)
+This epic aims to improve the user's shopping and checkout experience by features like product selection, cart management, secure payment process and finalizing the purchase.
+
+- [USER STORY: Shopping Cart](https://github.com/KlaraMartinsson/bombastic-baths/issues/16)
+- [USER STORY: Safe Payment](https://github.com/KlaraMartinsson/bombastic-baths/issues/17)
+- [USER STORY: Email Confirmation for Order](https://github.com/KlaraMartinsson/bombastic-baths/issues/30)
+- [USER STORY: Product Subscription #42](https://github.com/KlaraMartinsson/bombastic-baths/issues/42)
+
+### [Epic 4: Searching and Sorting](https://github.com/KlaraMartinsson/bombastic-baths/issues/4)
+This epic is all about making it easier for users to find and organize stuff on the platform.
+
+- [USER STORY: Search bar](https://github.com/KlaraMartinsson/bombastic-baths/issues/10)
+- [USER STORY: Product sorting](https://github.com/KlaraMartinsson/bombastic-baths/issues/11)
+- [USER STORY: Categories](https://github.com/KlaraMartinsson/bombastic-baths/issues/19)
+
+### [Epic 5: Site Owner Management](https://github.com/KlaraMartinsson/bombastic-baths/issues/5)
+This epic introduces comprehensive functionalities, granting site/store owners full control (Create, Read, Update, Delete - CRUD) over product listings.
+
+- [USER STORY: Site Owner functionality](https://github.com/KlaraMartinsson/bombastic-baths/issues/24)
+- [USER STORY: Documentation](https://github.com/KlaraMartinsson/bombastic-baths/issues/25)
+- [USER STORY: Testing](https://github.com/KlaraMartinsson/bombastic-baths/issues/28)
+
+### [Epic 6: SEO and Web Marketing](https://github.com/KlaraMartinsson/bombastic-baths/issues/37)
+This epic delves into strategies for maximizing website visibility in web searches. Includes utilize Search Engine Optimization (SEO) and diffrent marketing strategies.
+
+- [USER STORY: Newsletter Marketing](https://github.com/KlaraMartinsson/bombastic-baths/issues/34)
+- [USER STORY: Optimize Website for Search Engines](https://github.com/KlaraMartinsson/bombastic-baths/issues/36)
+- [USER STORY: Social Media Marketing](https://github.com/KlaraMartinsson/bombastic-baths/issues/38)
+- [USER STORY: Influencer Marketing](https://github.com/KlaraMartinsson/bombastic-baths/issues/39)
+
+
   
 ### Database Design
 ![Database](placeholder)
