@@ -39,10 +39,6 @@ Be able to manage the products on the website, add new ones, update them or dele
 
 # User Experience
 
-## First Time Users
-
-## Returning visitiors
-
 ### Target Audience
 There is diffrent type of customers that would be willing to engage in the website, for example:
 1. Skincare Enthusiasts: Individuals who are passionate about skincare products, including bath bombs with diffrent kinds of benefits.
@@ -53,8 +49,16 @@ There is diffrent type of customers that would be willing to engage in the websi
 
 4. Environmentally Conscious Consumers: Eco-friendly individuals who prioritize natural and simple ingridients, vegan friendly options and products against animal testing.
 
+### First Time Users
+For all of the first time users, we want the website to be easily discovered and that they get to learn all about Bombastic Baths products. They should have a smooth checkout process, making it easy for them to feel satisfied with their transaction. It schould also be a user-friendly registration for users who want to sign up for an account to access features like wishlists, orders, and exclusive offers.
 
-### Agile Methodology
+### Returning visitiors
+The goals is to make visitors wanting to return to the website. To achive this we have implemented a newsletter registration where users can get exclusive offers and updates. We also make it easy to access features that get users involved like a wishlist, account settings and order history. A feature implementation will be personalized recommendations based on their past purchases and browsing history so that the user will be getting inspiration and be willing to go back to the store.
+
+
+# Methodology
+
+### Agile Project Management with GitHub Projects and GitHub Issues
 Agile Methodology have been worked at through the project with Githubs project and issues feature. Githubs project board are serving a nice visual representaion for tracking the progress. Githubs issue feature have been used to represent respective user, their acceptance criteria, tasks and labels for prioritising. Each user story has their own label using the MoSCoW priotisation of Must Have, Should Have, Could Have and Won't Have. Every user story is also implemented in diffrent Epics Bugs are also documented as issues to keep track of and resolve.
 
 To view the projects progress, user stories and bugs, see the [Kanban board](https://github.com/users/KlaraMartinsson/projects/5)
@@ -71,6 +75,7 @@ Utilizing sprints/iterations have been important to manage our development proce
 ### [Sprint 7: Documentation and Testing](https://github.com/KlaraMartinsson/bombastic-baths/milestone/6) 
 ### [Sprint 8: Potential Features](https://github.com/KlaraMartinsson/bombastic-baths/milestone/8) 
 
+---
 
 ### [Epic 1: Viewing and Navigation](https://github.com/KlaraMartinsson/bombastic-baths/issues/1) :mag_right:
 This epic focuses on making the website's first impression captivating and easy to navigate. The goals is to create an attractive and user-friendly homepage that helps visitors find their ideal bath bombs. Ultimately ensuring a satisfying overall experience.
