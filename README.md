@@ -59,10 +59,8 @@ I worked on Agile Methodology through the project with Githubs project and issue
 
 To view the projects progress, user stories and bugs, see the [Kanban board](https://github.com/users/KlaraMartinsson/projects/5)
 
-### User Stories
-
-### [Epic 1: Viewing and Navigation](https://github.com/KlaraMartinsson/bombastic-baths/issues/1)
-This epic focuses on making the website's first impression captivating and easy to navigate. The goals is to create an attractive and user-friendly homepage that helps visitors find their ideal bath bombs. Ultimately ensuring a satisfying overall experience.
+### [Epic 1: Viewing and Navigation](https://github.com/KlaraMartinsson/bombastic-baths/issues/1) :mag_right:
+This epic focuses on making the website's first impression captivating and easy to navigate. The goals is to create an attractive and user-friendly homepage that helps visitors find their ideal bath bombs. Ultimately ensuring a satisfying overall experience. :mag_right:
 
 - [USER STORY: UX/UI Design Consistency](https://github.com/KlaraMartinsson/bombastic-baths/issues/7)
 - [USER STORY: Navigation](https://github.com/KlaraMartinsson/bombastic-baths/issues/8)
@@ -79,7 +77,7 @@ This epic focuses on making the website's first impression captivating and easy 
 - [USER STORY: Product Recommendations](https://github.com/KlaraMartinsson/bombastic-baths/issues/41)
 - [USER STORY: Gift Kits](https://github.com/KlaraMartinsson/bombastic-baths/issues/43)
 
-### [Epic 2: User Interaction and Engagement](https://github.com/KlaraMartinsson/bombastic-baths/issues/2)
+### [Epic 2: User Interaction and Engagement :computer:](https://github.com/KlaraMartinsson/bombastic-baths/issues/2)
 This epic focusing on the interaction and engagement for users. Such as registrate for an account, handle their personal page and leave reviews.
 
 - [USER STORY: User Registration](https://github.com/KlaraMartinsson/bombastic-baths/issues/12)
