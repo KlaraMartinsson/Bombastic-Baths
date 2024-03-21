@@ -37,7 +37,7 @@ The site owner or product owners goals is to drive traffic to the website and in
 Implement effective marketing strategies to promote products and engage customers.
 Be able to manage the products on the website, add new ones, update them or delete them. Also to have controll over user account for safety reasons. 
 
-# User Experience
+# User Experience (UX)
 
 ### Target Audience
 There is diffrent type of customers that would be willing to engage in the website, for example:
@@ -77,7 +77,7 @@ Utilizing sprints/iterations have been important to manage our development proce
 
 ---
 
-### [Epic 1: Viewing and Navigation](https://github.com/KlaraMartinsson/bombastic-baths/issues/1) :mag_right:
+### [Epic 1: Viewing and Navigation](https://github.com/KlaraMartinsson/bombastic-baths/issues/1) :eyes:
 This epic focuses on making the website's first impression captivating and easy to navigate. The goals is to create an attractive and user-friendly homepage that helps visitors find their ideal bath bombs. Ultimately ensuring a satisfying overall experience.
 
 - [USER STORY: UX/UI Design Consistency](https://github.com/KlaraMartinsson/bombastic-baths/issues/7)
@@ -138,19 +138,15 @@ This epic delves into strategies for maximizing website visibility in web search
 - [USER STORY: Social Media Marketing](https://github.com/KlaraMartinsson/bombastic-baths/issues/38)
 - [USER STORY: Influencer Marketing](https://github.com/KlaraMartinsson/bombastic-baths/issues/39)
 
-
   
-### Database Design
+# Database
 ![Database](placeholder)
 
 
-#### Database Schema
+# Design UI
 
 
-# Design
-
-
-### Colors
+### Main Colors
 
 ![Color scheme](placeholder)
 Color scheme was made at [coolors.co](https://coolors.co/)
@@ -158,7 +154,6 @@ Color scheme was made at [coolors.co](https://coolors.co/)
 ### Fonts
 
 ### Images
-
 
 ### Wireframes
 
@@ -295,7 +290,9 @@ Wireframes where made at [Balsamiq](https://balsamiq.com/)
 <img src="placeholder">
 </details>
 
-## Future adaptations
+### Accessibility
+
+### Future Implementations
 
 # Issues and Bugs
 
@@ -371,10 +368,10 @@ All User Stories can be found [Here](https://github.com/users/KlaraMartinsson/pr
 
 # Credits
 
-## Content 
+### Content 
 
-## Media
+### Media
 
-## Code used
+### Code used
 
-## Acknowledgementes
+### Acknowledgementes
