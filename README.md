@@ -10,7 +10,7 @@
 
 <div align="center">
 
-![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+![PostgreSQL Badge](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=fff&style=for-the-badge)
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
 ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
@@ -27,10 +27,15 @@
 
 
 ## Project Goals
+The goals for the project is to create an engaging and user-friendly ecommerce platform for selling bath bombs. To provide customers with a wide range of bath bomb products to choose from. Ensure seamless browsing, shopping, and checkout experiences for users. Implement effective marketing strategies and optimize the website for search engines to attract and retain customers. 
 
 ### User Goals
+The users goals is to find bath bombs in various scents and designs. Enjoy a smooth and hassle-free shopping experience. Be able to easily navigate the website to discover new products and promotions. Access detailed product information, including ingredients and price. Being able to easily put thing in their wishlist for future purschasing. Receive succesful or unsuccesful confirmation messages when an action has been made. For example when a purschase has been made or a product have been added to the wishlist. Have access to secure and convenient payment options. Benefit from discounts by registrating on the newspaper. 
 
 ### Site Owner Goals
+The site owner or product owners goals is to drive traffic to the website and increase conversion rates. Offer a diverse range of bath bomb products to cater to different preferences. Maintain an attractive and user-friendly website design.
+Implement effective marketing strategies to promote products and engage customers.
+Be able to manage the products on the website, add new ones, update them or delete them. Also to have controll over user account for safety reasons. 
 
 # User Experience
 
