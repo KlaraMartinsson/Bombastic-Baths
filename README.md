@@ -40,6 +40,15 @@ Be able to manage the products on the website, add new ones, update them or dele
 # User Experience
 
 ### Target Audience
+There is diffrent type of customers that would be willing to engage in the website, for example:
+1. Skincare Enthusiasts: Individuals who are passionate about skincare products, including bath bombs with diffrent kinds of benefits.
+
+2. Wellness Seekers: People who are focused on self-care and wellness, who appreciate the therapeutic benefits of bath bombs and enjoy a relaxing bath.
+
+3. Gift Shoppers: Individuals looking for unique and luxurious gifts for friends, family, or colleagues, such as gift baskets with bath bombs.
+
+4. Environmentally Conscious Consumers: Eco-friendly individuals who prioritize natural and simple ingridients, vegan friendly options and products against animal testing.
+
 
 ### Agile Methodology
 
