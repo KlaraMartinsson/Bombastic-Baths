@@ -292,6 +292,16 @@ Wireframes where made at [Balsamiq](https://balsamiq.com/)
 
 ### Future Implementations
 
+Some future adaptations the website could have are:
+
+- Personalized recommendations based on customers' past purchases and browsing history. This would inspire users, increasing their engagement with the store and encouraging them to return for more.
+
+- Another future enhancement for the website would involve collaborating with influencers to amplify our marketing efforts.
+
+- Create an option for customers to subscribe for monthly bathbombs.
+
+- Have a LiveChat so that users can quickly resolve any queries or issues.
+
 # Issues and Bugs
 
 ### Known and unsolved bugs
