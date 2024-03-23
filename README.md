@@ -1,14 +1,15 @@
 # Bombastic Baths
 ![Home page](placeholder)
 
+
 <div align="center">
+
+Welcome to Bombastic Baths! Dive into a world of luxurious bath bombs, meticulously handcrafted for your indulgence. Our products boast simple ingredients, are vegan-friendly, and cruelty-free, ensuring guilt-free pampering. Treat yourself to a relaxing escape and experience the magic of Bombastic Baths today!
+
+[View the live webpage here.](placeholder)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/KlaraMartinsson/bombastic-baths)
 ![](https://tokei.rs/b1/github/KlaraMartinsson/bombastic-baths?category=code)
-
-</div>
-
-<div align="center">
 
 ![PostgreSQL Badge](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=fff&style=for-the-badge)
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
@@ -23,10 +24,7 @@
 
 </div>
 
-[View the live webpage here.](placeholder)
-
-
-## Project Goals
+### Project Goals
 The goals for the project is to create an engaging and user-friendly ecommerce platform for selling bath bombs. To provide customers with a wide range of bath bomb products to choose from. Ensure seamless browsing, shopping, and checkout experiences for users. Implement effective marketing strategies and optimize the website for search engines to attract and retain customers. 
 
 ### User Goals
