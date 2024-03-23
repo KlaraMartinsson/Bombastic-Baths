@@ -311,10 +311,23 @@ Some future adaptations the website could have are:
 # Technologies Used
 
 ### Languages
+ - Python
+- HTML5
+- CSS3
+- Django Template Language
+- Markdown
   
 ### Frameworks
 
+- Django: A web framework that uses high-level Python. To enable full stack development for this project.
+- Bootstrap v5.0: Bootstrap is a framework to use for its easy responsiveness management tools and a lot more. I used it to make the website more available on all different screens and to reduce code work.
+- ElephantSQL: ElephantSQL is a PostgreSQL database. It is used as a cloud based database storage for the application's data.
+
 ### Tools
+
+- GitHub: I used GitHud for repositories storage and Agile project management using Kanban boards/issue tracking.
+- VsCode: Used to store and write code.
+- Heroku: Heroku is a cloud platform that I used for deployment to make this project into a live server.
 
 # Testing
 
