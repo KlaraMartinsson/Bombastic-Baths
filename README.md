@@ -47,6 +47,8 @@ There is diffrent type of customers that would be willing to engage in the websi
 
 4. Environmentally Conscious Consumers: Eco-friendly individuals who prioritize natural and simple ingridients, vegan friendly options and products against animal testing.
 
+5. Young inviduals who find bath bombs fun and exciting. Who are drawn to vibrant colors, playful shapes, and delightful scents, making bath time an enjoyable experience. They appreciate products that add a touch of magic to their daily routines and seek out bath bombs that promise an element of surprise and delight.
+
 ### First Time Users
 For all of the first time users, we want the website to be easily discovered and that they get to learn all about Bombastic Baths products. They should have a smooth checkout process, making it easy for them to feel satisfied with their transaction. It schould also be a user-friendly registration for users who want to sign up for an account to access features like wishlists, orders, and exclusive offers.
 
@@ -136,12 +138,21 @@ This epic delves into strategies for maximizing website visibility in web search
 - [USER STORY: Social Media Marketing](https://github.com/KlaraMartinsson/bombastic-baths/issues/38)
 - [USER STORY: Influencer Marketing](https://github.com/KlaraMartinsson/bombastic-baths/issues/39)
 
+# Buisness and Marketing Plan
+
+### Business Model
+
+### SEO
+
+### Marketing
+
+
   
 # Database
 ![Database](placeholder)
 
 
-# Design UI
+# Design (UI)
 
 
 ### Main Colors
