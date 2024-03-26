@@ -155,8 +155,24 @@ This epic delves into strategies for maximizing website visibility in web search
 
 # Design (UI)
 
+### Building a User-Friendly E-commerce Platform
 
-### Main Colors
+While designing the e-commerce platform, a core focus was placed on creating a user-friendly experience through clear organization and information. All resources on the site are easy to find because everything is well-organized and presented clearly. User will be able to navigate the layout of the site intuitively, moving seamlessly from browsing categories to product pages and checkout. We also focused of prioritization of information. With semantic markup, I could highlight the crucial details for each product. Information is presented and categorized in terms of its priority. This means product descriptions and prices are front and center, while additional details like reviews are easily accessible but don't clutter the main view.
+
+### User Control
+
+The user should always get a positive emotional response when interacting with the website. To make this happend the website has a clear layout, easy and unambiguous navigation structures and all interaction feedback, using colours and confirmation messages. Other things that we keept in mind are:
+
+- The user is shown progress indicators and feedback on transactions.
+
+- Errors resulting from user or data actions are reported to the user.
+
+### Consistency
+One of the most important things we put time on was to have a consistency of design through all of the websites pages/sections. We been doing this by colours, fonts and layout.
+
+### Accessibility
+
+### Main Colours
 
 ![Color scheme](placeholder)
 Color scheme was made at [coolors.co](https://coolors.co/)
@@ -303,7 +319,6 @@ Wireframes where made at [Balsamiq](https://balsamiq.com/)
 <img src="placeholder">
 </details>
 
-### Accessibility
 
 ### Future Implementations
 
