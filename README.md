@@ -55,6 +55,7 @@ For all of the first time users, we want the website to be easily discovered and
 ### Returning visitiors
 The goals is to make visitors wanting to return to the website. To achive this we have implemented a newsletter registration where users can get exclusive offers and updates. We also make it easy to access features that get users involved like a wishlist, account settings and order history. A feature implementation will be personalized recommendations based on their past purchases and browsing history so that the user will be getting inspiration and be willing to go back to the store.
 
+The site provides a good solution to the first time user’s  and returning visitiors demands and expectations.
 
 # Methodology
 
@@ -167,6 +168,9 @@ Color scheme was made at [coolors.co](https://coolors.co/)
 ### Wireframes
 
 Wireframes where made at [Balsamiq](https://balsamiq.com/)
+
+## Thoughts on wirefrasmes, why I used them etc. demonstrate that these have been followed through to implementation.
+
 
 <details>
 <summary>Home page</summary>
