@@ -170,12 +170,12 @@ Wireframes where made at [Balsamiq](https://balsamiq.com/)
 
 <details>
 <summary>Home page</summary>
-<img src="static/images/readme-images/homepage-wireframe.png">
+<img src="documentation/wireframes/homepage-wireframe.png">
 </details>
 
 <details>
 <summary>Products page</summary>
-<img src="static/images/readme-images/products-wireframe.png">
+<img src="documentation/wireframes/products-wireframe.png">
 </details>
 
 <details>
@@ -185,12 +185,12 @@ Wireframes where made at [Balsamiq](https://balsamiq.com/)
 
 <details>
 <summary>Bath Bombs page</summary>
-<img src="static/images/readme-images/bathbombs-wireframe.png">
+<img src="documentation/wireframes/bathbombs-wireframe.png">
 </details>
 
 <details>
 <summary>Gifts page</summary>
-<img src="static/images/readme-images/gifts-wireframe.png">
+<img src="documentation/wireframes/gifts-wireframe.png">
 </details>
 
 <details>
@@ -200,17 +200,17 @@ Wireframes where made at [Balsamiq](https://balsamiq.com/)
 
 <details>
 <summary>FAQ page</summary>
-<img src="static/images/readme-images/faq-wireframe.png">
+<img src="documentation/wireframes/faq-wireframe.png">
 </details>
 
 <details>
 <summary>Privacy Policy page</summary>
-<img src="static/images/readme-images/privacypolicy-wireframe.png">
+<img src="documentation/wireframes/privacypolicy-wireframe.png">
 </details>
 
 <details>
 <summary>Our Story page</summary>
-<img src="static/images/readme-images/ourstory-wireframe.png">
+<img src="documentation/wireframes/ourstory-wireframe.png">
 </details>
 
 <details>
