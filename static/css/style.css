@@ -9,3 +9,10 @@ a {
 .search-form {
     width: 50%;
 }
+
+.bg-header {
+    background-color:rgb(253, 235, 245);
+    width: 100%;
+    height: 600px;
+}
+
