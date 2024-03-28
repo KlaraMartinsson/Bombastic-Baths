@@ -3,6 +3,10 @@
     width: 500px;
 }
 
-.navbar-logo {
-    padding-top: 30px;
+body {
+    padding: 0;
+}
+
+nav {
+    background-color: aliceblue;
 }
