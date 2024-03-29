@@ -21,7 +21,7 @@
         <nav class="navbar">
             <div class="container-fluid d-flex flex-column flex-md-row justify-content-between">
                 <div class="d-flex align-items-center mb-2 mb-md-0">
-                    <a class="navbar-brand" href="#"> <img src="static/images/logotype.png" class="logo" alt="logo"></a>
+                    <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/logotype.png' %}" class="logo" alt="logo"></a>
                 </div>
                 <form class="d-flex search-form ms-3 mb-2 mb-md-0">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -43,7 +43,7 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
                     <ul class="navbar-nav justify-content-between">
                         <li class="nav-item">
-                            <a class="nav-link active fs-4 me-5" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active fs-4 me-5" aria-current="page" href="{% url 'home' %}">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link fs-4 me-5" href="#">All Products</a>

@@ -30,3 +30,8 @@ a i {
     height: 65px;
     margin-left: 5px;
   }
+
+.card-ourstory {
+    background-color: rgb(255, 240, 248);
+    border-radius: 5%;
+}
