@@ -1,15 +1,16 @@
 from pathlib import Path
+
 import os
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+# Build paths inside the project like this: BASE_DIR / 'subdir'.pip list
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-n=d4vwb+_blonp-3zju-f%j80kc41n$s8g@^qibbpvt)37es$h'
+SECRET_KEY = os.environ.get('69874EC133295')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
