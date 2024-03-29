@@ -8,3 +8,6 @@ def our_story(request):
 
 def privacy_policy(request):
     return render (request, "home/privacypolicy.html")
+
+def faq(request):
+    return render (request, "home/faq.html")
