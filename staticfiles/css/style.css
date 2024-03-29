@@ -1,0 +1,32 @@
+footer {
+    background-color: rgb(229, 210, 249);
+}
+
+nav {
+    background-color: rgb(242, 235, 250);
+}
+
+a i {
+    text-decoration:none !important;
+    color: black;
+}
+
+.search-form {
+    width: 50%;
+}
+
+.carousel-item {
+    height: 65vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .logo {
+    width: 165px;
+    height: 65px;
+    margin-left: 5px;
+  }
