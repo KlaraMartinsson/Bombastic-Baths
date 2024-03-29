@@ -4,12 +4,44 @@
 {% block content %}
 <!-- index.html content starts here -->
 <header>
-    <div class="bg-header">
-
+    <div id="carousel-header" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carousel-header" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carousel-header" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carousel-header" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+        <div class="carousel-item active" style="background-image: url('https://img.freepik.com/free-photo/still-life-unused-bath-bombs_52683-122513.jpg?t=st=1711643590~exp=1711647190~hmac=ec5256b4c8cd3ffc2c9b69e4989a835ea74cdc22350c83ac245c94eb689f037f&w=1060')">
+            <div class="carousel-caption">
+            <h5>First slide label</h5>
+            <p>Some text</p>
+            </div>
+        </div>
+        <div class="carousel-item" style="background-image: url('https://img.freepik.com/free-photo/still-life-unused-bath-bombs_52683-122510.jpg?t=st=1711643565~exp=1711647165~hmac=5a5c8d646cd603f9b9aa65a996580b636136e45503d4e2300dcc60f790df464c&w=1060')">
+            <div class="carousel-caption">
+            <h5>Second slide label</h5>
+            <p>Some text.</p>
+            </div>
+        </div>
+        <div class="carousel-item" style="background-image: url('https://img.freepik.com/free-photo/unused-bath-bombs-still-life_23-2150559021.jpg?t=st=1711643636~exp=1711647236~hmac=decf7c84dfeec11b9071dcf822f5115d9e62c8a424182ea3ff8013d3ec97e3bb&w=1380')">
+            <div class="carousel-caption">
+            <h5>Third slide label</h5>
+            <p>Some text.</p>
+            </div>
+        </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-header" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel-header" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
     </div>
 </header>
 
-<section class="bg-light">
+<section class="bg-light mt-3">
     <div class="container">
         <div class="row gx-3 gy-2">
             <div class="col-md-3 col-6">
