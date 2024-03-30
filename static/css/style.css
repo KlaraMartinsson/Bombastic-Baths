@@ -1,9 +1,4 @@
-
-
-footer {
-    background-color: rgb(229, 210, 249);
-}
-
+/* Home page */
 
 nav {
     background-color: rgb(242, 235, 250);
@@ -34,7 +29,19 @@ a i {
     margin-left: 5px;
   }
 
+/* Our Story page */
+
 .card-ourstory {
     background-color: rgb(255, 240, 248);
     border-radius: 5%;
+}
+
+/* FAQ page */
+
+
+
+/* Footer */
+
+footer {
+    background-color: rgb(229, 210, 249);
 }
