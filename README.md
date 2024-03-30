@@ -6,7 +6,7 @@
 
 Welcome to Bombastic Baths! Dive into a world of luxurious bath bombs, meticulously handcrafted for your indulgence. Our products boast simple ingredients, are vegan-friendly, and cruelty-free, ensuring guilt-free pampering. Treat yourself to a relaxing escape and experience the magic of Bombastic Baths today!
 
-[View the live webpage here.](placeholder)
+[View the live webpage here.](https://bombastic-baths-af5387841714.herokuapp.com/)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/KlaraMartinsson/bombastic-baths)
 ![](https://tokei.rs/b1/github/KlaraMartinsson/bombastic-baths?category=code)
