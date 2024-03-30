@@ -23,12 +23,15 @@ a i {
     background-size: cover;
   }
 
-  .logo {
+.logo {
     width: 165px;
     height: 65px;
     margin-left: 5px;
   }
 
+.section-visions {
+    background-color: rgb(232, 243, 253);
+  }
 /* Our Story page */
 
 .card-ourstory {
