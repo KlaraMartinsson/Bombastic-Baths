@@ -9,6 +9,12 @@ a i {
     color: black;
 }
 
+.logo {
+    width: 165px;
+    height: 65px;
+    margin-left: 5px;
+  }
+
 .search-form {
     width: 50%;
 }
@@ -23,10 +29,31 @@ a i {
     background-size: cover;
   }
 
-.logo {
-    width: 165px;
-    height: 65px;
-    margin-left: 5px;
+.shopnow-btn {
+    margin: 1px;
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1.4em;
+    min-width: 148px;
+    padding: 11px 39px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    width: auto;
+    border-radius: 20px;
+    border: 0;
+    text-transform: none;
+    letter-spacing: inherit;
+    white-space: normal;
+    box-shadow: 0 0 0 1px #ea5b96;
+    background-color: #ea5b96;
+    color: #fff;
+    transition: background-color .25s, color .25s, box-shadow .25s;
+}
+
+.shopnow-btn:hover {
+    background-color: white;
+    color: #ea5b96;
   }
 
 .section-visions {
