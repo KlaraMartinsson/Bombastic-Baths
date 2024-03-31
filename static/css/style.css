@@ -39,6 +39,22 @@ a i {
     border-radius: 5%;
 }
 
+/* Button for infinity scrolling */
+
+.scroll-button {
+    background-color: rgb(230, 236, 251);
+    height: 45px;
+    width: 45px;
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.scroll-link {
+    text-decoration: none;
+}
 
 /* Footer */
 
