@@ -59,14 +59,14 @@
                                 Bathbombs
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">All Bathbombs</a></li>
-                                <li><a class="dropdown-item" href="#">Relax</a></li>
-                                <li><a class="dropdown-item" href="#">Energize</a></li>
-                                <li><a class="dropdown-item" href="#">Moisturize</a></li>
-                                <li><a class="dropdown-item" href="#">Exfoliate</a></li>
-                                <li><a class="dropdown-item" href="#">Colorful</a></li>
-                                <li><a class="dropdown-item" href="#">Holiday theme</a></li>
-                                <li><a class="dropdown-item" href="#">With suprise</a></li>
+                                <li><a class="dropdown-item" href="{% url 'products' %}?category=allbathbombs">All Bathbombs</a></li>
+                                <li><a class="dropdown-item" href="{% url 'products' %}?category=relax">Relax</a></li>
+                                <li><a class="dropdown-item" href="{% url 'products' %}?category=energize">Energize</a></li>
+                                <li><a class="dropdown-item" href="{% url 'products' %}?category=moisturize">Moisturize</a></li>
+                                <li><a class="dropdown-item" href="{% url 'products' %}?category=exfoliate">Exfoliate</a></li>
+                                <li><a class="dropdown-item" href="{% url 'products' %}?category=colourful">Colourful</a></li>
+                                <li><a class="dropdown-item" href="{% url 'products' %}?category=holiday">Holiday theme</a></li>
+                                <li><a class="dropdown-item" href="{% url 'products' %}?category=surprise">With suprise</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
