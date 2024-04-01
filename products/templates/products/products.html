@@ -19,14 +19,19 @@
                     <div class="card h-100">
                         <i class="fa-regular fa-heart fa-2xl p-4"></i>
                     {% if item.image %}
+                    <a href="{% url 'details' %}">
                         <img class="card-img-top" src="{{ item.image_url }}" alt="{{ item.name }}">
+                    </a>
                     {% else %}
+                    <a href="{% url 'details' %}">
                         <img class="card-img-top" src="{% static 'images/default_image.png' %}" alt="{{item.name}}">
+                    </a>
                     {% endif %}
+                    
                         <div class="p-4">
                             <div class="text-center">
                                 <h5 class="fw-bolder">{{ item.name }}</h5>
-                                {{ item.price }}$
+                                {{ item.price }} $
                             </div>
                         </div>
                         <div class="p-4 bg-light d-flex justify-content-center">
