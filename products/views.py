@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 import random
-from .models import Product, Gift
+from .models import Product, Gift, Category
 
 
 def all_products(request):
@@ -22,14 +22,19 @@ def all_products(request):
 def all_bathbombs(request):
 
     bathbombs = Product.objects.all()
-    category = None
+    categories = None
+    title = "All Bath Bombs"
 
     if 'category' in request.GET:
         category = request.GET['category']
         bathbombs = bathbombs.filter(category__name=category)
+        category = get_object_or_404(Category, name=category)
+        title = category.get_friendly_name()
         
     context = {
         "bathbombs": bathbombs,
+        "current_categories": categories,
+        "title": title,
     }
     return render (request, 'products/bathbombs.html', context)
 
@@ -38,7 +43,7 @@ def all_gifts(request):
 
     gifts = Gift.objects.all()
     category = None
-    
+
     if 'category' in request.GET:
         category = request.GET['category']
         products = products.filter(category__name=category)
