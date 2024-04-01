@@ -37,6 +37,15 @@ a i {
     color: #fff;
 }
 
+.save-btn {
+    padding: 11px 39px;
+    border-radius: 20px;
+    border: 0;
+    box-shadow: 0 0 0 1px #5bbdea;
+    background-color: rgb(117, 186, 251);
+    color: #000000;
+}
+
 .shopnow-btn:hover {
     background-color: white;
     color: #ea5b96;
