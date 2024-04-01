@@ -33,7 +33,7 @@ def all_bathbombs(request):
         
     context = {
         "bathbombs": bathbombs,
-        "current_categories": categories,
+        "categories": categories,
         "title": title,
     }
     return render (request, 'products/bathbombs.html', context)
