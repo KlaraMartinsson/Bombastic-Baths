@@ -53,3 +53,12 @@ def all_gifts(request):
     }
     return render (request, 'products/gifts.html', context)
 
+def product_details(request):
+
+    details = Product.objects.all()
+        
+    context = {
+        "details": details,
+    }
+    return render (request, 'products/product_details.html', context)
+
