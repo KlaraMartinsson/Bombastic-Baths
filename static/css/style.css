@@ -60,6 +60,20 @@ a i {
     color: white;
 }
 
+.hero {
+    background: url('/static/images/bathbombs.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.hero2 {
+    background: url('/static/images/bathbombs_gifts.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.hero3 {
+    background: url('/static/images/bathbombs2.jpg') no-repeat center center;
+    background-size: cover;
+}
 /* Our Story page */
 
 .card-ourstory {
