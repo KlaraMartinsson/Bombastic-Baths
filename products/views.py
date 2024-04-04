@@ -53,9 +53,10 @@ def all_gifts(request):
     }
     return render (request, 'products/gifts.html', context)
 
-def product_details(request):
+def product_details(request, slug):
 
-    details = Product.objects.all()
+    productdetails = Product.objects.all()
+    details = get_object_or_404(productdetails, slug=slug)
         
     context = {
         "details": details,

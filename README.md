@@ -60,7 +60,7 @@ The site provides a good solution to the first time user’s  and returning visi
 # Methodology
 
 ### Agile Project Management with GitHub Projects and GitHub Issues
-Agile Methodology have been worked at through the project with Githubs project and issues feature. Githubs project board are serving a nice visual representaion for tracking the progress. Githubs issue feature have been used to represent respective user, their acceptance criteria, tasks and labels for prioritising. Each user story has their own label using the MoSCoW priotisation of Must Have, Should Have, Could Have and Won't Have. Every user story is also implemented in diffrent Epics Bugs are also documented as issues to keep track of and resolve.
+Agile Methodology have been worked at through the project with Githubs project and issues feature. Githubs project board are serving a nice visual representaion for tracking the progress. Githubs issue feature have been used to represent respective user story, their acceptance criteria, tasks and labels for prioritising. Each user story has their own label using the MoSCoW priotisation of Must Have, Should Have, Could Have and Won't Have. Every user story is also implemented in diffrent Epics Bugs, they are also documented as issues to keep track of and resolve.
 
 To view the projects progress, user stories and bugs, see the [Kanban board](https://github.com/users/KlaraMartinsson/projects/5)
 
