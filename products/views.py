@@ -4,17 +4,17 @@ from .models import Product, Gift, Category
 
 
 def all_products(request):
-    products = list(Product.objects.all().order_by('?'))
+    bathbombs = list(Product.objects.all().order_by('?'))
     gifts = list(Gift.objects.all().order_by('?'))
 
     # Combine products and gifts into a single list
-    items = products + gifts
+    products = bathbombs + gifts
 
     # Shuffle the combined list to randomize the order
-    random.shuffle(items)
+    random.shuffle(products)
 
     context = {
-        "items": items,
+        "products": products,
     }
     return render(request, 'products/products.html', context)
 
@@ -53,13 +53,23 @@ def all_gifts(request):
     }
     return render (request, 'products/gifts.html', context)
 
-def product_details(request, slug):
+def bathbombs_details(request, slug):
 
-    productdetails = Product.objects.all()
-    details = get_object_or_404(productdetails, slug=slug)
+    bathbombs = Product.objects.all()
+    product = get_object_or_404(bathbombs, slug=slug)
         
     context = {
-        "details": details,
+        "product": product,
+    }
+    return render (request, 'products/product_details.html', context)
+
+def gifts_details(request, slug):
+
+    gifts = Gift.objects.all()
+    product = get_object_or_404(gifts, slug=slug)
+        
+    context = {
+        "product": product,
     }
     return render (request, 'products/product_details.html', context)
 

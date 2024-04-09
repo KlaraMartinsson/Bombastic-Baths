@@ -15,13 +15,11 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <h4 class="text-dark">Bathbomb name</h4>
+                <h4 class="text-dark">{{ product.name }}</h4>
                 <div class="mb-3">
-                    <span class="h5">$7.00</span>
+                    <span class="h5">{{ product.price }} £</span>
                 </div>
-                <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia blanditiis ipsum, modi rem, pariatur quaerat recusandae in eveniet perspiciatis dolor fuga, aut et dignissimos voluptatum sed at accusantium maiores iusto!
-                </p>
+                <p>{{ product.description }}</p>
                 <div class="col-md-4 col-6 mb-3">
                     <label class="mb-2"><strong>Quantity:</strong></label>
                     <div class="input-group mb-3">
@@ -47,7 +45,7 @@
                         </h3>
                         <div id="collapseIngriedients" class="accordion-collapse collapse" data-bs-parent="accordionIngridients">
                             <div class="accordion-body">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum et animi ipsum eum iusto iste quam. Dolor recusandae ipsum aperiam ducimus, eos laboriosam laborum consectetur. Ex voluptatum distinctio consequuntur minus.</p>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum et animi ipsum eum iusto iste quam. Dolor recusandae ipsum aperiam ducimus, eos laboriosam laborum consectetur. Ex voluptatum distinctio consequuntur minus.</p>
                             </div>
                         </div>
                     </div>
@@ -62,7 +60,11 @@
                         </h3>
                         <div id="collapseIngriedients2" class="accordion-collapse collapse" data-bs-parent="accordionIngridients2">
                             <div class="accordion-body">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum et animi ipsum eum iusto iste quam. Dolor recusandae ipsum aperiam ducimus, eos laboriosam laborum consectetur. Ex voluptatum distinctio consequuntur minus.</p>
+                                <p><strong>Young explorers beware!</strong> This product contains small parts that could be a choking hazard. Not suitable for children under 3 years old.</p>
+                                <p><strong>Not for munching!</strong> This product is not edible.</p>
+                                <p><strong>Keep it away from the face!</strong> Avoid contact with eyes and mouth.</p>
+                                <p><strong>Skin sensitivities:</strong> In rare cases, this product may irritate the skin. Test a small area first, and avoid using it after chlorine exposure or if your skin is already irritated.
+                                <p><strong>Tub time safety:</strong> This product may make surfaces slippery. Use caution when stepping in or out of the tub.</p>
                             </div>
                         </div>
                     </div>
