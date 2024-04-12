@@ -1,5 +1,6 @@
 {% load static %}
 {% url 'home' as home_url %}
+{% url 'products' as products_url %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,9 +30,11 @@
                 <div class="d-flex align-items-center mb-2 mb-md-0">
                     <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/logotype.png' %}" class="logo" alt="logo"></a>
                 </div>
-                <form class="d-flex search-form ms-3 mb-2 mb-md-0">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-dark" type="submit"><i class="fa-solid fa-magnifying-glass fa-xl"></i></button>
+                <form method="GET" action="{% url 'products' %}" class="d-flex search-form ms-3 mb-2 mb-md-0">
+                    <input class="form-control me-2" name="q" type="text" placeholder="Search" aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-dark form-control" type="submit"><i class="fa-solid fa-magnifying-glass fa-xl"></i></button>
+                    </div>
                 </form>
                 <div class="d-flex align-items-center">
                     <i class="fa-regular fa-face-smile fa-2xl p-3"></i>
@@ -79,8 +82,21 @@
                 </div>
             </div>
         </nav>
+        <!-- Displaying Django messages -->
+        <div class="container messages">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    {% for message in messages %}
+                    <div class="alert {{ message.tags }} alert-dismissible
+                fade show" role="alert">
+                        {{ message | safe }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
 
-        
         <main>
 
             {% block content %}
@@ -97,7 +113,7 @@
     <!--Code from https://codepen.io/alexsparkes/pen/KKVjJwy to make the svg-->
     <svg viewBox="0 -20 700 110" width="100%" height="100" preserveAspectRatio="none">
         <path d="M0,10 c80,-18 230,-12 350,7 c80,13 260,17 350,-5 v100 h-700z" fill="#e5d2f9"/>
-      </svg>
+    </svg>
     <footer class="w-100">
         <div class="container py-4">
             <div class="row justify-content-between">
