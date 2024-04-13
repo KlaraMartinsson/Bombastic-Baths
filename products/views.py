@@ -11,8 +11,25 @@ def all_products(request):
     bathbombs = Product.objects.all().order_by('?')
     gifts = Gift.objects.all().order_by('?')
     query = None
+    sort = None
+    direction = None
+    
     if request.GET:
-    # Search functionality
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                bathbombs = bathbombs.annotate(lower_name=Lower('name'))
+                gifts = gifts.annotate(lower_name=Lower('name'))
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            bathbombs = bathbombs.order_by(sortkey)
+            gifts = gifts.order_by(sortkey)
+
+        # Search functionality
         if "q" in request.GET:
             query = request.GET['q']
             if not query:
@@ -23,15 +40,15 @@ def all_products(request):
             bathbombs = bathbombs.filter(queries)
             gifts = gifts.filter(queries)
     
+    current_sorting = f'{sort}_{direction}'
+    
     # Combine products and gifts into a single list
     products = list(bathbombs) + list(gifts)
-
-    # Shuffle the combined list to randomize the order
-    random.shuffle(products)
 
     context = {
         'products': products,
         'search_term': query,
+        'current_sorting': current_sorting,
     }
     return render(request, 'products/products.html', context)
 
