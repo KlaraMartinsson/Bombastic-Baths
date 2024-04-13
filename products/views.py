@@ -8,12 +8,18 @@ from .models import Product, Gift, Category
 
 
 def all_products(request):
+    """ 
+    A view to show all products. 
+    Also includes sorting and search queries.
+    """
+
     bathbombs = Product.objects.all().order_by('?')
     gifts = Gift.objects.all().order_by('?')
     query = None
     sort = None
     direction = None
     
+    # Sorting functionality
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -54,6 +60,7 @@ def all_products(request):
 
 
 def all_bathbombs(request):
+    """ A view to show all bath bombs and sort them"""
 
     bathbombs = Product.objects.all()
     categories = None
@@ -92,6 +99,7 @@ def all_bathbombs(request):
 
 
 def all_gifts(request):
+    """ A view to show all gifts and sort them"""
 
     gifts = Gift.objects.all()
     category = None
@@ -124,6 +132,7 @@ def all_gifts(request):
     return render (request, 'products/gifts.html', context)
 
 def bathbombs_details(request, slug):
+    """ A view to show individual bath bomb details """
 
     bathbombs = Product.objects.all()
     product = get_object_or_404(bathbombs, slug=slug)
@@ -134,6 +143,7 @@ def bathbombs_details(request, slug):
     return render (request, 'products/product_details.html', context)
 
 def gifts_details(request, slug):
+    """ A view to show individual gift details """
 
     gifts = Gift.objects.all()
     product = get_object_or_404(gifts, slug=slug)
