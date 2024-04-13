@@ -2,6 +2,11 @@ nav {
     background-color: rgb(242, 235, 250);
 }
 
+a {
+    text-decoration:none !important;
+    color: black;
+}
+
 a i {
     text-decoration:none !important;
     color: black;

@@ -11,6 +11,42 @@
     </div>
 </header>
 
+<!-- Product sort -->
+<div class="container">
+    <div class="row mx-5">
+        <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+            <div class="dropdown">
+                <button class="btn btn-outline-dark pe-5" type="button" data-bs-toggle="dropdown" aria-expanded="false"> 
+                    Sort by...
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">
+                            Price (low to high)</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'products' %}?sort=price&direction=desc" class="dropdown-item">
+                            Price (high to low)</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'products' %}?sort=rating&direction=asc" class="dropdown-item ">
+                            Rating (low to high)</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">
+                            Rating (high to low)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 order-md-first">
+            <p class="text-muted mt-3">
+                {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+            </p>
+        </div>
+    </div>
+</div>
+<!-- Products displaying -->
 <section class="py-5">
     <div class="container mt-4">
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
