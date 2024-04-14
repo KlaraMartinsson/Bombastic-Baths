@@ -3,6 +3,72 @@
 
 {% block content %}
 <!-- cart.html content starts here -->
-
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="display-5 mb-2 text-center">Shopping Cart</h3>
+                <p class="mb-5 mt-3 text-center">
+                    {% if cart.items %}
+                    <strong>{{ cart|length }}</strong> items in your cart.
+                </p>
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th style="width:60%">Product</th>
+                            <th style="width:12%">Price</th>
+                            <th style="width:10%">Quantity</th>
+                            <th style="width:16%">Update/Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="row">
+                                    <div class="col-md-3 text-start">
+                                        <img src="{% static 'images/default_image.png' %}" alt="product-image" class="img-fluid rounded my-2 shadow">
+                                    </div>
+                                    <div class="col-md-9 text-start">
+                                        <h4 class="h5">Product Name</h4>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>$8.00</td>
+                            <td>
+                                <input type="number" class="form-control form-control-lg text-center" value="1">
+                            </td>
+                            <td>
+                                <div class="text-start">
+                                    <button class="btn border-secondary mb-2">
+                                        <i class="fas fa-sync"></i>
+                                    </button>
+                                    <button class="btn  border-secondary mb-2">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="text-end">
+                    <h5 class="h4">Subtotal:</h5>
+                    <h6 class="h5">$18.00</h6>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-6 mb-3 text-start">
+                <a href="{% url 'products' %}"><i class="fa-solid fa-left-long fa-lg me-2" style="color: #ea5b96;"></i> Continue Shopping</a>
+            </div>
+            <div class="col-6 text-end">
+                <a href="#" class="shopnow-btn">Checkout</a>
+            </div>
+        </div>
+        {% else %}
+        <p class="text-center">Your cart is empty.</p>
+        <a href="{% url 'products' %}"><i class="fa-solid fa-left-long fa-lg me-2" style="color: #ea5b96;"></i> Continue Shopping</a>
+        {% endif %}
+    </div>
+</section>
 <!-- cart.html content ends here -->
 {% endblock %}
