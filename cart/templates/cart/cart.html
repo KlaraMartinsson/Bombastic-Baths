@@ -9,8 +9,8 @@
             <div class="col-12">
                 <h3 class="display-5 mb-2 text-center">Shopping Cart</h3>
                 <p class="mb-5 mt-3 text-center">
-                    {% if cart.items %}
-                    <strong>{{ cart|length }}</strong> items in your cart.
+            {% if cart_items %}
+                    <strong>{{ cart_items|length }}</strong> items in your cart.
                 </p>
                 <table class="table table-responsive">
                     <thead>
@@ -22,18 +22,19 @@
                         </tr>
                     </thead>
                     <tbody>
+                    {% for item in cart_items %}
                         <tr>
                             <td>
                                 <div class="row">
                                     <div class="col-md-3 text-start">
-                                        <img src="{% static 'images/default_image.png' %}" alt="product-image" class="img-fluid rounded my-2 shadow">
+                                        <img src="{{ item.product.image.url }}" alt="product-image" class="img-fluid rounded my-2 shadow">
                                     </div>
                                     <div class="col-md-9 text-start">
-                                        <h4 class="h5">Product Name</h4>
+                                        <h4 class="h5">{{ item.product.name }}</h4>
                                     </div>
                                 </div>
                             </td>
-                            <td>$8.00</td>
+                            <td>{{ item.product.price }}</td>
                             <td>
                                 <input type="number" class="form-control form-control-lg text-center" value="1">
                             </td>
@@ -48,11 +49,18 @@
                                 </div>
                             </td>
                         </tr>
+                    {% endfor %}
                     </tbody>
                 </table>
                 <div class="text-end">
-                    <h5 class="h4">Subtotal:</h5>
-                    <h6 class="h5">$18.00</h6>
+                    <h6 class="h5">Total: £{{ total|floatformat:2 }}</h6>
+                    <h6 class="h5">Delivery: £{{ delivery|floatformat:2 }}</h6>
+                    <h7 class="mt-4 h3"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+                    {% if free_delivery_delta > 0 %}
+                        <p class="mb-1 text-danger">
+                            You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
+                        </p>
+                    {% endif %}
                 </div>
             </div>
         </div>
