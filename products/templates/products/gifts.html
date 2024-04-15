@@ -54,11 +54,11 @@
                     <div class="card h-100">
                         <i class="fa-regular fa-heart fa-2xl p-4"></i>
                     {% if gift.image %}
-                    <a href="{% url 'gdetails' gift.slug %}">
+                    <a href="{% url 'gift-details' gift.slug %}">
                         <img class="card-img-top" src="{{ gift.image.url }}" alt="{{ gift.name }}">
                     </a>
                     {% else %}
-                    <a href="{% url 'gdetails' gift.slug %}">
+                    <a href="{% url 'gift-details' gift.slug %}">
                         <img class="card-img-top" src="{% static 'images/default_image.png' %}" alt="{{gift.name}}">
                     </a>
                     {% endif %}
