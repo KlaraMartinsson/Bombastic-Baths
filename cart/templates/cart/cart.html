@@ -35,9 +35,9 @@
                                 </div>
                             </td>
                             <td>{{ item.product.price }}</td>
-                            <td>
-                                <form class="form update-form" action="" method="POST">
-                                    {% csrf_token %}
+                            <form class="form update-form" action="{% url 'adjust_cart' item.item_id %}" method="POST">
+                                {% csrf_token %}
+                                <td>
                                     <div class="form-group">
                                         <div class="input-group">
                                             <div class="input-group-prepend">
@@ -62,13 +62,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                </form>
-                            </td>
-                            <td>
+                                </td>
+                                <td>
                                 <div class="text-start">
                                     <button class="btn border-secondary mb-2 update-item">
                                         <i class="fas fa-sync fa-sm"></i>
                                     </button>
+                            </form>
                                     <button class="btn  border-secondary mb-2 remove-item" id="remove_{{ item.item_id }}">
                                         <i class="fas fa-trash fa-sm"></i>
                                     </button>
