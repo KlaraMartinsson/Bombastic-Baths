@@ -33,19 +33,19 @@
                                     <div class="input-group-prepend">
                                         <button class="decrement-qty btn-outline-primary py-1 px-3 rounded-start" 
                                             data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
-                                            <span class="icon">
+                                            <span>
                                                 <i class="fas fa-minus"></i>
                                             </span>
                                         </button>
                                     </div>
-                                    <input class="form-control qty_input border-primary border-left-0 border-right-0 py-1" type="number" 
+                                    <input class="form-control qty_input border-primary py-1" type="number" 
                                         name="quantity" value="1" min="1" max="99" 
                                         data-item_id="{{ product.id }}"  
                                         id="id_qty_{{ product.id }}">
                                     <div class="input-group-append">
                                         <button class="increment-qty btn-primary py-1 px-3 rounded-end"
                                             data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
-                                            <span class="icon">
+                                            <span>
                                                 <i class="fas fa-plus"></i>
                                             </span>
                                         </button>
