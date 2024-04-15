@@ -101,7 +101,27 @@ background-color: rgb(232, 243, 253);
     border-color: #ea5b96 !important; 
 }
 
-/* Header for products pages */
+/* Products pages */
+
+.product-section:hover {
+    transform: translateY(-6px);
+    cursor: pointer;
+}
+
+.product-section {
+    transition: all 0.3s;
+}
+
+.card {
+    border-radius: 0;
+    border: 0;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: all 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
 
 .bg-pink {
     background-color: #ea5b96;
