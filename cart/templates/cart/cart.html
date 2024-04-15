@@ -83,8 +83,8 @@
                     <h6 class="h5">Delivery: £{{ delivery|floatformat:2 }}</h6>
                     <h7 class="mt-4 h3"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
                     {% if free_delivery_delta > 0 %}
-                        <p class="mb-1 text-danger">
-                            You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
+                        <p class="my-2 text-danger h5">
+                            Spend €{{ free_delivery_delta|floatformat:2 }} more for free delivery!
                         </p>
                     {% endif %}
                 </div>

@@ -41,7 +41,7 @@ a i {
     width: 165px;
     height: 65px;
     margin-left: 5px;
-  }
+}
 
 .search-form {
     width: 50%;
@@ -56,8 +56,29 @@ a i {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
+}
 
+.section-visions {
+background-color: rgb(232, 243, 253);
+}
+
+
+.hero {
+    background: url('/static/images/bathbombs.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.hero2 {
+    background: url('/static/images/bathbombs_gifts.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.hero3 {
+    background: url('/static/images/bathbombs2.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Buttons */
 .shopnow-btn {
     padding: 11px 39px;
     border-radius: 20px;
@@ -79,31 +100,13 @@ a i {
 .shopnow-btn:hover {
     background-color: white;
     color: #ea5b96;
-  }
-
-.section-visions {
-    background-color: rgb(232, 243, 253);
-  }
+}
 
 .bg-pink {
     background-color: #ea5b96;
     color: white;
 }
 
-.hero {
-    background: url('/static/images/bathbombs.jpg') no-repeat center center;
-    background-size: cover;
-}
-
-.hero2 {
-    background: url('/static/images/bathbombs_gifts.jpg') no-repeat center center;
-    background-size: cover;
-}
-
-.hero3 {
-    background: url('/static/images/bathbombs2.jpg') no-repeat center center;
-    background-size: cover;
-}
 /* Our Story page */
 
 .card-ourstory {
