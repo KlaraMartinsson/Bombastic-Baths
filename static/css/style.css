@@ -12,31 +12,6 @@ a i {
     color: black;
 }
 
-.btn-primary {
-    color: #fff;
-    background-color: #ea5b96;
-    border-color: #ea5b96;
-}
-
-.btn-outline-primary {
-    color: #ea5b96;
-    border-color: #ea5b96;
-    background-color: #ffffff;
-}
-
-.btn-outline-primary:focus {
-    box-shadow: 0 0 0 0.2rem  #ee77a9;
-}
-
-.btn-primary:focus {
-    box-shadow: 0 0 0 0.2rem  #ee77a9;
-}
-
-.border-primary {
-    border-color: #ea5b96 !important; 
-}
-
-
 .logo {
     width: 165px;
     height: 65px;
@@ -101,6 +76,32 @@ background-color: rgb(232, 243, 253);
     background-color: white;
     color: #ea5b96;
 }
+
+.btn-primary {
+    color: #fff;
+    background-color: #ea5b96;
+    border-color: #ea5b96;
+}
+
+.btn-outline-primary {
+    color: #ea5b96;
+    border-color: #ea5b96;
+    background-color: #ffffff;
+}
+
+.btn-outline-primary:focus {
+    box-shadow: 0 0 0 0.2rem  #ee77a9;
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem  #ee77a9;
+}
+
+.border-primary {
+    border-color: #ea5b96 !important; 
+}
+
+/* Header for products pages */
 
 .bg-pink {
     background-color: #ea5b96;
