@@ -3,95 +3,115 @@
 
 {% block content %}
 <!-- product_details.html content starts here -->
-<div class="bg-pink py-1">
-</div>
+    <div class="bg-pink py-1">
+    </div>
 
-<section class="py-5">
-    <div class="container">
-        <div class="row gx-5">
-            <div class="col-lg-6">
-                <div class="border rounded-4 mb-3 d-flex justify-content-center">
-                    {% if product.image %}
-                        <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
-                    {% else %}
-                        <img class="card-img-top" src="{% static 'images/default_image.png' %}" alt="{{product.name}}">
-                    {% endif %}
+    <section class="py-5">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-6">
+                    <div class="border rounded-4 mb-3 d-flex justify-content-center">
+                        {% if product.image %}
+                            <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        {% else %}
+                            <img class="card-img-top" src="{% static 'images/default_image.png' %}" alt="{{product.name}}">
+                        {% endif %}
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <h4 class="text-dark">{{ product.name }}</h4>
-                <div class="mb-3">
-                    <span class="h5">{{ product.price }} £</span>
-                </div>
-                <p>{{ product.description }}</p>
-                <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
-                    {% csrf_token %}
-                    <div class="form-row col-md-4 col-6 mb-3">
-                        <label class="mb-2"><strong>Quantity:</strong></label>
-                        <div class="form-group w-50">
-                            <div class="input-group">
-                                <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}"  id="id_qty_{{ product.id }}">
+                <div class="col-lg-6">
+                    <h4 class="text-dark">{{ product.name }}</h4>
+                    <div class="mb-3">
+                        <span class="h5">{{ product.price }} £</span>
+                    </div>
+                    <p>{{ product.description }}</p>
+                    <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-row col-6">
+                            <label class="mb-2"><strong>Quantity:</strong></label>
+                            <div class="form-group w-60">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <button class="decrement-qty btn-outline-primary py-1 px-3 rounded-start" 
+                                            data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                                            <span class="icon">
+                                                <i class="fas fa-minus"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <input class="form-control qty_input border-primary border-left-0 border-right-0 py-1" type="number" 
+                                        name="quantity" value="1" min="1" max="99" 
+                                        data-item_id="{{ product.id }}"  
+                                        id="id_qty_{{ product.id }}">
+                                    <div class="input-group-append">
+                                        <button class="increment-qty btn-primary py-1 px-3 rounded-end"
+                                            data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                            <span class="icon">
+                                                <i class="fas fa-plus"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <input type="submit" class="btn shopnow-btn text-black" value="Add to Cart">
+                        <a href="#" class="btn save-btn"><i class="pe-2 fa-regular fa-heart fa-lg"></i></i> Wishlist </a>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    </form>
+                    <div class="accordion accordion-flush mt-4" id="accordionIngridients">
+                        <div class="accordion-item shadow-sm">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIngriedients" aria-expanded="false" aria-controls="collapseIngriedients">
+                                    <i class="fa-solid fa-seedling"></i>
+                                    <strong class="ms-2">Ingridients</strong>
+                                </button>
+                            </h3>
+                            <div id="collapseIngriedients" class="accordion-collapse collapse" data-bs-parent="accordionIngridients">
+                                <div class="accordion-body">
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum et animi ipsum eum iusto iste quam. Dolor recusandae ipsum aperiam ducimus, eos laboriosam laborum consectetur. Ex voluptatum distinctio consequuntur minus.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <hr>
-                    <input type="submit" class="btn shopnow-btn text-black" value="Add to Cart">
-                    <a href="#" class="btn save-btn"><i class="pe-2 fa-regular fa-heart fa-lg"></i></i> Wishlist </a>
-                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                </form>
-                <div class="accordion accordion-flush mt-4" id="accordionIngridients">
-                    <div class="accordion-item shadow-sm">
-                        <h3 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIngriedients" aria-expanded="false" aria-controls="collapseIngriedients">
-                                <i class="fa-solid fa-seedling"></i>
-                                <strong class="ms-2">Ingridients</strong>
-                            </button>
-                        </h3>
-                        <div id="collapseIngriedients" class="accordion-collapse collapse" data-bs-parent="accordionIngridients">
-                            <div class="accordion-body">
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum et animi ipsum eum iusto iste quam. Dolor recusandae ipsum aperiam ducimus, eos laboriosam laborum consectetur. Ex voluptatum distinctio consequuntur minus.</p>
+                    <div class="accordion accordion-flush mt-4" id="accordionIngridients2">
+                        <div class="accordion-item shadow-sm">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIngriedients2" aria-expanded="false" aria-controls="collapseIngriedients2">
+                                    <i class="fa-solid fa-user"></i>
+                                    <strong class="ms-2">Warning</strong>
+                                </button>
+                            </h3>
+                            <div id="collapseIngriedients2" class="accordion-collapse collapse" data-bs-parent="accordionIngridients2">
+                                <div class="accordion-body">
+                                    <p><strong>Young explorers beware!</strong> This product contains small parts that could be a choking hazard. Not suitable for children under 3 years old.</p>
+                                    <p><strong>Not for munching!</strong> This product is not edible.</p>
+                                    <p><strong>Keep it away from the face!</strong> Avoid contact with eyes and mouth.</p>
+                                    <p><strong>Skin sensitivities:</strong> In rare cases, this product may irritate the skin. Test a small area first, and avoid using it after chlorine exposure or if your skin is already irritated.
+                                    <p><strong>Tub time safety:</strong> This product may make surfaces slippery. Use caution when stepping in or out of the tub.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </div>    
                 </div>
-                <div class="accordion accordion-flush mt-4" id="accordionIngridients2">
-                    <div class="accordion-item shadow-sm">
-                        <h3 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIngriedients2" aria-expanded="false" aria-controls="collapseIngriedients2">
-                                <i class="fa-solid fa-user"></i>
-                                <strong class="ms-2">Warning</strong>
-                            </button>
-                        </h3>
-                        <div id="collapseIngriedients2" class="accordion-collapse collapse" data-bs-parent="accordionIngridients2">
-                            <div class="accordion-body">
-                                <p><strong>Young explorers beware!</strong> This product contains small parts that could be a choking hazard. Not suitable for children under 3 years old.</p>
-                                <p><strong>Not for munching!</strong> This product is not edible.</p>
-                                <p><strong>Keep it away from the face!</strong> Avoid contact with eyes and mouth.</p>
-                                <p><strong>Skin sensitivities:</strong> In rare cases, this product may irritate the skin. Test a small area first, and avoid using it after chlorine exposure or if your skin is already irritated.
-                                <p><strong>Tub time safety:</strong> This product may make surfaces slippery. Use caution when stepping in or out of the tub.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>    
             </div>
         </div>
+    </section>
+
+    <div class="bg-pink py-1"></div>
+
+    <div class="container my-3">
+        <h4>Reviews:</h4>
+        <div class="row">
+            <div class="col-3 p-4 bg-pink">Text</div>
+            <div class="col-3 p-4 bg-pink">Text</div>
+            <div class="col-3 p-4 bg-pink">Text</div>
+            <div class="col-3 p-4 bg-pink">Text</div>
+        </div>
     </div>
-</section>
-
-
-
-
-
-<div class="bg-pink py-1"></div>
-
-<div class="container my-3">
-    <h4>Reviews:</h4>
-    <div class="row">
-        <div class="col-3 p-4 bg-pink">Text</div>
-        <div class="col-3 p-4 bg-pink">Text</div>
-        <div class="col-3 p-4 bg-pink">Text</div>
-        <div class="col-3 p-4 bg-pink">Text</div>
-    </div>
-</div>
 <!-- product_details.html content ends here -->
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
