@@ -28,6 +28,17 @@ a i {
     width: 50%;
 }
 
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
 /* Home page */
 .carousel-item {
     height: 65vh;

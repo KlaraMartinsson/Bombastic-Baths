@@ -1,7 +1,8 @@
 import os
 from pathlib import Path
-from django.contrib.messages import constants as messages
 import dj_database_url
+from django.contrib.messages import constants as messages
+
 if os.path.isfile('env.py'):
     import env
 
@@ -63,6 +64,10 @@ TEMPLATES = [
     },
 ]
 
+# Make Messages declared by Bootstrap class
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+
 WSGI_APPLICATION = 'bombastic_baths.wsgi.application'
 
 
@@ -98,14 +103,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
-# Make Messages declared by Bootstrap class
-
-MESSAGE_TAGS = {
-    messages.SUCCESS: 'alert-success',
-    messages.ERROR: 'alert-danger',
-}
-
 
 # Static files (CSS, JavaScript, Images)
 
