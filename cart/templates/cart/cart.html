@@ -65,7 +65,7 @@
                                 </td>
                                 <td>
                                 <div class="text-start">
-                                    <button class="btn border-secondary mb-2 update-item">
+                                    <button class="btn border-secondary mb-2" type="submit">
                                         <i class="fas fa-sync fa-sm"></i>
                                     </button>
                             </form>
@@ -112,12 +112,6 @@
 {% include 'products/includes/quantity_input_script.html' %}
 
 <script type="text/javascript">
-    // Update quantity on click
-    $('.update-item').click(function(e) {
-        var form = $(this).prev('.update-form');
-        form.submit();
-    })
-
     // Remove item and reload on click
     $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
