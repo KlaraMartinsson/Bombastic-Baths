@@ -39,7 +39,16 @@
                 <div class="d-flex align-items-center">
                     <i class="fa-regular fa-face-smile fa-2xl p-3"></i>
                     <i class="fa-regular fa-heart fa-2xl p-3"></i>
-                    <a href="{% url 'cart' %}"><i class="fa-solid fa-cart-shopping fa-2xl p-3"></i></a>
+                    <a href="{% url 'cart' %}">
+                        <i class="fa-solid fa-cart-shopping fa-2xl p-3"></i>
+                        <span class="badge bg-dark text-white p-2 rounded-pill">
+                            {% if grand_total %}
+                               £{{ grand_total|floatformat:2 }}
+                            {% else %}
+                               £0.00
+                            {% endif %}
+                        </span>
+                    </a>
                 </div>
             </div>
         </nav>
