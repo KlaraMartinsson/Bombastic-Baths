@@ -104,6 +104,35 @@
         {% endif %}
     </div>
 </section>
+<hr>
+<div class="container">
+    <h7 class="text-start h4">You may also like..</h7>
+    <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center mt-3">
+        {% for product in products %}
+            <div class="col mb-5 product-section">
+                <div class="card h-100">
+                    <i class="fa-regular fa-heart fa-2xl p-4"></i>
+                    <a href="{% if product.occasion %}{% url 'gift-details' product.slug %}{% else %}{% url 'bathbomb-details' product.slug %}{% endif %}">
+                        {% if product.image %}
+                            <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        {% else %}
+                            <img class="card-img-top" src="{% static 'images/default_image.png' %}" alt="{{product.name}}">
+                        {% endif %}
+                    </a>
+                    <div class="p-4">
+                        <div class="text-center">
+                            <h5 class="fw-bolder">{{ product.name }}</h5>
+                            £{{ product.price }}
+                        </div>
+                    </div>
+                    <div class="p-4 bg-light d-flex justify-content-center">
+                        <a href="{% if product.occasion %}{% url 'gift-details' product.slug %}{% else %}{% url 'bathbomb-details' product.slug %}{% endif %}"><button class="shopnow-btn">More Info</button></a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
 <!-- cart.html content ends here -->
 {% endblock %}
 

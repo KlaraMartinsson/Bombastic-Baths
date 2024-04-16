@@ -1,12 +1,21 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.contrib import messages
-from products.models import Product
+from products.models import Product, Gift
 
 def shopping_cart(request):
     """A view that renders the shopping cart contents page"""
+    bathbombs = Product.objects.all().order_by('?')[:2]
+    gifts = Gift.objects.all().order_by('?')[:2]
+
+     # Combine products and gifts into a single list
+    products = list(bathbombs) + list(gifts)
+
+    context = {
+        'products': products,
+    }
     
-    return render (request, 'cart/cart.html')
+    return render (request, 'cart/cart.html', context)
 
 def add_to_cart(request, item_id):
     """Add a quantity of the specified product to the shopping cart"""
