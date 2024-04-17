@@ -1,9 +1,55 @@
+{% load static %}
 <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
     <div class="toast-header">
         <strong class="me-auto text-success">Success!</strong>
         <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
     <div class="toast-body">
-        {{ message }}
+        <div class="row">
+            <div class="col">
+                {{ message }}
+                <hr class="mt-1 mb-3">
+            </div>
+        </div>
+        <!--Shopping Cart Preview-->
+        {% if grand_total %}
+            <p class="py-1">You have ({{ product_count }}) in your cart</p>
+            <div class="bag-notification-wrapper">
+                {% for item in cart_items %}
+                    <div class="row">
+                        <div class="col-3 my-1">
+                            {% if item.product.image.url %}
+                                <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                            {% else %}
+                                <img class="w-100" src="{% static 'images/default_image.png' %}" alt="{{ item.product.name }}">
+                            {% endif %}
+                        </div>
+                        <div class="col-9">
+                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col">
+                    <strong><p class="mt-3 mb-1">
+                        Total{% if free_delivery_delta > 0 %} (Exc. delivery){% endif %}: 
+                        <span>${{ total|floatformat:2 }}</span>
+                    </p></strong>
+                    {% if free_delivery_delta > 0 %}
+                        <p class="mb-0 p-2 bg-warning text-center">
+                            Spend <strong>${{ free_delivery_delta }}</strong> more for free delivery!
+                        </p>
+                    {% endif %}
+                    <a href="{% url 'cart' %}" class="btn bg-pink mt-2">
+                        <span class="text-uppercase">Go To Secure Checkout</span>
+                        <span>
+                            <i class="fas fa-lock text-white"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        {% endif %}
     </div>
 </div>
