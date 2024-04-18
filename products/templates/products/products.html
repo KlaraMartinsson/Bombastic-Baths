@@ -56,7 +56,7 @@
                         <i class="fa-regular fa-heart fa-2xl p-4"></i>
                         <a href="{% if product.occasion %}{% url 'gift-details' product.slug %}{% else %}{% url 'bathbomb-details' product.slug %}{% endif %}">
                             {% if product.image %}
-                                <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
+                               <!-- <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}"> -->
                             {% else %}
                                 <img class="card-img-top" src="{% static 'images/default_image.png' %}" alt="{{product.name}}">
                             {% endif %}
