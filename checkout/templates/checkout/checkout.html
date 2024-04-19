@@ -5,18 +5,92 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <h1 class=" display-5 mb-3 text-center">Checkout</h1>
+            <h1 class=" display-5 mt-3 text-center">Checkout</h1>
             <hr>
         </div>
     </div>
     <div class="row">
-        <div class="col-6">
-            <p>Please fill out the form below</p>
+        <div class="col-12 col-lg-6">
+            <form method="POST" action="{% url 'checkout' %}" id="payment-form">
+                {% csrf_token %}
+                <fieldset class="rounded px-3 mb-5">
+                    <legend class="small px-2">Contact Information</legend>
+                    {{ order_form.full_name | as_crispy_field }}
+                    {{ order_form.email | as_crispy_field }}
+                    {{ order_form.phone_number | as_crispy_field }}
+                </fieldset>
+                <fieldset class="rounded px-3 mb-5">
+                    <legend class="small px-2">Delivery</legend>
+                    {{ order_form.country | as_crispy_field }}
+                    {{ order_form.postcode | as_crispy_field }}
+                    {{ order_form.town_or_city | as_crispy_field }}
+                    {{ order_form.street_address1 | as_crispy_field }}
+                    {{ order_form.street_address2 | as_crispy_field }}
+                    {{ order_form.county | as_crispy_field }}
+                </fieldset>
+                <fieldset class="rounded px-3 mb-5">
+                    <legend class="small px-2">Payment</legend>
+                    <div id="card-element" class="mb-3"></div>
+                    <div id="card-errors" role="alert" class="text-danger mb-3"></div>
+                </fieldset>
+                <div class="row mt-4">
+                    <div class="col-6 mb-3 text-start">
+                        <a href="{% url 'cart' %}"><i class="fa-solid fa-left-long fa-lg me-2" style="color: #ea5b96;"></i> Adjust Cart</a>
+                    </div>
+                    <div class="col-6 text-end">
+                        <a href="{% url 'checkout' %}" class="addtocart-btn">Complete Order<i class="fas fa-lock text-white ps-2"></i></a>
+                    </div>
+                    <p class="small text-danger">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
+                    </p>
+                </div>
+            </form>
         </div>
-        <div class="col-6">
-
+        <div class="col-12 col-lg-6">
+            <p>Order Summary ({{ product_count }})</p>
+            {% for item in cart_items %}
+                <div class="row">
+                    <div class="col-3">
+                        <a href="{url 'product_detail' item.product.id %}">
+                            <div class="position-relative">
+                                {% if item.product.image %}
+                                <img src="{{ item.product.image.url }}" alt="{{product.name}}" class="img-fluid shadow">
+                                {% else %}
+                                <img class="card-img-top" src="{% static 'images/default_image.png' %}" alt="{{product.name}}">
+                                {% endif %}
+                                <span
+                                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-pink">{{ item.quantity }}
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <h3 class="h6">{{ item.product.name }}</h3>
+                        </div>
+                    </div>
+                    <div class="col-3 text-end">
+                        <div>
+                            <p class="h6"> €{{ item.product.price }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            <hr>
+            <div class="row text-end">
+                <div class="col-7 offset-2">
+                    <p class="my-0">Order Total:</p>
+                    <p class="my-0">Delivery:</p>
+                    <p class="my-0"><strong>Grand Total:</strong></p>
+                </div>
+                <div class="col-3">
+                    <p class="my-0">${{ total | floatformat:2 }}</p>
+                    <p class="my-0">${{ delivery | floatformat:2 }}</p>
+                    <p class="my-0"><strong>${{ grand_total | floatformat:2 }}</strong></p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
 {% endblock %}
