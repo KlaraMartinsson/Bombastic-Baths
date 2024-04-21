@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/checkout.css' %}">
+{% endblock %}
+
 {% block content %}
 <div class="container">
     <div class="row">
@@ -14,13 +18,13 @@
             <form method="POST" action="{% url 'checkout' %}" id="payment-form">
                 {% csrf_token %}
                 <fieldset class="rounded px-3 mb-5">
-                    <legend class="small px-2">Contact Information</legend>
+                    <legend class="small px-2">Contact Information:</legend>
                     {{ order_form.full_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
                     {{ order_form.phone_number | as_crispy_field }}
                 </fieldset>
                 <fieldset class="rounded px-3 mb-5">
-                    <legend class="small px-2">Delivery</legend>
+                    <legend class="small px-2">Delivery:</legend>
                     {{ order_form.country | as_crispy_field }}
                     {{ order_form.postcode | as_crispy_field }}
                     {{ order_form.town_or_city | as_crispy_field }}
@@ -29,7 +33,7 @@
                     {{ order_form.county | as_crispy_field }}
                 </fieldset>
                 <fieldset class="rounded px-3 mb-5">
-                    <legend class="small px-2">Payment</legend>
+                    <legend class="small px-2">Payment:</legend>
                     <div id="card-element" class="mb-3"></div>
                     <div id="card-errors" role="alert" class="text-danger mb-3"></div>
                 </fieldset>
@@ -53,7 +57,7 @@
                 <div class="row">
                     <div class="col-3">
                         <a href="{url 'product_detail' item.product.id %}">
-                            <div class="position-relative">
+                            <div class="position-relative mb-4">
                                 {% if item.product.image %}
                                 <img src="{{ item.product.image.url }}" alt="{{product.name}}" class="img-fluid shadow">
                                 {% else %}
@@ -93,4 +97,11 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe.js' %}"></script>
 {% endblock %}
