@@ -14,6 +14,9 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
+        <!-- Extra CSS -->
+        {% block extra_css %}{% endblock %}
+
         <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicons/apple-touch-icon.png' %}">
         <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicons/favicon-32x32.png' %}">

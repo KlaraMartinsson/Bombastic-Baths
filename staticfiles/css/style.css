@@ -1,5 +1,16 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 nav {
     background-color: rgb(242, 235, 250);
+}
+
+a {
+    text-decoration:none !important;
+    color: black;
 }
 
 a i {
@@ -11,10 +22,21 @@ a i {
     width: 165px;
     height: 65px;
     margin-left: 5px;
-  }
+}
 
 .search-form {
     width: 50%;
+}
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
 }
 
 /* Home page */
@@ -26,43 +48,121 @@ a i {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
+}
 
+.section-visions {
+background-color: rgb(232, 243, 253);
+}
+
+
+.hero {
+    background: url('/static/images/bathbombs.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.hero2 {
+    background: url('/static/images/bathbombs_gifts.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.hero3 {
+    background: url('/static/images/bathbombs2.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Buttons */
 .shopnow-btn {
-    margin: 1px;
-    display: inline-block;
-    font-size: 1rem;
-    line-height: 1.4em;
-    min-width: 148px;
     padding: 11px 39px;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    width: auto;
     border-radius: 20px;
     border: 0;
-    text-transform: none;
-    letter-spacing: inherit;
-    white-space: normal;
     box-shadow: 0 0 0 1px #ea5b96;
     background-color: #ea5b96;
     color: #fff;
-    transition: background-color .25s, color .25s, box-shadow .25s;
 }
 
 .shopnow-btn:hover {
     background-color: white;
     color: #ea5b96;
-  }
+}
 
-.section-visions {
-    background-color: rgb(232, 243, 253);
-  }
+.addtocart-btn {
+    padding: 11px 39px;
+    border-radius: 20px;
+    border: 0;
+    box-shadow: 0 0 0 1px #ea5b96;
+    background-color: #ea5b96;
+    color: #fff;
+}
+
+.addtocart-btn:hover {
+    background-color: #d3437f;
+    color: #ffffff;
+}
+
+.wishlist-btn {
+    padding: 11px 39px;
+    border-radius: 20px;
+    border: 0;
+    background-color: rgb(117, 186, 251);
+    color: #ffffff;
+}
+
+.wishlist-btn:hover {
+    background-color: rgb(67, 161, 248);
+    color:  rgb(255, 255, 255);
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #ea5b96;
+    border-color: #ea5b96;
+}
+
+.btn-outline-primary {
+    color: #ea5b96;
+    border-color: #ea5b96;
+    background-color: #ffffff;
+}
+
+.btn-outline-primary:focus {
+    box-shadow: 0 0 0 0.2rem  #ee77a9;
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem  #ee77a9;
+}
+
+.border-primary {
+    border-color: #ea5b96 !important; 
+}
+
+/* Products pages */
+
+.product-section:hover {
+    transform: translateY(-6px);
+    cursor: pointer;
+}
+
+.product-section {
+    transition: all 0.3s;
+}
+
+.card {
+    border-radius: 0;
+    border: 0;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: all 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
 
 .bg-pink {
     background-color: #ea5b96;
     color: white;
 }
+
 
 /* Our Story page */
 
@@ -93,3 +193,4 @@ a i {
 footer {
     background-color: rgb(229, 210, 249);
 }
+
