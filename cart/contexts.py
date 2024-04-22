@@ -23,6 +23,8 @@ def cart_contents(request):
                 'quantity': item_data,
                 'product': product,
             })
+        else:
+            product = get_object_or_404(Product, pk=item_id)
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
