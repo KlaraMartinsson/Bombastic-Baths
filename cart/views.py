@@ -21,7 +21,7 @@ def add_to_cart(request, item_id):
     """Add a quantity of the specified product to the shopping cart"""
     
     bathbomb = get_object_or_404(Product, pk=item_id)
-    quantity = request.POST.get('quantity')
+    quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
 
@@ -37,20 +37,18 @@ def add_to_cart(request, item_id):
 
 def adjust_cart(request, item_id):
     """Changes the quantity of products to the specified amount"""
-    cart = request.session.get('cart', {})
-    bathbomb = get_object_or_404(Product, pk=item_id)
-    quantity = request.POST.get('quantity')
 
-    if item_id in list(cart.keys()):
-        if int(quantity) > 0:
-            cart[item_id] = quantity
-            messages.success(
-                request, f'{bathbomb.name} quantity updated successfully.')
-        else:
-            messages.error(request, 'Something went wrong. Please try again.')
+    product = get_object_or_404(Product, pk=item_id)
+    quantity = int(request.POST.get('quantity'))
+    cart = request.session.get('cart', {})
+
+    if quantity > 0:
+        cart[item_id] = quantity
+        messages.success(request, f'{product.name} quantity updated successfully.')
+    else:
+        messages.error(request, 'Something went wrong. Please try again.')
 
     request.session['cart'] = cart
-
     return redirect(reverse('cart'))
 
 
