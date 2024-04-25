@@ -5,8 +5,8 @@ from products.models import Product
 
 def shopping_cart(request):
     """A view that renders the shopping cart contents page"""
-    products = Product.objects.all()
-    
+    products = Product.objects.all().order_by('?')[:2]
+
     context = {
         'products': products,
     }

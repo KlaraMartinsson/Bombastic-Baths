@@ -10,7 +10,7 @@
         </div>
     </div>
 </header>
-<!-- Gift sort -->
+<!-- Gift sort 
 <div class="container">
     <div class="row mx-2">
         <div class="col-4">
@@ -45,7 +45,7 @@
         </div>
     </div>
 </div>
-<!-- Gifts displaying -->
+<!Gifts displaying 
 <section class="py-5">
     <div class="container mt-4">
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
@@ -55,7 +55,7 @@
                         <i class="fa-regular fa-heart fa-2xl p-4"></i>
                     {% if gift.image %}
                     <a href="{% url 'gift-details' gift.slug %}">
-                       <!-- <img class="card-img-top" src="{{ gift.image.url }}" alt="{{ gift.name }}"> -->
+                        <img class="card-img-top" src="{{ gift.image.url }}" alt="{{ gift.name }}"> 
                     </a>
                     {% else %}
                     <a href="{% url 'gift-details' gift.slug %}">
@@ -77,7 +77,7 @@
         </div>
     </div>
 </section>
-<!-- gifts.html content ends here -->
+gifts.html content ends here-->
 {% endblock %}
 
 {% block postloadjs %}

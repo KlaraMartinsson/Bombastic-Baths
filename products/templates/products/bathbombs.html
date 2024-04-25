@@ -55,11 +55,11 @@
                     <div class="card h-100">
                         <i class="fa-regular fa-heart fa-2xl p-4"></i>
                     {% if bathbomb.image %}
-                    <a href="{% url 'bathbomb-details' bathbomb.slug %}">
+                    <a href="{% url 'product-details' bathbomb.slug %}">
                         <!--<img class="card-img-top" src="{{ bathbomb.image.url }}" alt="{{ bathbomb.name }}">-->
                     </a>
                     {% else %}
-                    <a href="{% url 'bathbomb-details' bathbomb.slug %}">
+                    <a href="{% url 'product-details' bathbomb.slug %}">
                         <img class="card-img-top" src="{% static 'images/default_image.png' %}" alt="{{bathbomb.name}}">
                     </a>
                     {% endif %}
@@ -70,7 +70,7 @@
                             </div>
                         </div>
                         <div class="p-4 bg-light d-flex justify-content-center">
-                            <a href="{% url 'bathbomb-details' bathbomb.slug %}"><button class="btn shopnow-btn">More Info</button></a>
+                            <a href="{% url 'product-details' bathbomb.slug %}"><button class="btn shopnow-btn">More Info</button></a>
                         </div>
                     </div>
                 </div>

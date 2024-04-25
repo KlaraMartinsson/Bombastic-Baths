@@ -13,7 +13,7 @@ def all_products(request):
     Also includes sorting and search queries.
     """
 
-    bathbombs = Product.objects.all().order_by('?')
+    products = Product.objects.all().order_by('?')
     query = None
     sort = None
     direction = None
@@ -25,12 +25,13 @@ def all_products(request):
             sort = sortkey
             if sortkey == 'name':
                 sortkey = 'lower_name'
-                bathbombs = bathbombs.annotate(lower_name=Lower('name'))
+                products = products.annotate(lower_name=Lower('name'))
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
-            bathbombs = bathbombs.order_by(sortkey)
+            products = products.order_by(sortkey)
+
         # Search functionality
         if "q" in request.GET:
             query = request.GET['q']
@@ -39,12 +40,12 @@ def all_products(request):
                 return redirect(reverse('products'))
             
             queries = Q(name__icontains=query) | Q(description__icontains=query)
-            bathbombs = bathbombs.filter(queries)
+            products = products.filter(queries)
     
     current_sorting = f'{sort}_{direction}'
 
     context = {
-        'bathbombs': bathbombs,
+        'products': products,
         'search_term': query,
         'current_sorting': current_sorting,
     }
@@ -89,7 +90,7 @@ def all_bathbombs(request):
     }
     return render (request, 'products/bathbombs.html', context)
 
-def bathbombs_details(request, slug):
+def product_details(request, slug):
     """ A view to show individual bath bomb details """
 
     bathbombs = Product.objects.all()
