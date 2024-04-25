@@ -69,7 +69,7 @@
                             </div>
                         </div>
                         <div class="p-4 bg-light d-flex justify-content-center">
-                            <a href="{% if gift.occasion %}{% url 'gift-details' gift.slug %}{% else %}{% url 'bathbomb-details' gift.slug %}{% endif %}"><button class="shopnow-btn">More Info</button></a>
+                            <a href="{% url 'bathbomb-details' gift.slug %}"><button class="shopnow-btn">More Info</button></a>
                         </div>
                     </div>
                 </div>
