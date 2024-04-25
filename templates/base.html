@@ -63,8 +63,14 @@
                         <li class="nav-item">
                             <a class="nav-link active fs-4 me-5" aria-current="page" href="{% url 'home' %}">Home</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item dropdown">
                             <a class="nav-link fs-4 me-5" href="{% url 'products' %}">All Products</a>
+                            <ul class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                                <li><a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a></li>
+                                <li><a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a></li>
+                                <li><a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a></li>
+                                <li><a href="{% url 'products' %}" class="dropdown-item">All Products</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle fs-4 me-5" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
