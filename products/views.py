@@ -17,6 +17,7 @@ def all_products(request):
     query = None
     sort = None
     direction = None
+    categories = None
     
     # Sorting functionality
     if request.GET:
@@ -26,11 +27,20 @@ def all_products(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
+
+            if sortkey == 'category':
+                sortkey = 'category__name'
+
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
+
+        if 'category' in request.GET:
+            categories = request.GET['category'].split()
+            products = products.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
 
         # Search functionality
         if "q" in request.GET:
@@ -48,53 +58,15 @@ def all_products(request):
         'products': products,
         'search_term': query,
         'current_sorting': current_sorting,
+        'current_categories': categories,
     }
     return render(request, 'products/products.html', context)
-
-
-def all_bathbombs(request):
-    """ A view to show all bath bombs and sort them"""
-
-    bathbombs = Product.objects.all()
-    categories = None
-    sort = None
-    direction = None
-    title = "All Bath Bombs"
-
-    if request.GET:
-        if 'sort' in request.GET:
-            sortkey = request.GET['sort']
-            sort = sortkey
-            if sortkey == 'name':
-                sortkey = 'lower_name'
-                bathbombs = bathbombs.annotate(lower_name=Lower('name'))
-            if 'direction' in request.GET:
-                direction = request.GET['direction']
-                if direction == 'desc':
-                    sortkey = f'-{sortkey}'
-            bathbombs = bathbombs.order_by(sortkey)
-
-        if 'category' in request.GET:
-            category = request.GET['category']
-            bathbombs = bathbombs.filter(category__name=category)
-            category = get_object_or_404(Category, name=category)
-            title = category.get_friendly_name()
-
-    current_sorting = f'{sort}_{direction}'
-        
-    context = {
-        'bathbombs': bathbombs,
-        'categories': categories,
-        'title': title,
-        'current_sorting': current_sorting,
-    }
-    return render (request, 'products/bathbombs.html', context)
 
 def product_details(request, slug):
     """ A view to show individual bath bomb details """
 
-    bathbombs = Product.objects.all()
-    product = get_object_or_404(bathbombs, slug=slug)
+    products = Product.objects.all()
+    product = get_object_or_404(products, slug=slug)
         
     context = {
         'product': product,

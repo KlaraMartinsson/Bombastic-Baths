@@ -6,7 +6,13 @@
 <header class="bg-pink py-2">
     <div class="container-xxl px-4 px-lg-5 my-5">
         <div class="text-center">
+        {% if current_categories %}
+            {% for category in current_categories %}
+                <h2 class="fw-normal mb-0 mt-4">{{ category.friendly_name }}</h2>
+            {% endfor %}
+        {% else %}
             <h2 class="fw-normal mb-0 mt-4">All Products</h2>
+        {% endif %}
         </div>
     </div>
 </header>
