@@ -31,6 +31,17 @@
                     {{ order_form.postcode | as_crispy_field }}
                     {{ order_form.county | as_crispy_field }}
                     {{ order_form.country | as_crispy_field }}
+                    <div class="form-check form-check-inline mt-3">
+                        {% if user.is_authenticated %}
+                            <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
+                            <input class="form-check-input" type="checkbox" id="id-save-info" name="save-info" checked>
+                        {% else %}
+                            <label class="form-check-label" for="id-save-info">
+                                <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
+                                <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                            </label>
+                        {% endif %}
+                    </div>
                 </fieldset>
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="small px-2">Payment:</legend>
@@ -113,5 +124,5 @@
     {{ block.super }}
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
     {{ client_secret|json_script:"id_client_secret" }}
-    <script src="{% static 'checkout/js/stripe.js' %}"></script>
+    <script src="{% static 'js/stripe.js' %}"></script>
 {% endblock %}
