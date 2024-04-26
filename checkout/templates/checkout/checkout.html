@@ -9,7 +9,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <h1 class=" display-5 mt-3 text-center">Checkout</h1>
+            <h1 class="display-5 mt-3 text-center">Checkout</h1>
             <hr>
         </div>
     </div>
@@ -18,13 +18,13 @@
             <form method="POST" action="{% url 'checkout' %}" id="payment-form">
                 {% csrf_token %}
                 <fieldset class="rounded px-3 mb-5">
-                    <legend class="small px-2">Contact Information:</legend>
+                    <legend class="fs-5 px-2">Contact Information:</legend>
                     {{ order_form.full_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
                     {{ order_form.phone_number | as_crispy_field }}
                 </fieldset>
                 <fieldset class="rounded px-3 mb-5">
-                    <legend class="small px-2">Delivery:</legend>
+                    <legend class="fs-5 px-2">Delivery:</legend>
                     {{ order_form.street_address1 | as_crispy_field }}
                     {{ order_form.street_address2 | as_crispy_field }}
                     {{ order_form.town_or_city | as_crispy_field }}
@@ -44,7 +44,7 @@
                     </div>
                 </fieldset>
                 <fieldset class="rounded px-3 mb-5">
-                    <legend class="small px-2">Payment:</legend>
+                    <legend class="fs-5 px-2">Payment:</legend>
                     <!-- A Stripe Element will be inserted here. -->
                     <div id="card-element" class="mb-3"></div>
                     <!-- Used to display form errors. -->
