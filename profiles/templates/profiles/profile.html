@@ -8,25 +8,38 @@
 {% block content %}
 <!-- profile.html content starts here -->
 
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <hr>
-            <h2 class="logo-font mb-4">My Profile</h2>
-            <hr>
-        </div>
+<div class="container card p-5 my-5">
+    <div class="col mt-3">
+        <h2 class="mb-2 text-center">My Profile</h2>
+        <p class="text-center">Update your delivery address and see your order history.</p>
     </div>
-    <div class="row">
-        <div class="col-12 col-lg-6">
-            <p class="text-muted">Delivery Information</p>
+    <!-- Tab Headings -->
+    <ul class="nav nav-pills my-3 justify-content-center" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="btn active" id="pills-profile-tab" data-bs-toggle="pill" href="#pills-details"
+            role="tab" aria-controls="pills-details" aria-selected="true">Address</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="btn" id="pills-orders-tab" data-bs-toggle="pill" href="#pills-orders" role="tab"
+            aria-controls="pills-orders" aria-selected="false">Orders</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="btn" id="pills-delete-tab" data-bs-toggle="pill" href="#pills-delete" role="tab"
+            aria-controls="pills-delete" aria-selected="false">Delete Account</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+        <!-- Details Tab -->
+        <div class="tab-pane fade show active" id="pills-details" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <p>Delivery Information</p>
             <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button class="addtocart-btn mt-2">Update Information</button>
+                <button class="addtocart-btn mt-5">Update Information</button>
             </form>
         </div>
-        <div class="col-12 col-lg-6">
-            <p class="text-muted">Order History</p>
+            <!-- Orders Tab -->
+        <div class="tab-pane fade border-accent-primary" id="pills-orders" role="tabpanel" aria-labelledby="pills-orders-tab">
             <div class="order-history table-responsive">
                 <table class="table table-sm table-borderless">
                     <thead>
@@ -58,10 +71,19 @@
                                 </td>
                                 <td>${{ order.grand_total }}</td>
                             </tr>
+                            {% empty %}
+                            <tr>
+                                <td>You haven't made any orders yet</td>
+                            </tr>
                         {% endfor %}
                     </tbody>
                 </table>
             </div>
+        </div>
+        <!-- Delete Profile Tab -->
+        <div class="tab-pane fade border-accent-primary text-center text-black" id="pills-delete" role="tabpanel" aria-labelledby="pills-delete-tab">
+            <p class="text-center fs-4">Warning!</p>
+            <p class="text-center fs-5">Account deletion is permanent. Proceed?</p>
         </div>
     </div>
 </div>
