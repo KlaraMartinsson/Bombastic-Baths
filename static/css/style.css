@@ -118,22 +118,58 @@ background-color: rgb(232, 243, 253);
     border-color: #ea5b96;
 }
 
-.btn-outline-primary {
-    color: #ea5b96;
-    border-color: #ea5b96;
-    background-color: #ffffff;
-}
-
-.btn-outline-primary:focus {
-    box-shadow: 0 0 0 0.2rem  #ee77a9;
+.btn-primary:hover {
+    color: #fff;
+    background-color: #d3437f;
+    border: 1px solid #ffffff;
 }
 
 .btn-primary:focus {
     box-shadow: 0 0 0 0.2rem  #ee77a9;
 }
 
+.btn-outline-primary {
+    color: #ea5b96;
+    border-color: #ea5b96;
+    background-color: #ffffff;
+}
+
+.btn-outline-primary:hover {
+    color: #ffffff;
+    border-color: #ea5b96;
+    background-color: #ea5b96 ;
+}
+
+.btn-outline-primary:focus {
+    box-shadow: 0 0 0 0.2rem  #ee77a9;
+}
+
 .border-primary {
     border-color: #ea5b96 !important; 
+}
+
+
+/* Allauth forms */
+
+.allauth-form-inner-content {
+    padding: 1.5rem;
+}
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem; 
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
 }
 
 /* Products pages */
@@ -161,6 +197,10 @@ background-color: rgb(232, 243, 253);
 .bg-pink {
     background-color: #ea5b96;
     color: white;
+}
+
+.pink-text {
+    color: #ea5b96;
 }
 
 
