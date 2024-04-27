@@ -17,6 +17,10 @@
         <!-- Extra CSS -->
         {% block extra_css %}{% endblock %}
 
+        <!--Mailchimp css-->
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+
+
         <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicons/apple-touch-icon.png' %}">
         <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicons/favicon-32x32.png' %}">
@@ -139,52 +143,15 @@
 
         </main>
 
+    <!-- Scroll to top button -->
     <div class="scroll-button shadow-sm border border-black">
         <a class="scroll-link d-flex h-100">
             <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
         </a>
     </div>
-    <!--Code from https://codepen.io/alexsparkes/pen/KKVjJwy to make the svg-->
-    <svg class="mt-auto" viewBox="0 -20 700 110" width="100%" height="100" preserveAspectRatio="none">
-        <path d="M0,10 c80,-18 230,-12 350,7 c80,13 260,17 350,-5 v100 h-700z" fill="#e5d2f9"/>
-    </svg>
-    <footer class="w-100">
-        <div class="container py-4">
-            <div class="row justify-content-between">
-                <div class="col-lg-4 col-md-6 p-5">
-                    <h5 class="text-white mb-3">Join our newsletter for exclusive deals!</h5>
-                    <form action="#">
-                        <div class="input-group mb-3">
-                            <input class="form-control" type="text" placeholder="Email" aria-label="Email">
-                            <button class="btn btn-dark" type="submit"><i class="fas fa-paper-plane"></i></button>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <h5 class="text-white text-decoration-underline mt-5">Info</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="{% url 'ourstory' %}" class="text-white" >Our Story</a></li>
-                        <li><a href="{% url 'faq' %}" class="text-white">FAQs</a></li>
-                        <li><a href="{% url 'privacypolicy' %}" class="text-white">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <h5 class="text-white text-decoration-underline mt-5">Contact</h5>
-                    <ul class="list-unstyled">
-                        <li class="text-white fw-bold">Phone:</li>
-                        <li class="text-white">000000000</li>
-                        <li class="text-white fw-bold">Email:</li>
-                        <li class="text-white">info@bombasticbaths.com</li>
-                    </ul>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <a href="#" class=""><i class="fa-brands fa-facebook fa-2xl p-3" ></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram fa-2xl p-3"></i></a>
-                    <a href="#"><i class="fa-brands fa-tiktok fa-2xl p-3"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
+
+    {% include 'includes/footer.html' %}
+
 
         {% block corejs %}
         <!-- Jquery -->
