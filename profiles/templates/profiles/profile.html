@@ -83,6 +83,10 @@
         <div class="tab-pane fade border-accent-primary text-center text-black" id="pills-delete" role="tabpanel" aria-labelledby="pills-delete-tab">
             <p class="text-center fs-4">Warning!</p>
             <p class="text-center fs-5">Account deletion is permanent. Proceed?</p>
+            <form action="{% url 'delete_profile' %}" method="POST">
+                {% csrf_token %}
+                <button class="pink-btn mt-5">Delete Account</button>
+            </form>
         </div>
     </div>
 </div>
