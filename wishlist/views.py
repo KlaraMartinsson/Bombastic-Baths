@@ -17,10 +17,9 @@ def view_wishlist(request):
         )
         return redirect(reverse("account_login"))
 
-  # Retrieve or create the user's wishlist
+    # Retrieve or create the user's wishlist
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
 
-    # Prepare the context with the wishlist
     context = {
         'wishlist': wishlist,
     }
@@ -29,9 +28,20 @@ def view_wishlist(request):
 
 @login_required
 def add_to_wishlist(request, product_id):
+    """ A view to add products to users wishlist page """
     product = get_object_or_404(Product, id=product_id)
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
     wishlist.products.add(product)
     messages.success(request, f"{product.name} added to your wishlist")
+    wishlist.save()
+    return redirect('view_wishlist')
+
+@login_required
+def remove_from_wishlist(request, product_id):
+    """ A view to add products to users wishlist page """
+    product = get_object_or_404(Product, id=product_id)
+    wishlist, created = Wishlist.objects.get_or_create(user=request.user)
+    wishlist.products.remove(product)
+    messages.success(request, f"{product.name} removed from your wishlist")
     wishlist.save()
     return redirect('view_wishlist')
