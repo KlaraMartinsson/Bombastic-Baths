@@ -1,10 +1,11 @@
 from django.db.models import Q
 from django.shortcuts import render, redirect,  get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.db.models.functions import Lower
-import random
-from .models import Product, Category
+
+from .models import Product, Category, Rating
 from wishlist.models import Wishlist
 
 
@@ -75,7 +76,7 @@ def product_details(request, slug):
     product = get_object_or_404(products, slug=slug)
     user = request.user
 
-    if user.is_authenticated:
+    if request.user.is_authenticated:
         wishlist, created = Wishlist.objects.get_or_create(user=user)
     else:
         wishlist = None
