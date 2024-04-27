@@ -1,10 +1,12 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import get_object_or_404, redirect
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.urls import reverse
+from django.shortcuts import render
 
 from .models import Wishlist
-from profiles.models import UserProfile
 from products.models import Product
+
 
 
 def view_wishlist(request):
@@ -15,8 +17,21 @@ def view_wishlist(request):
         )
         return redirect(reverse("account_login"))
 
-    template = "wishlist/wishlist.html"
+  # Retrieve or create the user's wishlist
+    wishlist, created = Wishlist.objects.get_or_create(user=request.user)
+
+    # Prepare the context with the wishlist
     context = {
+        'wishlist': wishlist,
     }
 
-    return render(request, template, context)
+    return render(request, "wishlist/wishlist.html", context)
+
+@login_required
+def add_to_wishlist(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+    wishlist, created = Wishlist.objects.get_or_create(user=request.user)
+    wishlist.products.add(product)
+    messages.success(request, f"{product.name} added to your wishlist")
+    wishlist.save()
+    return redirect('view_wishlist')
