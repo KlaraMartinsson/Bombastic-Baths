@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.urls import reverse
 from django.shortcuts import render
+from django.http import HttpResponseRedirect
 
 from .models import Wishlist
 from products.models import Product
@@ -28,17 +29,23 @@ def view_wishlist(request):
 
 def add_to_wishlist(request, product_id):
     """ A view to add products to users wishlist page """
+    
+
     if not request.user.is_authenticated:
         messages.error(
             request, "Sorry, you need to be logged in to add to your Wishlist."
         )
         return redirect(reverse("account_login"))
+    
     product = get_object_or_404(Product, id=product_id)
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
     wishlist.products.add(product)
     messages.success(request, f"{product.name} added to your wishlist")
     wishlist.save()
-    return redirect('view_wishlist')
+    #Redirect to the same page after adding to wishlist
+    #https://stackoverflow.com/questions/12758786/redirect-return-to-same-previous-page-in-django
+    redirect_url = request.META.get("HTTP_REFERER", reverse("products"))
+    return HttpResponseRedirect(redirect_url)
 
 @login_required
 def remove_from_wishlist(request, product_id):
@@ -48,7 +55,10 @@ def remove_from_wishlist(request, product_id):
     wishlist.products.remove(product)
     messages.success(request, f"{product.name} removed from your wishlist")
     wishlist.save()
-    return redirect('view_wishlist')
+    #Redirect to the same page after removing a product from wishlist
+    #https://stackoverflow.com/questions/12758786/redirect-return-to-same-previous-page-in-django
+    redirect_url = request.META.get("HTTP_REFERER", reverse("products"))
+    return HttpResponseRedirect(redirect_url)
 
 @login_required
 def clear_wishlist(request, product_id):

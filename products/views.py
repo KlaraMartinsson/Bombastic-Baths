@@ -5,6 +5,7 @@ from django.urls import reverse
 from django.db.models.functions import Lower
 import random
 from .models import Product, Category
+from wishlist.models import Wishlist
 
 
 def all_products(request):
@@ -18,6 +19,12 @@ def all_products(request):
     sort = None
     direction = None
     categories = None
+    user = request.user
+
+    if user.is_authenticated:
+        wishlist, created = Wishlist.objects.get_or_create(user=user)
+    else:
+        wishlist = None
     
     # Sorting functionality
     if request.GET:
@@ -55,6 +62,7 @@ def all_products(request):
         'search_term': query,
         'current_sorting': current_sorting,
         'current_categories': categories,
+        'wishlist': wishlist,
     }
     return render(request, 'products/products.html', context)
 
@@ -63,9 +71,16 @@ def product_details(request, slug):
 
     products = Product.objects.all()
     product = get_object_or_404(products, slug=slug)
+    user = request.user
+
+    if user.is_authenticated:
+        wishlist, created = Wishlist.objects.get_or_create(user=user)
+    else:
+        wishlist = None
         
     context = {
         'product': product,
+        'wishlist': wishlist,
     }
     return render (request, 'products/product_details.html', context)
 

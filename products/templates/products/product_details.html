@@ -55,7 +55,12 @@
                         </div>
                         <hr>
                         <input type="submit" class="btn pink-btn text-black text-white" value="Add to Cart">
-                        <a href="{% url 'add_to_wishlist' product.id %}"class="btn wishlist-btn"><i class="pe-2 fa-regular fa-heart fa-lg text-white"></i></i> Wishlist </a>
+                        <!-- Wishlist Icon -->
+                        {% if product in wishlist.products.all %}
+                        <a href="{% url 'remove_from_wishlist' product.id %}"class="btn wishlist-btn" aria-label="Remove product from Wishlist"><i class="pe-2 fa-solid fa-heart fa-lg text-white"></i></i> Wishlist </a>
+                        {% else %}
+                        <a href="{% url 'add_to_wishlist' product.id %}"class="btn wishlist-btn" aria-label="Add product to Wishlist"><i class="pe-2 fa-regular fa-heart fa-lg text-white"></i></i> Wishlist </a>
+                        {% endif %}
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </form>
                     <div class="accordion accordion-flush mt-4" id="accordionIngredients">

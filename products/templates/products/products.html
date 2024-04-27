@@ -59,9 +59,16 @@
             {% for product in products %}
                 <div class="col mb-5 product-section">
                     <div class="card h-100">
-                        <a href="{% url 'add_to_wishlist' product.id %}">
-                            <i class="fa-regular fa-heart fa-2xl p-4"></i>
+                        <!-- Wishlist Icon -->
+                        {% if product in wishlist.products.all %}
+                        <a href="{% url 'remove_from_wishlist' product.id %}" aria-label="Remove product from Wishlist">
+                            <div><i class="fa-solid fa-heart fa-xl"></i></div>
                         </a>
+                        {% else %}
+                        <a href="{% url 'add_to_wishlist' product.id %}" aria-label="Add product to Wishlist">
+                            <div><i class="fa-regular fa-heart fa-xl"></i></div>
+                        </a>
+                        {% endif %}
                         <a href="{% url 'product-details' product.slug %}">
                             {% if product.image %}
                                <!-- <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}"> -->
