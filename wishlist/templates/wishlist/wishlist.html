@@ -2,23 +2,39 @@
 {% load static %}
 
 {% block content %}
-{% if wishlist %}
-<h1>{{ wishlist.user.username }}'s Wishlist</h1>
-<ul>
+<!-- wishlist.html content starts here -->
+<div class="container card p-5 my-5">
+    <h2 class="text-center mb-2">{{ wishlist.user.username }}'s Wishlist</h2>
+    <p class="text-center">Here are the products you have saved for later.</p>
     {% for product in wishlist.products.all %}
-    <a href="{% url 'clear_wishlist' product.id %}">Clear Wishlist</a>
-        <li>
-            <h2>{{ product.name }}</h2>
-            <p>{{ product.description }}</p>
-            <p>Price: {{ product.price }}</p>
-            <img src="{{ product.image.url }}" alt="{{ product.name }}">
-            <a href="{% url 'remove_from_wishlist' product.id %}">Remove from Wishlist</a>
-        </li>
+    <div class="col-12 d-flex justify-content-center">
+        <a class="text-center btn pink-btn"href="{% url 'clear_wishlist' product.id %}">Clear Wishlist</a>
+    </div>
+    <hr>
+    <div class="table-responsive">
+        <table class="table table-sm table-borderless">
+            <thead>
+                <tr>
+                    <th>Product Name:</th>
+                    <th>Description:</th>
+                    <th>Price:</th>
+                    <th>Delete:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><p>{{ product.name }}</p></td>
+                    <td><p>{{ product.description }}</p></td>
+                    <td><p>Price: {{ product.price }}</p></td>
+                    <td><a href="{% url 'remove_from_wishlist' product.id %}" class="btn border-secondary"><i class="fas fa-trash fa-sm"></i></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     {% empty %}
-        <li>Your wishlist is empty.</li>
+        <p>Your wishlist is empty.</p>
     {% endfor %}
-</ul>
-{% else %}
-<p>You do not have a wishlist.</p>
-{% endif %}
+    <div class="col-2"><a href="{% url 'products' %}"><i class="fa-solid fa-left-long fa-lg me-2" style="color: #ea5b96;"></i> Back to Products</a>
+</div>
+<!-- wishlist.html content ends here -->
 {% endblock %}
