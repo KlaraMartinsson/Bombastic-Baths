@@ -47,11 +47,11 @@
                     <div class="card h-100">
                         <!-- Wishlist Icon -->
                         {% if product in wishlist.products.all %}
-                        <a href="{% url 'remove_from_wishlist' product.id %}" aria-label="Remove product from Wishlist">
+                        <a href="{% url 'remove_from_wishlist' product.slug %}" aria-label="Remove product from Wishlist">
                             <div><i class="fa-solid fa-heart fa-xl"></i></div>
                         </a>
                         {% else %}
-                        <a href="{% url 'add_to_wishlist' product.id %}" aria-label="Add product to Wishlist">
+                        <a href="{% url 'add_to_wishlist' product.slug %}" aria-label="Add product to Wishlist">
                             <div><i class="fa-regular fa-heart fa-xl"></i></div>
                         </a>
                         {% endif %}

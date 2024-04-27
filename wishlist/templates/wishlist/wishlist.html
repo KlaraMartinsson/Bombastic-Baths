@@ -25,10 +25,10 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><p>{{ product.name }}</p></td>
+                    <td><p><a href="{% url 'product-details' product.slug %}">{{ product.name }}</a></p></td>
                     <td><p>{{ product.description }}</p></td>
                     <td><p>Price: {{ product.price }}</p></td>
-                    <td><a href="{% url 'remove_from_wishlist' product.id %}" class="btn border-secondary"><i class="fas fa-trash fa-sm"></i></a></td>
+                    <td><a href="{% url 'remove_from_wishlist' product.slug %}" class="btn border-secondary"><i class="fas fa-trash fa-sm"></i></a></td>
                 </tr>
             </tbody>
         </table>

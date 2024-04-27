@@ -27,7 +27,7 @@ def view_wishlist(request):
 
     return render(request, "wishlist/wishlist.html", context)
 
-def add_to_wishlist(request, product_id):
+def add_to_wishlist(request, slug):
     """ A view to add products to users wishlist page """
     
     if not request.user.is_authenticated:
@@ -36,7 +36,7 @@ def add_to_wishlist(request, product_id):
         )
         return redirect(reverse("account_login"))
     
-    product = get_object_or_404(Product, id=product_id)
+    product = get_object_or_404(Product, slug=slug)
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
     wishlist.products.add(product)
     messages.success(request, f"{product.name} added to your wishlist")
@@ -47,9 +47,9 @@ def add_to_wishlist(request, product_id):
     return HttpResponseRedirect(redirect_url)
 
 @login_required
-def remove_from_wishlist(request, product_id):
+def remove_from_wishlist(request, slug):
     """ A view to remove products from users wishlist page """
-    product = get_object_or_404(Product, id=product_id)
+    product = get_object_or_404(Product, slug=slug)
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
     wishlist.products.remove(product)
     messages.success(request, f"{product.name} removed from your wishlist")
