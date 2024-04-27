@@ -149,6 +149,13 @@ background-color: rgb(232, 243, 253);
     border-color: #ea5b96 !important; 
 }
 
+.sort-btn {
+    border: 1px solid #ea5b96;
+    cursor: pointer;
+    background: #f8f9fa;
+    padding: 6px 18px;
+    border-radius: 6px;
+}
 
 /* Allauth forms */
 
