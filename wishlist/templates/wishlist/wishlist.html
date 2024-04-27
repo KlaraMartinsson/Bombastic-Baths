@@ -6,10 +6,12 @@
 <div class="container card p-5 my-5">
     <h2 class="text-center mb-2">{{ wishlist.user.username }}'s Wishlist</h2>
     <p class="text-center">Here are the products you have saved for later.</p>
-    {% for product in wishlist.products.all %}
+    {% if wishlist.products.all|length > 0 %}
     <div class="col-12 d-flex justify-content-center">
-        <a class="text-center btn pink-btn"href="{% url 'clear_wishlist' product.id %}">Clear Wishlist</a>
+        <a class="text-center btn pink-btn"href="{% url 'clear_wishlist' %}">Clear Wishlist</a>
     </div>
+    {% endif %}
+    {% for product in wishlist.products.all %}
     <hr>
     <div class="table-responsive">
         <table class="table table-sm table-borderless">

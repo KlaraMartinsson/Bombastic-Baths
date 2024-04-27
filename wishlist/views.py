@@ -30,7 +30,6 @@ def view_wishlist(request):
 def add_to_wishlist(request, product_id):
     """ A view to add products to users wishlist page """
     
-
     if not request.user.is_authenticated:
         messages.error(
             request, "Sorry, you need to be logged in to add to your Wishlist."
@@ -61,9 +60,8 @@ def remove_from_wishlist(request, product_id):
     return HttpResponseRedirect(redirect_url)
 
 @login_required
-def clear_wishlist(request, product_id):
+def clear_wishlist(request):
     """ A view to clear all products from users wishlist page """
-    product = get_object_or_404(Product, id=product_id)
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
     wishlist.products.clear()
     messages.success(request, "Your wishlist has been cleared")
