@@ -59,6 +59,7 @@
             {% for product in products %}
                 <div class="col mb-5 product-section">
                     <div class="card h-100">
+                        <a href="{% url 'add_wishlist' product.id %}" aria-label="Add product to Wishlist">
                         <i class="fa-regular fa-heart fa-2xl p-4"></i>
                         <a href="{% url 'product-details' product.slug %}">
                             {% if product.image %}
