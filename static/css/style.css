@@ -1,3 +1,4 @@
+/* General */
 body {
     min-height: 100vh;
     display: flex;
@@ -27,7 +28,7 @@ a i {
 .search-form {
     width: 50%;
 }
-
+/* Messages */
 .message-container {
     position: fixed;
     top: 72px;
@@ -71,7 +72,7 @@ background-color: rgb(232, 243, 253);
 }
 
 /* Buttons */
-.shopnow-btn {
+.pink-white-btn {
     padding: 11px 39px;
     border-radius: 20px;
     border: 0;
@@ -80,12 +81,12 @@ background-color: rgb(232, 243, 253);
     color: #fff;
 }
 
-.shopnow-btn:hover {
+.pink-white-btn:hover {
     background-color: white;
     color: #ea5b96;
 }
 
-.addtocart-btn {
+.pink-btn {
     padding: 11px 39px;
     border-radius: 20px;
     border: 0;
@@ -94,7 +95,7 @@ background-color: rgb(232, 243, 253);
     color: #fff;
 }
 
-.addtocart-btn:hover {
+.pink-btn:hover {
     background-color: #d3437f;
     color: #ffffff;
 }
@@ -112,13 +113,13 @@ background-color: rgb(232, 243, 253);
     color:  rgb(255, 255, 255);
 }
 
-.btn-primary {
+.quantity-btn {
     color: #fff;
     background-color: #ea5b96;
     border-color: #ea5b96;
 }
 
-.btn-primary:hover {
+.quantity-btn:hover {
     color: #fff;
     background-color: #d3437f;
     border: 1px solid #ffffff;

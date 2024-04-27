@@ -43,7 +43,7 @@
                                         data-item_id="{{ product.id }}"  
                                         id="id_qty_{{ product.id }}">
                                     <div class="input-group-append">
-                                        <button class="increment-qty btn-primary py-1 px-3 rounded-end"
+                                        <button class="increment-qty quantity-btn py-1 px-3 rounded-end"
                                             data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
                                             <span>
                                                 <i class="fas fa-plus"></i>
@@ -54,7 +54,7 @@
                             </div>
                         </div>
                         <hr>
-                        <input type="submit" class="btn addtocart-btn text-black text-white" value="Add to Cart">
+                        <input type="submit" class="btn pink-btn text-black text-white" value="Add to Cart">
                         <a href="#" class="btn wishlist-btn"><i class="pe-2 fa-regular fa-heart fa-lg text-white"></i></i> Wishlist </a>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </form>
