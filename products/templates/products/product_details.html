@@ -111,7 +111,7 @@
     <!--Reviews-->
     <div class="container my-3">
         {% if request.user.is_authenticated %}
-        <h4>Leave a Product Review</h4>
+        <h4 id="reviewHeading">Leave a Product Review</h4>
         <form action="{% url 'product-details' product.slug %}" method="POST">
             {% csrf_token %}
             <p class="mb-0 mt-2">Rate Product</p>
@@ -127,7 +127,8 @@
             </div>
         </form>
         {% endif %}
-        {% include "products/includes/product_review.html" %}
+        <div class="mt-2">
+            {% include "products/includes/product_review.html" %}
         </div>
     </div>
 <!-- product_details.html content ends here -->
@@ -136,4 +137,17 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
+<!--Jquery for edit review-->
+<script>
+    $(document).ready(function() {
+        $(".edit-btn").click(function(e) {
+            let reviewId = $(this).attr("review_id");
+            let reviewContent = $("#review" + reviewId).text();
+            $("#content").val(reviewContent);
+            $("#submitButton").text("Update");
+            $("#reviewHeading").text("Edit your review:");
+            $("#reviewForm").attr("action", `edit_review/${reviewId}`);
+        });
+    });
+</script>
 {% endblock %}

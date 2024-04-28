@@ -95,7 +95,7 @@ def product_details(request, slug):
                 rating.product = product
                 rating.save()
                 messages.success(request,"Product rating submitted.")
-                return HttpResponseRedirect(reverse("product-details", args=[slug]))
+                return HttpResponseRedirect(reverse('product-details', args=[slug]))
             else:
                 messages.error(request, "Error rating product. Please try again.")
         
@@ -107,7 +107,7 @@ def product_details(request, slug):
                 review.product = product
                 review.save()
                 messages.success(request, "Review submitted and awaiting approval.")
-                return HttpResponseRedirect(reverse("product-details", args=[slug]))
+                return HttpResponseRedirect(reverse('product-details', args=[slug]))
             else:
                 messages.error(request, "Error submitting review")
     
@@ -124,9 +124,10 @@ def product_details(request, slug):
     }
     return render (request, 'products/product_details.html', context)
 
+@login_required
 def remove_review(request, slug, review_id):
     """ A view to remove product reviews """
-    
+
     review = get_object_or_404(Review, pk=review_id)
 
     if request.user == review.author:
@@ -135,5 +136,26 @@ def remove_review(request, slug, review_id):
     else:
         messages.error(request, "You are not the author of this review.")
     
-    return HttpResponseRedirect(reverse("product-details", args=[slug]))
+    return HttpResponseRedirect(reverse('product-details', args=[slug]))
+
+@login_required
+def edit_review(request, slug, review_id):
+    """ A view to edit product reviews """
+    
+    if request.method == "POST":
+        queryset = Product.objects.all()
+        product = get_object_or_404(queryset, slug=slug)
+        review = get_object_or_404(Review, pk=review_id)
+        review_form = ReviewForm(data=request.POST, instance=review)
+
+        if review_form.is_valid() and review.author == request.user:
+            review = review_form.save(commit=False)
+            review.product = product
+            review.approved = False
+            review.save()
+            messages.success(request, "Product review edited and awaiting approval")
+        else:
+            messages.error(request, "Error editing product review")
+
+    return HttpResponseRedirect(reverse('product-details', args=[slug]))
 
