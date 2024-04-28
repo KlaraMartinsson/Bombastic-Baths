@@ -1,86 +1,88 @@
 {% load static %}
-<nav class="navbar">
-    <div class="container-fluid d-flex flex-column flex-md-row justify-content-between">
-        <div class="d-flex align-items-center mb-2 mb-md-0">
-            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/logotype.png' %}" class="logo" alt="logo"></a>
-        </div>
-        <form method="GET" action="{% url 'products' %}" class="d-flex search-form ms-3 mb-2 mb-md-0">
-            <input class="form-control me-2" name="q" type="text" placeholder="Search" aria-label="Search">
-            <div class="input-group-append">
-                <button class="btn btn-outline-dark form-control" type="submit"><i class="fa-solid fa-magnifying-glass fa-xl"></i></button>
+
+<nav>
+   <div class="navbar">
+        <div class="container-fluid d-flex flex-column flex-lg-row justify-content-between">
+            <div class="d-flex align-items-center mb-2 mb-md-0">
+                <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/logotype.png' %}" class="logo" alt="logo"></a>
             </div>
-        </form>
-        <div class="d-flex align-items-center">
-            <div class="dropdown">
-                <a href="#" role="button" id="user-options" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa-regular fa-face-smile fa-2xl p-3"></i>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="user-options">
-                {% if request.user.is_authenticated %}
-                    <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
-                    <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
-                {% else %}
-                    <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
-                    <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
-                {% endif %}
+            <form method="GET" action="{% url 'products' %}" class="d-flex search-form ms-3 mb-2 flex-md-row">
+                <input class="form-control me-2" name="q" type="text" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-dark form-control" type="submit"><i class="fa-solid fa-magnifying-glass fa-xl"></i></button>
                 </div>
-            </div>
-            <a href="{% url 'view_wishlist' %}">
-                <i class="fa-regular fa-heart fa-2xl p-3"></i>
-            </a>
-            <a href="{% url 'cart' %}">
-                <i class="fa-solid fa-cart-shopping fa-2xl p-3"></i>
-                <span class="badge bg-dark text-white p-2 rounded-pill">
-                    {% if grand_total %}
-                       £{{ grand_total|floatformat:2 }}
+            </form>
+            <div class="d-flex align-items-center" id="nav-icons">
+                <div class="dropdown">
+                    <a href="#" role="button" id="user-options" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-regular fa-face-smile fa-2xl p-3"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="user-options">
+                    {% if request.user.is_authenticated %}
+                        <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
+                        <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
                     {% else %}
-                       £0.00
+                        <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
+                        <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
                     {% endif %}
-                </span>
-            </a>
+                    </div>
+                </div>
+                <a href="{% url 'view_wishlist' %}">
+                    <i class="fa-regular fa-heart fa-2xl p-3"></i>
+                </a>
+                <a href="{% url 'cart' %}">
+                    <i class="fa-solid fa-cart-shopping fa-2xl p-3"></i>
+                    <span class="badge bg-dark text-white p-2 rounded-pill">
+                        {% if grand_total %}
+                        £{{ grand_total|floatformat:2 }}
+                        {% else %}
+                        £0.00
+                        {% endif %}
+                    </span>
+                </a>
+            </div>
         </div>
     </div>
-</nav>
-
-<nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-            <ul class="navbar-nav justify-content-between">
-                <li class="nav-item">
-                    <a class="nav-link fs-4 me-5" href="{% url 'home' %}">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link fs-4 me-5 dropdown-toggle" href="{% url 'products' %}" id="all-product-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">All Products</a>
-                    <ul class="dropdown-menu border-0" aria-labelledby="all-product-link">
-                        <li><a href="{% url 'products' %}" class="dropdown-item">All Products</a></li>
-                        <li><a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a></li>
-                        <li><a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle fs-4 me-5" href="#" id="all-bathbombs-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Bath bombs 
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="all-bathbombs-link">
-                        <li><a class="dropdown-item" href="{% url 'products' %}?category=relax">Relax</a></li>
-                        <li><a class="dropdown-item" href="{% url 'products' %}?category=energize">Energize</a></li>
-                        <li><a class="dropdown-item" href="{% url 'products' %}?category=moisturize">Moisturize</a></li>
-                        <li><a class="dropdown-item" href="{% url 'products' %}?category=exfoliate">Exfoliate</a></li>
-                        <li><a class="dropdown-item" href="{% url 'products' %}?category=colourful">Colourful</a></li>
-                        <li><a class="dropdown-item" href="{% url 'products' %}?category=holiday">Holiday theme</a></li>
-                        <li><a class="dropdown-item" href="{% url 'products' %}?category=surprise">With suprise</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link fs-4 me-5" href="{% url 'products' %}?category=gifts">Gifts</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link fs-4 me-5" href="{% url 'ourstory' %}">Our Story</a>
-                </li>
-            </ul>
+    <div class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                <ul class="navbar-nav justify-content-between">
+                    <li class="nav-item">
+                        <a class="nav-link fs-4 me-5" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link fs-4 me-5 dropdown-toggle" href="{% url 'products' %}" id="all-product-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">All Products</a>
+                        <ul class="dropdown-menu border-0" aria-labelledby="all-product-link">
+                            <li><a href="{% url 'products' %}" class="dropdown-item">All Products</a></li>
+                            <li><a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a></li>
+                            <li><a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fs-4 me-5" href="#" id="all-bathbombs-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Bath bombs 
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="all-bathbombs-link">
+                            <li><a class="dropdown-item" href="{% url 'products' %}?category=relax">Relax</a></li>
+                            <li><a class="dropdown-item" href="{% url 'products' %}?category=energize">Energize</a></li>
+                            <li><a class="dropdown-item" href="{% url 'products' %}?category=moisturize">Moisturize</a></li>
+                            <li><a class="dropdown-item" href="{% url 'products' %}?category=exfoliate">Exfoliate</a></li>
+                            <li><a class="dropdown-item" href="{% url 'products' %}?category=colourful">Colourful</a></li>
+                            <li><a class="dropdown-item" href="{% url 'products' %}?category=holiday">Holiday theme</a></li>
+                            <li><a class="dropdown-item" href="{% url 'products' %}?category=surprise">With suprise</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-4 me-5" href="{% url 'products' %}?category=gifts">Gifts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-4 me-5" href="{% url 'ourstory' %}">Our Story</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </nav>

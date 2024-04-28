@@ -1,26 +1,30 @@
-{% if request.user.is_authenticated %}
-    <form id="reviewForm" method="post" action="{% url 'product-details' product.slug %}">
-        {% csrf_token %}
-        <input type="hidden" name="review_form" value="review_form">
-        <textarea type="text" id="content" name="content" rows="5" cols="200" class="form-control mb-3">{{ review.content | safe }}</textarea>
-        <button class="btn btn-dark" type="submit" id="submitButton">Submit Review</button>
-    </form>
-{% endif %}
+<section>
+    {% if request.user.is_authenticated %}
+        <form id="reviewForm" method="post" action="{% url 'product-details' product.slug %}">
+            {% csrf_token %}
+            <input type="hidden" name="review_form" value="review_form">
+            <textarea type="text" id="content" name="content" rows="5" cols="200" class="form-control mb-3">{{ review.content | safe }}</textarea>
+            <button class="btn btn-dark" type="submit" id="submitButton">Submit Review</button>
+        </form>
+    {% endif %}
 
-<h5 class="mt-3 pink-text">Reviews</h5>
-{% for review in product_reviews %}
-    <div class="review-card rounded mt-3">
-        {% if not review.approved and review.author == user %}
-            <p class="text-end m-0"> Review is awaiting approval.</p>
-        {% endif %}
-        <p class="fw-bold">{{ review.author }}</p>
-        <p id="review{{ review.id }}">{{ review.content }}</p>
-        <p class="text-muted fst-italic m-0">Created on: {{ review.created_on }}</p>
-        {% if user.is_authenticated and review.author == user %}
-            <a href="{% url 'remove-review' product.slug review.id %}" class="btn btn-sm btn-outline-danger">Delete</a>
-            <button class="edit-btn btn btn-sm btn-outline-success" review_id="{{ review.id }}">Edit</button>
-        {% endif %}
-    </div>
-{% empty %}
-    <p>No reviews yet.</p>
-{% endfor %}
+    <h5 class="mt-4 pink-text">Reviews</h5>
+    {% for review in product_reviews %}
+        <div class="review-card rounded mt-3">
+            {% if not review.approved and review.author == user %}
+                <p class="text-end m-0"> Review is awaiting approval.</p>
+            {% endif %}
+            <p class="fw-bold">{{ review.author }}</p>
+            <p id="review{{ review.id }}">{{ review.content }}</p>
+            <p class="text-muted fst-italic m-0">Created on: {{ review.created_on }}</p>
+            {% if user.is_authenticated and review.author == user %}
+                <div class="mt-3">
+                    <a href="{% url 'remove-review' product.slug review.id %}" class="btn btn-outline-danger px-3">Delete</a>
+                    <button class="edit-btn btn btn-outline-success px-3" review_id="{{ review.id }}">Edit</button>
+                </div>
+            {% endif %}
+        </div>
+    {% empty %}
+        <p>No reviews yet.</p>
+    {% endfor %}
+</section>
