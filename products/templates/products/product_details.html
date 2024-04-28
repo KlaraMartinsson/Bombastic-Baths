@@ -106,11 +106,22 @@
 
     <div class="container my-3">
         <h4>Reviews:</h4>
-        <div class="row">
-            <div class="col-3 p-4 bg-pink">Text</div>
-            <div class="col-3 p-4 bg-pink">Text</div>
-            <div class="col-3 p-4 bg-pink">Text</div>
-            <div class="col-3 p-4 bg-pink">Text</div>
+            {% if request.user.is_authenticated %}
+            <form action="{% url 'product-details' product.slug %}" method="POST">
+                {% csrf_token %}
+                <p class="mb-0 mt-2">Rate Product</p>
+                <div class="d-flex align-items-center">
+                    <select name="rating" class="form-control me-2 w-25">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <button type="submit" class="btn btn-dark">Submit Rating</button>
+                </div>
+            </form>
+            {% endif %}
         </div>
     </div>
 <!-- product_details.html content ends here -->

@@ -1,9 +1,11 @@
 from django.db.models import Q
-from django.shortcuts import render, redirect,  get_object_or_404
+from django.shortcuts import render, redirect,  get_object_or_404, HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.db.models.functions import Lower
+
+from .forms import RatingForm
 
 from .models import Product, Category, Rating
 from wishlist.models import Wishlist
@@ -78,12 +80,30 @@ def product_details(request, slug):
 
     if request.user.is_authenticated:
         wishlist, created = Wishlist.objects.get_or_create(user=user)
+        user_rating = Rating.objects.filter(user=request.user, product=product).exists()
     else:
         wishlist = None
+        user_rating = False
+
+    if request.method == "POST":
+        rating_form = RatingForm(data=request.POST)
+        if rating_form.is_valid() and request.user.is_authenticated:
+            rating = rating_form.save(commit=False)
+            rating.user = request.user
+            rating.product = product
+            rating.save()
+            messages.success(request,"Product rating submitted.")
+            return HttpResponseRedirect(reverse("product-details", args=[slug]))
+        else:
+            messages.error(request, "Error rating product. Please try again.")
+    
+    rating_form = RatingForm()
         
     context = {
         'product': product,
         'wishlist': wishlist,
+        'rating_form': rating_form,
+        'user_rating': user_rating,
     }
     return render (request, 'products/product_details.html', context)
 
