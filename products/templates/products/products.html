@@ -21,13 +21,13 @@
 <div class="container">
     <div class="row mx-2">
         <div class="col-4">
-            <p class="text-muted mt-3">
+            <p class="mt-3">
                 {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
             </p>
         </div>
         <div class="col-8 mt-2 d-flex justify-content-end">
-            <select id="sort-selector" class="sort-btn">
-                <option class="pb-3" value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+            <select id="sort-selector" class="sort-btn px-3">
+                <option class="pb-3" value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}> Sort by...</option>
                 <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                 <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
                 <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>

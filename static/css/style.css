@@ -33,6 +33,11 @@ a i {
     color: #ea5b96;
 }
 
+.total-cost-pill {
+    padding: 15px 20px;
+    font-size: 1rem;
+}
+
 /* Mailchimp */
 #mc_embed_signup {
     clear:left; 
@@ -86,12 +91,13 @@ background-color: rgb(232, 243, 253);
 
 /* Buttons */
 .pink-white-btn {
-    padding: 11px 30px;
-    border-radius: 20px;
+    padding: 15px 60px;
+    border-radius: 30px;
     border: 0;
     box-shadow: 0 0 0 1px #ea5b96;
     background-color: #ea5b96;
     color: #fff;
+    font-size: 20px;
 }
 
 .pink-white-btn:hover {
@@ -155,7 +161,6 @@ background-color: rgb(232, 243, 253);
     border: 1px solid #ea5b96;
     cursor: pointer;
     background-color: #ffffff;
-    padding: 6px 18px;
     border-radius: 6px;
     color: #ea5b96;
 }
@@ -271,4 +276,48 @@ background-color: rgb(232, 243, 253);
 
 footer {
     background-color: rgb(229, 210, 249);
+}
+
+/* Media queries */
+
+@media screen and (max-width: 1600px) {
+    .pink-white-btn {
+        padding: 11px 20px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .increment-qty, .decrement-qty {
+        padding:  .5rem !important;
+    }
+    
+}
+
+@media screen and (max-width: 691px) {
+    .increment-qty, .decrement-qty {
+        padding:  .2rem !important;
+    }
+    .pink-btn {
+        margin-bottom: 10px;
+    }
+
+    .total-cost-pill {
+        padding: 10px 15px;
+    }
+
+    .sort-btn {
+        font-size: 14px; 
+    }
+
+}
+
+@media screen and (min-width: 500px){
+    .sort-btn {
+        font-size: 20px; 
+    }
+
+    a, li, p {
+        font-size: 20px;
+    }
 }
