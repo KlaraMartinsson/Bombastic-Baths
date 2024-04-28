@@ -20,7 +20,8 @@
                 </div>
                 <div class="col-lg-6">
                     <h4 class="text-dark">{{ product.name }}</h4>
-                    <div class="mb-3">
+                    {% include "products/includes/product_rating.html" %}
+                    <div class="my-3">
                         <span class="h5">£{{ product.price }}</span>
                     </div>
                     <p>{{ product.description }}</p>

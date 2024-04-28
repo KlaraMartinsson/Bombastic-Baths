@@ -65,11 +65,12 @@
                         <div class="p-4">
                             <div class="text-center">
                                 <h5 class="fw-bolder">{{ product.name }}</h5>
+                                {% include "products/includes/product_rating.html" %}
                                 £{{ product.price }}
                             </div>
                         </div>
                         <div class="p-4 bg-light d-flex justify-content-center">
-                            <a href="{% url 'product-details' product.slug %}"><button class="pink-white-btn">More Info</button></a>
+                            <a href="{% url 'product-details' product.slug %}"><button class="pink-white-btn ">More Info</button></a>
                         </div>
                     </div>
                 </div>
