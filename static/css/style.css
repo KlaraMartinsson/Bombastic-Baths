@@ -287,17 +287,8 @@ footer {
     }
 }
 
-@media screen and (max-width: 991px) {
-    .increment-qty, .decrement-qty {
-        padding:  .5rem !important;
-    }
-    
-}
 
 @media screen and (max-width: 691px) {
-    .increment-qty, .decrement-qty {
-        padding:  .2rem !important;
-    }
     .pink-btn {
         margin-bottom: 10px;
     }
