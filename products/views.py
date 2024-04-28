@@ -7,7 +7,7 @@ from django.db.models.functions import Lower
 
 from .forms import RatingForm, ReviewForm
 
-from .models import Product, Category, Rating
+from .models import Product, Category, Rating, Review
 from wishlist.models import Wishlist
 
 
@@ -124,4 +124,16 @@ def product_details(request, slug):
     }
     return render (request, 'products/product_details.html', context)
 
+def remove_review(request, slug, review_id):
+    """ A view to remove product reviews """
+    
+    review = get_object_or_404(Review, pk=review_id)
+
+    if request.user == review.author:
+        review.delete()
+        messages.success(request, "Review removed.")
+    else:
+        messages.error(request, "You are not the author of this review.")
+    
+    return HttpResponseRedirect(reverse("product-details", args=[slug]))
 

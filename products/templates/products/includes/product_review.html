@@ -16,6 +16,9 @@
         <p class="fw-bold">{{ review.author }}</p>
         <p id="review{{ review.id }}">{{ review.content }}</p>
         <p class="text-muted fst-italic m-0">Created on: {{ review.created_on }}</p>
+        {% if user.is_authenticated and review.author == user %}
+            <a href="{% url 'remove-review' product.slug review.id %}" class="btn btn-sm btn-outline-danger">Delete</a>
+        {% endif %}
     </div>
 {% empty %}
     <p>No reviews yet.</p>
