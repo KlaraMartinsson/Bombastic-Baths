@@ -81,7 +81,7 @@ background-color: rgb(232, 243, 253);
 
 /* Buttons */
 .pink-white-btn {
-    padding: 11px 39px;
+    padding: 11px 20px;
     border-radius: 20px;
     border: 0;
     box-shadow: 0 0 0 1px #ea5b96;
@@ -130,7 +130,6 @@ background-color: rgb(232, 243, 253);
 .quantity-btn:hover {
     color: #fff;
     background-color: #d3437f;
-    border: 1px solid #ffffff;
 }
 
 .btn-primary:focus {
