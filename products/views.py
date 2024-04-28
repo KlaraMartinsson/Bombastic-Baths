@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.db.models.functions import Lower
 
-from .forms import RatingForm
+from .forms import RatingForm, ReviewForm
 
 from .models import Product, Category, Rating
 from wishlist.models import Wishlist
@@ -86,24 +86,39 @@ def product_details(request, slug):
         user_rating = False
 
     if request.method == "POST":
-        rating_form = RatingForm(data=request.POST)
-        if rating_form.is_valid() and request.user.is_authenticated:
-            rating = rating_form.save(commit=False)
-            rating.user = request.user
-            rating.product = product
-            rating.save()
-            messages.success(request,"Product rating submitted.")
-            return HttpResponseRedirect(reverse("product-details", args=[slug]))
-        else:
-            messages.error(request, "Error rating product. Please try again.")
+        if "rating_form" in request.POST:
+            rating_form = RatingForm(data=request.POST)
+            if rating_form.is_valid() and request.user.is_authenticated:
+                rating = rating_form.save(commit=False)
+                rating.user = request.user
+                rating.product = product
+                rating.save()
+                messages.success(request,"Product rating submitted.")
+                return HttpResponseRedirect(reverse("product-details", args=[slug]))
+            else:
+                messages.error(request, "Error rating product. Please try again.")
+        
+        if "review_form" in request.POST:
+            review_form = ReviewForm(data=request.POST)
+            if review_form.is_valid() and request.user.is_authenticated:
+                review = review_form.save(commit=False)
+                review.author = request.user
+                review.product = product
+                review.save()
+                messages.success(request, "Review submitted and awaiting approval.")
+                return HttpResponseRedirect(reverse("product-details", args=[slug]))
+            else:
+                messages.error(request, "Error submitting review")
     
     rating_form = RatingForm()
+    review_form = ReviewForm()
         
     context = {
         'product': product,
         'wishlist': wishlist,
         'rating_form': rating_form,
         'user_rating': user_rating,
+        'review_form': review_form,
     }
     return render (request, 'products/product_details.html', context)
 
