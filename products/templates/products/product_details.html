@@ -73,7 +73,7 @@
                             </h3>
                             <div id="collapseIngredients" class="accordion-collapse collapse" data-bs-parent="accordionIngredients">
                                 <div class="accordion-body">
-                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum et animi ipsum eum iusto iste quam. Dolor recusandae ipsum aperiam ducimus, eos laboriosam laborum consectetur. Ex voluptatum distinctio consequuntur minus.</p>
+                                        <p>{{ product.ingredients }}</p>
                                 </div>
                             </div>
                         </div>
@@ -106,6 +106,7 @@
 
     <div class="container my-3">
         <h4>Reviews:</h4>
+        {% include "products/includes/product_rating.html" %}
             {% if request.user.is_authenticated %}
             <form action="{% url 'product-details' product.slug %}" method="POST">
                 {% csrf_token %}

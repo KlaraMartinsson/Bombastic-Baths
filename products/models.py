@@ -31,6 +31,7 @@ class Product(models.Model):
     slug = models.SlugField(max_length=300, blank=True, editable=False, unique=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
+    ingredients = models.TextField(null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2, blank=False)
     image = models.ImageField(null=True, blank=True)
 
