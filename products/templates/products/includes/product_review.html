@@ -1,0 +1,22 @@
+{% if request.user.is_authenticated %}
+    <form method="POST" action="{% url 'product-details' product.slug %}">
+        {% csrf_token %}
+        <input type="hidden" name="review_form" value="review_form">
+        {{ review_form.content | as_crispy_field }}
+        <button class="btn btn-dark mt-3" type="submit">Submit Review</button>
+    </form>
+{% endif %}
+
+<h5 class="mt-3">Reviews</h5>
+{% for review in product_reviews %}
+    <div class="review-card mt-3">
+        {% if not review.approved and review.author == user %}
+            <p class="text-end m-0"> Review is awaiting approval.</p>
+        {% endif %}
+        <p class="fw-bold">{{ review.author }}</p>
+        <p id="review{{ review.id }}">{{ review.content }}</p>
+        <p class="text-muted fst-italic m-0">Created on: {{ review.created_on }}</p>
+    </div>
+{% empty %}
+    <p>No reviews yet.</p>
+{% endfor %}

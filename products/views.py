@@ -76,6 +76,7 @@ def product_details(request, slug):
 
     products = Product.objects.all()
     product = get_object_or_404(products, slug=slug)
+    product_reviews = product.product_reviews.all().order_by('-created_on')
     user = request.user
 
     if request.user.is_authenticated:
@@ -86,7 +87,7 @@ def product_details(request, slug):
         user_rating = False
 
     if request.method == "POST":
-        if "rating_form" in request.POST:
+        if 'rating_form' in request.POST:
             rating_form = RatingForm(data=request.POST)
             if rating_form.is_valid() and request.user.is_authenticated:
                 rating = rating_form.save(commit=False)
@@ -98,7 +99,7 @@ def product_details(request, slug):
             else:
                 messages.error(request, "Error rating product. Please try again.")
         
-        if "review_form" in request.POST:
+        if 'review_form' in request.POST:
             review_form = ReviewForm(data=request.POST)
             if review_form.is_valid() and request.user.is_authenticated:
                 review = review_form.save(commit=False)
@@ -119,6 +120,7 @@ def product_details(request, slug):
         'rating_form': rating_form,
         'user_rating': user_rating,
         'review_form': review_form,
+        'product_reviews': product_reviews,
     }
     return render (request, 'products/product_details.html', context)
 
