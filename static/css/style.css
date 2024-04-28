@@ -86,7 +86,7 @@ background-color: rgb(232, 243, 253);
 
 /* Buttons */
 .pink-white-btn {
-    padding: 11px 20px;
+    padding: 11px 30px;
     border-radius: 20px;
     border: 0;
     box-shadow: 0 0 0 1px #ea5b96;
@@ -126,17 +126,6 @@ background-color: rgb(232, 243, 253);
     color:  rgb(255, 255, 255);
 }
 
-.quantity-btn {
-    color: #fff;
-    background-color: #ea5b96;
-    border-color: #ea5b96;
-}
-
-.quantity-btn:hover {
-    color: #fff;
-    background-color: #d3437f;
-}
-
 .btn-primary:focus {
     box-shadow: 0 0 0 0.2rem  #ee77a9;
 }
@@ -146,6 +135,7 @@ background-color: rgb(232, 243, 253);
     border-color: #ea5b96;
     background-color: #ffffff;
 }
+
 
 .btn-outline-primary:hover {
     color: #ffffff;
@@ -164,9 +154,37 @@ background-color: rgb(232, 243, 253);
 .sort-btn {
     border: 1px solid #ea5b96;
     cursor: pointer;
-    background: #f8f9fa;
+    background-color: #ffffff;
     padding: 6px 18px;
     border-radius: 6px;
+    color: #ea5b96;
+}
+
+.btn-review {
+    background-color: #433b58;
+    color: #ffffff;
+    border-color: #000000;
+}
+
+.btn-review:hover {
+    background-color: #332d42;
+    color: #ffffff;
+    border-color: #000000;
+}
+
+
+.decrement-qty {
+    padding: .5rem 1rem;
+    color: #ea5b96;
+    border-color: #ea5b96;
+    background-color: #ffffff;
+}
+
+.increment-qty {
+    padding: .5rem 1rem;
+    color: #ffffff;
+    border-color: #ea5b96;
+    background-color: #ea5b96 ;
 }
 
 /* Allauth forms */

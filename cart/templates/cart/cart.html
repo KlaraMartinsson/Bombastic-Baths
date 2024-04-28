@@ -31,7 +31,7 @@
                                     <!-- <img src="{{ item.product.image.url }}" alt="product-image" class="img-fluid rounded my-2 shadow"> -->
                                 </div>
                                 <div class="col-md-9 text-start">
-                                    <h4 class="h5">{{ item.product.name }}</h4>
+                                    <h4 class="h5 product-name">{{ item.product.name }}</h4>
                                 </div>
                             </div>
                         </td>
@@ -44,19 +44,19 @@
                                         <div class="form-group">
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
-                                                    <button class="decrement-qty btn-outline-primary p-1 rounded-start" 
+                                                    <button class="decrement-qty rounded-start" 
                                                         data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
                                                         <span>
                                                             <i class="fas fa-minus fa-xs"></i>
                                                         </span>
                                                     </button>
                                                 </div>
-                                                <input class="form-control qty_input border-primary pt-1 px-2" type="number" 
+                                                <input class="form-control qty_input border-primary" type="number" 
                                                     name="quantity" value="{{item.quantity}}" min="1" max="99" 
                                                     data-item_id="{{ item.item_id }}"  
                                                     id="id_qty_{{ item.item_id }}">
                                                 <div class="input-group-append">
-                                                    <button class="increment-qty quantity-btn p-1 rounded-end"
+                                                    <button class="increment-qty rounded-end"
                                                         data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
                                                         <span>
                                                             <i class="fas fa-plus fa-xs"></i>
@@ -68,7 +68,6 @@
                                     </td>
                                 </form>
                             </div>
-                                
                             <div class="col-sm-6 col-12">
                                 <td>
                                     <div class="ms-2">
@@ -99,7 +98,7 @@
         </div>
         <div class="row mt-4 d-flex">
             <div class="col-6">
-                <a href="{% url 'products' %}"><i class="fa-solid fa-left-long fa-lg" style="color: #ea5b96;"></i>  Continue Shopping</a>
+                <a href="{% url 'products' %}" class="fs-5"><i class="fa-solid fa-left-long fa-lg" style="color: #ea5b96;"></i>  Continue Shopping</a>
             </div>
             <div class="col-6 text-end">
                 <a href="{% url 'checkout' %}" class="pink-white-btn">Checkout</a>

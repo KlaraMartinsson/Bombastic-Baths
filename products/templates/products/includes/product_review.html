@@ -4,11 +4,11 @@
             {% csrf_token %}
             <input type="hidden" name="review_form" value="review_form">
             <textarea type="text" id="content" name="content" rows="5" cols="200" class="form-control mb-3">{{ review.content | safe }}</textarea>
-            <button class="btn btn-dark" type="submit" id="submitButton">Submit Review</button>
+            <button class="btn btn-review" type="submit" id="submitButton">Submit Review <i class="fa-solid fa-pen"></i></button>
         </form>
     {% endif %}
-
-    <h5 class="mt-4 pink-text">Reviews</h5>
+    <hr>
+    <h5 class="mt-4 pink-text h4">Reviews</h5>
     {% for review in product_reviews %}
         <div class="review-card rounded mt-3">
             {% if not review.approved and review.author == user %}
