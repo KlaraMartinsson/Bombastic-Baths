@@ -13,3 +13,7 @@ urlpatterns = [
     path('wishlist/', include('wishlist.urls')),
 ]
 
+handler403 = 'home.views.custom_403'
+handler404 = 'home.views.custom_404'
+handler405 = 'home.views.custom_405'
+handler500 = 'home.views.custom_500'

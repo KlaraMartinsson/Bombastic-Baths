@@ -7,9 +7,9 @@
     </form>
 {% endif %}
 
-<h5 class="mt-3">Reviews</h5>
+<h5 class="mt-3 pink-text">Reviews</h5>
 {% for review in product_reviews %}
-    <div class="review-card mt-3">
+    <div class="review-card rounded mt-3">
         {% if not review.approved and review.author == user %}
             <p class="text-end m-0"> Review is awaiting approval.</p>
         {% endif %}

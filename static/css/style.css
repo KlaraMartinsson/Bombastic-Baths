@@ -28,6 +28,11 @@ a i {
 .search-form {
     width: 50%;
 }
+
+.pink-text {
+    color: #ea5b96;
+}
+
 /* Mailchimp */
 #mc_embed_signup {
     clear:left; 
@@ -207,15 +212,6 @@ background-color: rgb(232, 243, 253);
 
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.bg-pink {
-    background-color: #ea5b96;
-    color: white;
-}
-
-.pink-text {
-    color: #ea5b96;
 }
 
 .review-card {
