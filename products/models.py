@@ -69,9 +69,27 @@ class Product(models.Model):
 
 
 class Rating(models.Model):
+    """ Model for product ratings by users """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     rating = models.FloatField(validators=[MinValueValidator(1), MaxValueValidator(5)])
 
     def __str__(self):
         return f"{self.user} gave {self.product} a {self.rating} star rating"
+    
+class Review(models.Model):
+    """ Model for product reviews by users """
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="product_reviewer")
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name="product_reviews")
+    content = models.TextField(max_length=500, blank=True)
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
+    approved = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ["-created_on"]
+
+    def __str__(self):
+        return f"{self.author}'s review on {self.product}"
