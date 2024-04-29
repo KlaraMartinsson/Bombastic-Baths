@@ -55,3 +55,8 @@ All Python files has passed through validation using [PEP 8](https://pep8ci.hero
 |apps.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/products-apps.py-validation.jpg)</details>| ✅
 |forms.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/products-forms.py-validation.jpg)</details>| ✅
 |admin.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/products-admin.py-validation.jpg)</details>| ✅
+| **Cart App** |
+|views.py| All clear, no errors found  | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/cart-views.py-validation.jpg)</details>| ✅
+|urls.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/cart-urls.py-validation.jpg)</details>| ✅
+|apps.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/cart-apps.py-validation.jpg)</details>| ✅
+|contexts.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/cart-contexts.py-validation.jpg)</details>| ✅
