@@ -18,7 +18,6 @@
             <thead>
                 <tr>
                     <th>Product Name:</th>
-                    <th>Description:</th>
                     <th>Price:</th>
                     <th>Delete:</th>
                 </tr>
@@ -26,7 +25,6 @@
             <tbody>
                 <tr>
                     <td><p><a href="{% url 'product-details' product.slug %}" aria-label="View product details">{{ product.name }}</a></p></td>
-                    <td><p>{{ product.description }}</p></td>
                     <td><p>Price: {{ product.price }}</p></td>
                     <td><a href="{% url 'remove_from_wishlist' product.slug %}" class="btn border-secondary" aria-label="Remove from wishlist"><i class="fas fa-trash fa-sm"></i></a></td>
                 </tr>
@@ -36,7 +34,9 @@
     {% empty %}
         <p>Your wishlist is empty.</p>
     {% endfor %}
-    <div class="col-12"><a href="{% url 'products' %}" aria-label="View products page><i class="fa-solid fa-left-long fa-lg me-2" style="color: #ea5b96;"></i> Back to Products</a>
+    <div class="col-12">
+        <a href="{% url 'products' %}" aria-label="View products page"><i class="fa-solid fa-left-long fa-lg me-2" style="color: #ea5b96;"></i> Back to Products</a>
+    </div>
 </div>
 <!-- wishlist.html content ends here -->
 {% endblock %}

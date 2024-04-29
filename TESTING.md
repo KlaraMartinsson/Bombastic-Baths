@@ -17,6 +17,10 @@
 |cart.html| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/cart-validation.jpg)</details>| ✅
 | **Checkout App** |
 |checkout.html| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/checkout-validation.jpg)</details>| ✅
+| **Profile App** |
+|profile.html| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/profile-validation.jpg)</details>| ✅
+| **Wishlist App** |
+|wishlist.html| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/wishlist-validation.jpg)</details>| ✅
 
 
 

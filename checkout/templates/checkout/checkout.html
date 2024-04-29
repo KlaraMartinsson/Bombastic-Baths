@@ -6,6 +6,7 @@
 {% endblock %}
 
 {% block content %}
+<!--Checkout.html starts here-->
 <div class="container">
     <div class="row">
         <div class="col-12">
@@ -37,7 +38,7 @@
                             <input class="form-check-input" type="checkbox" id="id-save-info" name="save-info" checked>
                         {% else %}
                             <label class="form-check-label" for="id-save-info">
-                                <a class="text-info" href="{% url 'account_signup' %}" aria-label="Create account">Create an account</a> or 
+                                <a class="text-info" href="{% url 'account_signup' %}" aria-label="Create account">Create an account</a> or
                                 <a class="text-info" href="{% url 'account_login' %}" aria-label="Login">login</a> to save this information
                             </label>
                         {% endif %}
@@ -70,7 +71,7 @@
             {% for item in cart_items %}
                 <div class="row">
                     <div class="col-3">
-                        <a href="{url 'product_detail' item.product.id %}" aria-label="View products details">
+                        <a href="{% url 'product-details' item.product.id %}" aria-label="View products details">
                             <div class="position-relative mb-4">
                                 {% if item.product.image %}
                                 <img src="{{ item.product.image.url }}" alt="{{product.name}}" class="img-fluid shadow">
@@ -118,6 +119,7 @@
         </span>
     </div>
 </div>
+<!--Checkout.html ends here-->
 {% endblock %}
 
 {% block postloadjs %}
