@@ -25,42 +25,42 @@ Welcome to Bombastic Baths! Dive into a world of luxurious bath bombs, meticulou
 </div>
 
 ### Project Goals
-The goals for the project is to create an engaging and user-friendly ecommerce platform for selling bath bombs. To provide customers with a wide range of bath bomb products to choose from. Ensure seamless browsing, shopping, and checkout experiences for users. Implement effective marketing strategies and optimize the website for search engines to attract and retain customers. 
+The goals for the project is to create an engaging and user-friendly e-commerce platform for selling bath bombs. To provide customers with a wide range of bath bomb products to choose from. Ensure seamless browsing, shopping, and checkout experiences for users. Implement effective marketing strategies and optimize the website for search engines to attract and retain customers. 
 
 ### User Goals
-The users goals is to find bath bombs in various scents and designs. Enjoy a smooth and hassle-free shopping experience. Be able to easily navigate the website to discover new products and promotions. Access detailed product information, including ingredients and price. Being able to easily put thing in their wishlist for future purschasing. Receive succesful or unsuccesful confirmation messages when an action has been made. For example when a purschase has been made or a product have been added to the wishlist. Have access to secure and convenient payment options. Benefit from discounts by registrating on the newspaper. 
+The users goals is to find bath bombs in various scents and designs. Enjoy a smooth and hassle-free shopping experience. Be able to easily navigate the website to discover new products and promotions. Access detailed product information, including ingredients and price. Being able to easily put thing in their wishlist for future purchasing. Receive successful or unsuccessful confirmation messages when an action has been made. For example when a purchase has been made or a product have been added to the wishlist. Have access to secure and convenient payment options. Benefit from discounts by registration for the newspaper. 
 
 ### Site Owner Goals
 The site owner or product owners goals is to drive traffic to the website and increase conversion rates. Offer a diverse range of bath bomb products to cater to different preferences. Maintain an attractive and user-friendly website design.
 Implement effective marketing strategies to promote products and engage customers.
-Be able to manage the products on the website, add new ones, update them or delete them. Also to have controll over user account for safety reasons. 
+Be able to manage the products on the website, add new ones, update them or delete them. Also to have control over user account for safety reasons. 
 
 # User Experience (UX)
 
 ### Target Audience
-There is diffrent type of customers that would be willing to engage in the website, for example:
-1. Skincare Enthusiasts: Individuals who are passionate about skincare products, including bath bombs with diffrent kinds of benefits.
+There is different type of customers that would be willing to engage in the website, for example:
+1. Skincare Enthusiasts: Individuals who are passionate about skincare products, including bath bombs with different kinds of benefits.
 
 2. Wellness Seekers: People who are focused on self-care and wellness, who appreciate the therapeutic benefits of bath bombs and enjoy a relaxing bath.
 
 3. Gift Shoppers: Individuals looking for unique and luxurious gifts for friends, family, or colleagues, such as gift baskets with bath bombs.
 
-4. Environmentally Conscious Consumers: Eco-friendly individuals who prioritize natural and simple ingridients, vegan friendly options and products against animal testing.
+4. Environmentally Conscious Consumers: Eco-friendly individuals who prioritize natural and simple ingredients, vegan friendly options and products against animal testing.
 
-5. Young inviduals who find bath bombs fun and exciting. Who are drawn to vibrant colors, playful shapes, and delightful scents, making bath time an enjoyable experience. They appreciate products that add a touch of magic to their daily routines and seek out bath bombs that promise an element of surprise and delight.
+5. Young individuals who find bath bombs fun and exciting. Who are drawn to vibrant colors, playful shapes, and delightful scents, making bath time an enjoyable experience. They appreciate products that add a touch of magic to their daily routines and seek out bath bombs that promise an element of surprise and delight.
 
 ### First Time Users
-For all of the first time users, we want the website to be easily discovered and that they get to learn all about Bombastic Baths products. They should have a smooth checkout process, making it easy for them to feel satisfied with their transaction. It schould also be a user-friendly registration for users who want to sign up for an account to access features like wishlists, orders, and exclusive offers.
+For all of the first time users, we want the website to be easily discovered and that they get to learn all about Bombastic Baths products. They should have a smooth checkout process, making it easy for them to feel satisfied with their transaction. It should also be a user-friendly registration for users who want to sign up for an account to access features like wishlists, orders, and exclusive offers.
 
-### Returning visitiors
-The goals is to make visitors wanting to return to the website. To achive this we have implemented a newsletter registration where users can get exclusive offers and updates. We also make it easy to access features that get users involved like a wishlist, account settings and order history. A feature implementation will be personalized recommendations based on their past purchases and browsing history so that the user will be getting inspiration and be willing to go back to the store.
+### Returning visitors
+The goals is to make visitors wanting to return to the website. To achieve this we have implemented a newsletter registration where users can get exclusive offers and updates. We also make it easy to access features that get users involved like a wishlist, account settings and order history. A feature implementation will be personalized recommendations based on their past purchases and browsing history so that the user will be getting inspiration and be willing to go back to the store.
 
-The site provides a good solution to the first time user’s  and returning visitiors demands and expectations.
+The site provides a good solution to the first time user’s  and returning visitors demands and expectations.
 
 # Methodology
 
 ### Agile Project Management with GitHub Projects and GitHub Issues
-Agile Methodology have been worked at through the project with Githubs project and issues feature. Githubs project board are serving a nice visual representaion for tracking the progress. Githubs issue feature have been used to represent respective user story, their acceptance criteria, tasks and labels for prioritising. Each user story has their own label using the MoSCoW priotisation of Must Have, Should Have, Could Have and Won't Have. Every user story is also implemented in diffrent Epics Bugs, they are also documented as issues to keep track of and resolve.
+Agile Methodology have been worked at through the project with Githubs project and issues feature. Githubs project board are serving a nice visual representation for tracking the progress. Githubs issue feature have been used to represent respective user story, their acceptance criteria, tasks and labels for prioritizing. Each user story has their own label using the MoSCoW prioritizing of Must Have, Should Have, Could Have and Won't Have. Every user story is also implemented in different Epics Bugs, they are also documented as issues to keep track of and resolve.
 
 To view the projects progress, user stories and bugs, see the [Kanban board](https://github.com/users/KlaraMartinsson/projects/5)
 
@@ -97,7 +97,7 @@ This epic focuses on making the website's first impression captivating and easy 
 - [USER STORY: Gift Kits](https://github.com/KlaraMartinsson/bombastic-baths/issues/43)
 
 ### [Epic 2: User Interaction and Engagement](https://github.com/KlaraMartinsson/bombastic-baths/issues/2) :computer:
-This epic focusing on the interaction and engagement for users. Such as registrate for an account, handle their personal page and leave reviews.
+This epic focusing on the interaction and engagement for users. Such as register for an account, handle their personal page and leave reviews.
 
 - [USER STORY: User Registration](https://github.com/KlaraMartinsson/bombastic-baths/issues/12)
 - [USER STORY: Easy User Login and Logout](https://github.com/KlaraMartinsson/bombastic-baths/issues/13)
@@ -132,14 +132,14 @@ This epic introduces comprehensive functionalities, granting site/store owners f
 - [USER STORY: Testing](https://github.com/KlaraMartinsson/bombastic-baths/issues/28)
 
 ### [Epic 6: SEO and Web Marketing](https://github.com/KlaraMartinsson/bombastic-baths/issues/37) :globe_with_meridians:
-This epic delves into strategies for maximizing website visibility in web searches. Includes utilize Search Engine Optimization (SEO) and diffrent marketing strategies.
+This epic delves into strategies for maximizing website visibility in web searches. Includes utilize Search Engine Optimization (SEO) and different marketing strategies.
 
 - [USER STORY: Newsletter Marketing](https://github.com/KlaraMartinsson/bombastic-baths/issues/34)
 - [USER STORY: Optimize Website for Search Engines](https://github.com/KlaraMartinsson/bombastic-baths/issues/36)
 - [USER STORY: Social Media Marketing](https://github.com/KlaraMartinsson/bombastic-baths/issues/38)
 - [USER STORY: Influencer Marketing](https://github.com/KlaraMartinsson/bombastic-baths/issues/39)
 
-# Buisness and Marketing Plan
+# Business and Marketing Plan
 
 ### Business Model
 
@@ -161,7 +161,7 @@ While designing the e-commerce platform, a core focus was placed on creating a u
 
 ### User Control
 
-The user should always get a positive emotional response when interacting with the website. To make this happend the website has a clear layout, easy and unambiguous navigation structures and all interaction feedback, using colours and confirmation messages. Other things that we keept in mind are:
+The user should always get a positive emotional response when interacting with the website. To make this happen the website has a clear layout, easy and unambiguous navigation structures and all interaction feedback, using colours and confirmation messages. Other things that we keept in mind are:
 
 - The user is shown progress indicators and feedback on transactions.
 
@@ -328,7 +328,7 @@ Some future adaptations the website could have are:
 
 - Another future enhancement for the website would involve collaborating with influencers to amplify our marketing efforts.
 
-- Create an option for customers to subscribe for monthly bathbombs.
+- Create an option for customers to subscribe for monthly bath bombs.
 
 - Have a LiveChat so that users can quickly resolve any queries or issues.
 
@@ -425,4 +425,4 @@ All User Stories can be found [Here](https://github.com/users/KlaraMartinsson/pr
 
 ### Code used
 
-### Acknowledgementes
+### Acknowledgements
