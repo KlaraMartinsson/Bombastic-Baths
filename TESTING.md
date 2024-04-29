@@ -21,6 +21,14 @@
 |profile.html| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/profile-validation.jpg)</details>| ✅
 | **Wishlist App** |
 |wishlist.html| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/wishlist-validation.jpg)</details>| ✅
+| **Signup HTML** |
+|signup.html| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/signup-validation.jpg)</details>| ✅
+| **Login HTML** |
+|login.html| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/login-validation.jpg)</details>| ✅
+| **Logout HTML** |
+|logout.html| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/logout-validation.jpg)</details>| ✅
+
+
 
 
 

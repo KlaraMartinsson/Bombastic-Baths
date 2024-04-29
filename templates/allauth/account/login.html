@@ -5,11 +5,11 @@
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block inner_content %}
-
+<!-- Login.html starts here -->
 <h2>{% trans "Sign In" %}</h2>
 <p>{% blocktrans %} Welcome back to Bombastic Baths.</p>
 <p>If you have not created an account yet, then please
-<a href="{{ signup_url }}" aria-label="Sign up><span class="pink-text">sign up</span></a> first.{% endblocktrans %}</p>
+<a href="{{ signup_url }}" aria-label="Sign up"><span class="pink-text">sign up</span></a> first.{% endblocktrans %}</p>
 <form class="login" method="POST" action="{% url 'account_login' %}">
     {% csrf_token %}
     {{ form.as_p }}
@@ -21,5 +21,5 @@
         <a class="button secondaryAction text-muted" href="{% url 'account_reset_password' %}" aria-label="Forgot password">{% trans "Forgot Password?" %}</a>
     </p>
 </form>
-
+<!-- Login.html ends here -->
 {% endblock %}
