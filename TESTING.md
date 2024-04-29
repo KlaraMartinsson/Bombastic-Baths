@@ -18,6 +18,7 @@ All HTML code has passed through validation using W3 Markup Validator and shows 
 |cart.html| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/cart-validation.jpg)</details>| ✅
 | **Checkout App** |
 |checkout.html| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/checkout-validation.jpg)</details>| ✅
+|checkout_success.html| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/checkout-success-validation.jpg)</details>| ✅
 | **Profile App** |
 |profile.html| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/profile-validation.jpg)</details>| ✅
 | **Wishlist App** |
@@ -60,3 +61,12 @@ All Python files has passed through validation using [PEP 8](https://pep8ci.hero
 |urls.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/cart-urls.py-validation.jpg)</details>| ✅
 |apps.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/cart-apps.py-validation.jpg)</details>| ✅
 |contexts.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/cart-contexts.py-validation.jpg)</details>| ✅
+| **Checkout App** |
+|models.py| All clear, no errors found  | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/checkout-models.py-validation.jpg)</details>| ✅
+|views.py| All clear, no errors found  | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/checkout-views.py-validation.jpg)</details>| ✅
+|urls.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/checkout-urls.py-validation.jpg)</details>| ✅
+|apps.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/checkout-apps.py-validation.jpg)</details>| ✅
+|signals.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/checkout-signals.py-validation.jpg)</details>| ✅
+|admin.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/checkout-admin.py-validation.jpg)</details>| ✅
+|forms.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/checkout-forms.py-validation.jpg)</details>| ✅
+

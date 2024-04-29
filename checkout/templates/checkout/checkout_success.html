@@ -6,6 +6,7 @@
 {% endblock %}
 
 {% block content %}
+<!--Checkout_success.html starts here-->
 <div class="container">
     <div class="row">
         <div class="col">
@@ -26,7 +27,7 @@
                         </div>
                     </div>
                     <div class="col-3">
-                        <a href="{url 'product_detail' item.product.id %}" aria-label="View products details">
+                        <a href="{% url 'product-details' item.product.id %}" aria-label="View products details">
                             <div class="position-relative mb-4 mt-2">
                                 {% if item.product.image %}
                                 <!--<img src="{{ item.product.image.url }}" alt="{{product.name}}" class="img-fluid shadow">-->
@@ -90,4 +91,5 @@
         </div>
     </div>
 </div>
+<!--Checkout_success.html ends here-->
 {% endblock %}
