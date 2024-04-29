@@ -287,16 +287,6 @@ Wireframes where made at [Balsamiq](https://balsamiq.com/)
 </details>
 
 <details>
-<summary>Bath Bombs page</summary>
-<img src="documentation/wireframes/bathbombs-wireframe.png">
-</details>
-
-<details>
-<summary>Gifts page</summary>
-<img src="documentation/wireframes/gifts-wireframe.png">
-</details>
-
-<details>
 <summary>Profile page</summary>
 <img src="placeholder">
 </details>
@@ -424,7 +414,7 @@ Some future adaptations the website could have are:
 # Technologies Used
 
 ### Languages
- - Python
+- Python
 - HTML5
 - CSS3
 - Django Template Language

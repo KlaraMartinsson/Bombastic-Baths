@@ -69,7 +69,8 @@ a i {
 }
 
 .section-visions {
-background-color: rgb(232, 243, 253);
+    background-color: rgb(232, 243, 253);
+    padding: 12px;
 }
 
 
