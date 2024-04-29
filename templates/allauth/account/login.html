@@ -9,7 +9,7 @@
 <h2>{% trans "Sign In" %}</h2>
 <p>{% blocktrans %} Welcome back to Bombastic Baths.</p>
 <p>If you have not created an account yet, then please
-<a href="{{ signup_url }}"><span class="pink-text">sign up</span></a> first.{% endblocktrans %}</p>
+<a href="{{ signup_url }}" aria-label="Sign up><span class="pink-text">sign up</span></a> first.{% endblocktrans %}</p>
 <form class="login" method="POST" action="{% url 'account_login' %}">
     {% csrf_token %}
     {{ form.as_p }}
@@ -18,7 +18,7 @@
     {% endif %}
     <button class="primaryAction btn pink-btn" type="submit">{% trans "Sign In" %}</button>
     <p class="mt-4">
-        <a class="button secondaryAction text-muted" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+        <a class="button secondaryAction text-muted" href="{% url 'account_reset_password' %}" aria-label="Forgot password">{% trans "Forgot Password?" %}</a>
     </p>
 </form>
 

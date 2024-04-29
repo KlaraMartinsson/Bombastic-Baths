@@ -16,15 +16,15 @@
     <ul class="nav nav-pills my-3 justify-content-center gap-3" id="pills-tab" role="tablist">
         <li class="nav-item" role="presentation">
             <a class="btn active btn-dark" id="pills-profile-tab" data-bs-toggle="pill" href="#pills-details"
-            role="tab" aria-controls="pills-details" aria-selected="true">Address</a>
+            role="tab" aria-controls="pills-details" aria-selected="true" aria-label="Your address">Address</a>
         </li>
         <li class="nav-item" role="presentation">
             <a class="btn btn-dark" id="pills-orders-tab" data-bs-toggle="pill" href="#pills-orders" role="tab"
-            aria-controls="pills-orders" aria-selected="false">Orders</a>
+            aria-controls="pills-orders" aria-selected="false" aria-label="Your orders">Orders</a>
         </li>
         <li class="nav-item" role="presentation">
             <a class="btn btn-dark" id="pills-delete-tab" data-bs-toggle="pill" href="#pills-delete" role="tab"
-            aria-controls="pills-delete" aria-selected="false">Delete Account</a>
+            aria-controls="pills-delete" aria-selected="false" aria-label="Delete your account">Delete Account</a>
         </li>
     </ul>
     <div class="tab-content" id="pills-tabContent">
@@ -54,7 +54,7 @@
                             <tr>
                                 <td>
                                     <a href="{% url 'order_history' order.order_number %}"
-                                    title="{{ order.order_number }}">
+                                    title="{{ order.order_number }}" aria-label="View order">
                                         {{ order.order_number|truncatechars:6 }}
                                     </a>
                                 </td>

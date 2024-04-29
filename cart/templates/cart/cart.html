@@ -61,7 +61,7 @@
                                                     </div>
                                                     <div class="mt-3 text-center">
                                                         <button type="submit" class="btn border-secondary mb-2"><i class="fas fa-sync"></i></button>
-                                                        <a href="{% url 'remove_from_cart' item.item_id %}" class="btn border-secondary mb-2" type="button"><i class="fas fa-trash"></i></a>
+                                                        <a href="{% url 'remove_from_cart' item.item_id %}" class="btn border-secondary mb-2" type="button" aria-label="Remove product from cart"><i class="fas fa-trash"></i></a>
                                                     </div>
                                                 </form>
                                             </div>
@@ -77,17 +77,17 @@
         {% endfor %}
         <div class="row mt-4 d-flex">
             <div class="col-6">
-                <a href="{% url 'products' %}" class="fs-5"><i class="fa-solid fa-left-long fa-lg" style="color: #ea5b96;"></i>  Continue Shopping</a>
+                <a href="{% url 'products' %}" class="fs-5" aria-label="View Products"><i class="fa-solid fa-left-long fa-lg" style="color: #ea5b96;"></i>  Continue Shopping</a>
             </div>
             <div class="col-6 text-end">
-                <a href="{% url 'checkout' %}" class="pink-white-btn">Checkout</a>
+                <a href="{% url 'checkout' %}" class="pink-white-btn" aria-label="Go to checkout page">Checkout</a>
             </div>
         </div>
         {% else %}
         <div class="col-12">
             <h3 class="display-5 mb-2 text-center">Shopping Cart</h3>
             <p class="text-center">Your cart is empty.</p>
-            <a href="{% url 'products' %}"><i class="fa-solid fa-left-long fa-lg me-2" style="color: #ea5b96;"></i> Continue Shopping</a>
+            <a href="{% url 'products' %}" aria-label="View Products"><i class="fa-solid fa-left-long fa-lg me-2" style="color: #ea5b96;"></i> Continue Shopping</a>
         </div>
         {% endif %}
     </div>
@@ -101,7 +101,7 @@
                 <div class="col mb-5 product-section">
                     <div class="card h-100">
                         <i class="fa-regular fa-heart fa-2xl p-4"></i>
-                        <a href="{% url 'product-details' product.slug %}">
+                        <a href="{% url 'product-details' product.slug %}" aria-label="Product image">
                             {% if product.image %}
                                 <!--<img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">-->
                             {% else %}
@@ -115,7 +115,7 @@
                             </div>
                         </div>
                         <div class="p-4 bg-light d-flex justify-content-center">
-                            <a href="{% url 'product-details' product.slug %}"><button class="pink-white-btn">More Info</button></a>
+                            <a href="{% url 'product-details' product.slug %}" aria-label="Get more info about product"><button class="pink-white-btn">More Info</button></a>
                         </div>
                     </div>
                 </div>

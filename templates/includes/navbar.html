@@ -4,7 +4,7 @@
    <div class="navbar">
         <div class="container-fluid d-flex flex-column flex-xl-row justify-content-between">
             <div class="d-flex align-items-center mb-2 mb-md-0">
-                <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/logotype.png' %}" class="logo" alt="logo"></a>
+                <a class="navbar-brand" href="{% url 'home' %}" aria-label="View home page"><img src="{% static 'images/logotype.png' %}" class="logo" alt="logo"></a>
             </div>
             <form method="GET" action="{% url 'products' %}" class="d-flex search-form ms-3 mb-2 flex-md-row">
                 <input class="form-control me-2" name="q" type="text" placeholder="Search" aria-label="Search">
@@ -14,23 +14,23 @@
             </form>
             <div class="d-flex align-items-center" id="nav-icons">
                 <div class="dropdown">
-                    <a href="#" role="button" id="user-options" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a href="#" role="button" id="user-options" data-bs-toggle="dropdown" aria-expanded="false" aria-label="View account options">
                         <i class="fa-regular fa-face-smile fa-2xl p-3"></i>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="user-options">
                     {% if request.user.is_authenticated %}
-                        <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
-                        <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="dropdown-item" href="{% url 'profile' %}" aria-label="View profile page">Profile</a>
+                        <a class="dropdown-item" href="{% url 'account_logout' %}" aria-label="View logout page">Logout</a>
                     {% else %}
-                        <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
-                        <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
+                        <a class="dropdown-item" href="{% url 'account_signup' %}" aria-label="View register page">Register</a>
+                        <a class="dropdown-item" href="{% url 'account_login' %}" aria-label="View login page">Login</a>
                     {% endif %}
                     </div>
                 </div>
-                <a href="{% url 'view_wishlist' %}">
+                <a href="{% url 'view_wishlist' %}" aria-label="View wishlist page">
                     <i class="fa-regular fa-heart fa-2xl p-3"></i>
                 </a>
-                <a href="{% url 'cart' %}">
+                <a href="{% url 'cart' %}" aria-label="View shopping cart">
                     <i class="fa-solid fa-cart-shopping fa-2xl p-3"></i>
                     <span class="badge bg-dark text-white rounded-pill total-cost-pill">
                         {% if grand_total %}
@@ -51,34 +51,34 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
                 <ul class="navbar-nav justify-content-between">
                     <li class="nav-item">
-                        <a class="nav-link fs-4 me-5 text-black" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link fs-4 me-5 text-black" href="{% url 'home' %}" aria-label="View home page">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link fs-4 me-5 dropdown-toggle text-black" href="{% url 'products' %}" id="all-product-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">All Products</a>
+                        <a class="nav-link fs-4 me-5 dropdown-toggle text-black" href="{% url 'products' %}" id="all-product-link" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="View products categories">All Products</a>
                         <ul class="dropdown-menu border-0" aria-labelledby="all-product-link">
-                            <li><a href="{% url 'products' %}" class="dropdown-item">All Products</a></li>
-                            <li><a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a></li>
-                            <li><a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a></li>
+                            <li><a href="{% url 'products' %}" class="dropdown-item" aria-label="View all products page">All Products</a></li>
+                            <li><a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item" aria-label="View products page sort by price">By Price</a></li>
+                            <li><a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item" aria-label="View products page sort by rating">By Rating</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle fs-4 me-5 text-black" href="#" id="all-bathbombs-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle fs-4 me-5 text-black" href="#" id="all-bathbombs-link" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="View bath bombs categories">
                             Bath Bombs 
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="all-bathbombs-link">
-                            <li><a class="dropdown-item" href="{% url 'products' %}?category=relax">Relax</a></li>
-                            <li><a class="dropdown-item" href="{% url 'products' %}?category=energize">Energize</a></li>
-                            <li><a class="dropdown-item" href="{% url 'products' %}?category=moisturize">Moisturize</a></li>
-                            <li><a class="dropdown-item" href="{% url 'products' %}?category=colourful">Colourful</a></li>
-                            <li><a class="dropdown-item" href="{% url 'products' %}?category=holidaytheme">Holiday Theme</a></li>
-                            <li><a class="dropdown-item" href="{% url 'products' %}?category=withsurprise">With Surprise</a></li>
+                            <li><a class="dropdown-item" href="{% url 'products' %}?category=relax" aria-label="View relax bath bombs">Relax</a></li>
+                            <li><a class="dropdown-item" href="{% url 'products' %}?category=energize" aria-label="View energize bath bombs">Energize</a></li>
+                            <li><a class="dropdown-item" href="{% url 'products' %}?category=moisturize" aria-label="View moisturize bath bombs">Moisturize</a></li>
+                            <li><a class="dropdown-item" href="{% url 'products' %}?category=colourful" aria-label="View colourful bath bombs">Colourful</a></li>
+                            <li><a class="dropdown-item" href="{% url 'products' %}?category=holidaytheme" aria-label="View holiday themed bath bombs">Holiday Theme</a></li>
+                            <li><a class="dropdown-item" href="{% url 'products' %}?category=withsurprise" aria-label="View bath bombs with surprise">With Surprise</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-4 me-5 text-black" href="{% url 'products' %}?category=gifts">Gifts</a>
+                        <a class="nav-link fs-4 me-5 text-black" href="{% url 'products' %}?category=gifts" aria-label="View gift bath bombs">Gifts</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-4 me-5 text-black" href="{% url 'ourstory' %}">Our Story</a>
+                        <a class="nav-link fs-4 me-5 text-black" href="{% url 'ourstory' %}" aria-label="View about page">Our Story</a>
                     </li>
                 </ul>
             </div>

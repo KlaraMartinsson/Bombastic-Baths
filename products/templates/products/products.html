@@ -55,7 +55,7 @@
                             <div><i class="fa-regular fa-heart fa-xl"></i></div>
                         </a>
                         {% endif %}
-                        <a href="{% url 'product-details' product.slug %}">
+                        <a href="{% url 'product-details' product.slug %}" aria-label="View product">
                             {% if product.image %}
                                <!-- <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}"> -->
                             {% else %}
@@ -70,7 +70,7 @@
                             </div>
                         </div>
                         <div class="p-4 bg-light d-flex justify-content-center">
-                            <a href="{% url 'product-details' product.slug %}"><button class="pink-white-btn">More Info</button></a>
+                            <a href="{% url 'product-details' product.slug %}" aria-label="View product details"><button class="pink-white-btn">More Info</button></a>
                         </div>
                     </div>
                 </div>

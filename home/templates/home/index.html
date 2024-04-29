@@ -15,21 +15,21 @@
                 <div class="carousel-caption">
                     <h4>Your'e The Bomb!</h4>
                     <p class="fs-5">Get yourself a well deserved bath!</p>
-                    <a href="{% url 'products' %}"><button class="pink-white-btn my-2">Shop Now</button></a>
+                    <a href="{% url 'products' %}" aria-label="View products"><button class="pink-white-btn my-2">Shop Now</button></a>
                 </div>
             </div>
             <div class="carousel-item hero2">
                 <div class="carousel-caption">
                     <h4>Your Friends & Family Are The Bomb!</h4>
                     <p class="fs-5">Get them a gift they deserve!</p>
-                    <a href="{% url 'products' %}?category=gifts"><button class="pink-white-btn my-2">Shop Gifts</button></a>
+                    <a href="{% url 'products' %}?category=gifts" aria-label="View gifts"><button class="pink-white-btn my-2">Shop Gifts</button></a>
                 </div>
             </div>
             <div class="carousel-item hero3">
                 <div class="carousel-caption">
                     <h4>We Are The Bomb!</h4>
                     <p class="fs-5">Read more about us and our bathbombs!</p>
-                    <a href="{% url 'ourstory' %}"><button class="pink-white-btn my-2">About Us</button></a>
+                    <a href="{% url 'ourstory' %}" aria-label="View about us page"><button class="pink-white-btn my-2">About Us</button></a>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carousel-header" data-bs-slide="prev">
@@ -46,7 +46,7 @@
 
 <section class="mt-3 section-visions">
     <div class="container">
-        <a href="{% url 'ourstory' %} ">
+        <a href="{% url 'ourstory' %}" aria-label="View about us page">
             <div class="row gx-3 gy-2">
                 <div class="col-md-3 col-6">
                     <p>HOMEMADE</p>
@@ -70,17 +70,17 @@
     <div class="container">
         <div class="row my-4">
            <div class="col-md-4 mb-3">
-            <a href="/products/flowerbomb-05ERQ7/">
+            <a href="/products/flowerbomb-05ERQ7/" aria-label="View product">
                 <img src="static/images/bathbomb_flower.jpg" class="img-fluid" alt="Image 1">
             </a>
            </div>
            <div class="col-md-4 mb-3">
-            <a href="/products/watermelon-suger-TKXXSB/">
+            <a href="/products/watermelon-suger-TKXXSB/" aria-label="View product">
                 <img src="static/images/bathbomb_watermelon.jpg" class="img-fluid" alt="Image 2">
             </a>
            </div>
            <div class="col-md-4 mb-3">
-            <a href="/products/rainbow-flow-LDGMEG/">
+            <a href="/products/rainbow-flow-LDGMEG/" aria-label="View product">
                 <img src="static/images/bathbomb_rainbow.jpg" class="img-fluid" alt="Image 3">
             </a>
            </div>

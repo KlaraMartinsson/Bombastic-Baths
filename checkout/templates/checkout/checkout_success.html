@@ -26,7 +26,7 @@
                         </div>
                     </div>
                     <div class="col-3">
-                        <a href="{url 'product_detail' item.product.id %}">
+                        <a href="{url 'product_detail' item.product.id %}" aria-label="View products details">
                             <div class="position-relative mb-4 mt-2">
                                 {% if item.product.image %}
                                 <!--<img src="{{ item.product.image.url }}" alt="{{product.name}}" class="img-fluid shadow">-->
@@ -83,7 +83,7 @@
     <div class="row">
         <div class="col-12 col-lg-7 text-right">
             {% if from_profile %}
-                <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
+                <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2" aria-label="Go back to profile">
                     <span class="fs-5"><i class="fa-solid fa-left-long fa-lg" style="color: #ea5b96;"></i> Back to Profile</span>
                 </a>
             {% endif %}

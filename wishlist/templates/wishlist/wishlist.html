@@ -8,7 +8,7 @@
     <p class="text-center">Here are the products you have saved for later.</p>
     {% if wishlist.products.all|length > 0 %}
     <div class="col-12 d-flex justify-content-center">
-        <a class="text-center btn pink-btn"href="{% url 'clear_wishlist' %}">Clear Wishlist</a>
+        <a class="text-center btn pink-btn" href="{% url 'clear_wishlist' %}" aria-label="Clear wishlist">Clear Wishlist</a>
     </div>
     {% endif %}
     {% for product in wishlist.products.all %}
@@ -25,10 +25,10 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><p><a href="{% url 'product-details' product.slug %}">{{ product.name }}</a></p></td>
+                    <td><p><a href="{% url 'product-details' product.slug %}" aria-label="View product details">{{ product.name }}</a></p></td>
                     <td><p>{{ product.description }}</p></td>
                     <td><p>Price: {{ product.price }}</p></td>
-                    <td><a href="{% url 'remove_from_wishlist' product.slug %}" class="btn border-secondary"><i class="fas fa-trash fa-sm"></i></a></td>
+                    <td><a href="{% url 'remove_from_wishlist' product.slug %}" class="btn border-secondary" aria-label="Remove from wishlist"><i class="fas fa-trash fa-sm"></i></a></td>
                 </tr>
             </tbody>
         </table>
@@ -36,7 +36,7 @@
     {% empty %}
         <p>Your wishlist is empty.</p>
     {% endfor %}
-    <div class="col-12"><a href="{% url 'products' %}"><i class="fa-solid fa-left-long fa-lg me-2" style="color: #ea5b96;"></i> Back to Products</a>
+    <div class="col-12"><a href="{% url 'products' %}" aria-label="View products page><i class="fa-solid fa-left-long fa-lg me-2" style="color: #ea5b96;"></i> Back to Products</a>
 </div>
 <!-- wishlist.html content ends here -->
 {% endblock %}
