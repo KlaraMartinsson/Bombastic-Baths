@@ -9,7 +9,6 @@ Welcome to Bombastic Baths! Dive into a world of luxurious bath bombs, meticulou
 [View the live webpage here.](https://bombastic-baths-af5387841714.herokuapp.com/)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/KlaraMartinsson/bombastic-baths)
-![](https://tokei.rs/b1/github/KlaraMartinsson/bombastic-baths?category=code)
 
 ![PostgreSQL Badge](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=fff&style=for-the-badge)
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
@@ -141,11 +140,40 @@ This epic delves into strategies for maximizing website visibility in web search
 
 # Business and Marketing Plan
 
-### Business Model
+### Business Model 
+Bombastic Baths e-commerce operates on a direct-to-consumer(B2C) business model, specializing in handmade natural bath bombs designed to deliver a unique blend of fun and relaxation. Through strategic marketing efforts focused on social media platforms like Instagram, TikTok, and Facebook, Bombastic Baths will targets a diverse user base spanning all age groups. In the future we plan to offer more engaging content showcasing the excitement and benefits of our products, along with enticing sales and discounts delivered through influencers and online platforms. The payment type for this e-commerce is an single payment. Once a customer makes a single payment, the transaction is completed, and a delivery order is promptly generated. The available payment option is payment by card, implemented using Stripe.
+
+### Marketing Plan
+When formulating our marketing strategies, we carefully considered the following questions:
+
+Who are Bombastic Baths users?
+Bombastic Baths user base spans across all age groups, primarily focusing on girls. From children who find joy in play to teenagers seeking a cool and relaxing experience, and adults craving a moment of tranquility, Bombastic Baths caters to everyone looking for a blissful escape.
+
+Where can you find Bombastic Baths online?
+If you're searching for our vibrant community, look no further than Instagram, TikTok, and Facebook.
+
+**Facebook**
+
+![Facebook](/documentation/social_medias/facebook.jpg)
+
+What do our users need?
+They need bath bombs that are vegan-friendly, cruelty-free (against animal testing), and crafted with simple, wholesome ingredients.
+Our users also want engaging content that showcases the excitement and relaxation our bath bombs bring. In the future will we provide videos demonstrating the fun and cool vibes of our products, along with research on their relaxing benefits.
+
+How do we reach out to our users?
+Users on Bombastic Baths can sign up to our newsletter where they can find out about all the news and discounts.
+In the future, we plan to incorporate strategic sales and irresistible discounts into our marketing approach. Whether through collaborations with influencers, promotions on various platforms, or irresistible friend referral programs.
+![Newsletter](/documentation/social_medias/newsletter.jpg)
+
+What marketing practices do other e-commerce businesses that sell similar products employ? Which ones appear to be working best?
+The biggest company's that we found and looked into are called LUSH and BOMB Cosmetic. LUSH static where: Youtube: 409K, Instagram:634K, Tiktok: 207K, Facebook: 1,1 mn, X: 408K. BOMB Cosmetic hade: Facebook: 36K, Instagram:  50K. This gave us a better view on what platforms our users will be on. Hence, we've established our presence on Facebook, Instagram, and TikTok.
+
+
+What are our business goals?
+Our business goals encompass several key objectives. Firstly, we aim to establish ourselves as a leading provider of bath bombs that align with values important to our customers. This includes maintaining our commitment to being vegan-friendly, cruelty-free, and using only simple, wholesome ingredients in our products. Additionally, we strive to increase brand awareness, drive traffic to our online platform, and foster customer loyalty.
+
 
 ### SEO
-
-### Marketing
 
 
   
