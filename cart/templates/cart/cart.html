@@ -41,7 +41,7 @@
                                                         <div class="input-group">
                                                             <div class="input-group-prepend">
                                                                 <button class="decrement-qty rounded-start" 
-                                                                    data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                                    data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}" aria-label="Decrement">
                                                                     <span">
                                                                         <i class="fas fa-minus"></i>
                                                                     </span>
@@ -51,7 +51,7 @@
                                                                 min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
                                                             <div class="input-group-append">
                                                                 <button class="increment-qty rounded-end"
-                                                                    data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                                    data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}" aria-label="Increment">
                                                                     <span>
                                                                         <i class="fas fa-plus"></i>
                                                                     </span>
@@ -60,7 +60,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="mt-3 text-center">
-                                                        <button type="submit" class="btn border-secondary mb-2"><i class="fas fa-sync"></i></button>
+                                                        <button type="submit" class="btn border-secondary mb-2" aria-label="Submit"><i class="fas fa-sync"></i></button>
                                                         <a href="{% url 'remove_from_cart' item.item_id %}" class="btn border-secondary mb-2" type="button" aria-label="Remove product from cart"><i class="fas fa-trash"></i></a>
                                                     </div>
                                                 </form>

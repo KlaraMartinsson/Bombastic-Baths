@@ -34,7 +34,7 @@
             <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button class="pink-btn mt-5">Update Information</button>
+                <button class="pink-btn mt-5" aria-label="Update information">Update Information</button>
             </form>
         </div>
         <!-- Orders Tab -->
@@ -85,7 +85,7 @@
             <p class="text-center fs-5">Account deletion is permanent. Proceed?</p>
             <form action="{% url 'delete_profile' %}" method="POST">
                 {% csrf_token %}
-                <button class="pink-btn mt-5">Delete Account</button>
+                <button class="pink-btn mt-5" aria-label="Delete Account">Delete Account</button>
             </form>
         </div>
     </div>

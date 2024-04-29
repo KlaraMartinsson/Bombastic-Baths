@@ -16,7 +16,7 @@
     {% if redirect_field_value %}
     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
     {% endif %}
-    <button class="primaryAction btn pink-btn" type="submit">{% trans "Sign In" %}</button>
+    <button class="primaryAction btn pink-btn" type="submit" aria-label="Login">{% trans "Sign In" %}</button>
     <p class="mt-4">
         <a class="button secondaryAction text-muted" href="{% url 'account_reset_password' %}" aria-label="Forgot password">{% trans "Forgot Password?" %}</a>
     </p>
