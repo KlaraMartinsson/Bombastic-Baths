@@ -44,8 +44,7 @@ a i {
     font:14px Helvetica,Arial,sans-serif; 
     width: 400px;
 }
-                        /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-                            We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+
 /* Messages */
 .message-container {
     position: fixed;
@@ -130,10 +129,6 @@ background-color: rgb(232, 243, 253);
 .wishlist-btn:hover {
     background-color: rgb(67, 161, 248);
     color:  rgb(255, 255, 255);
-}
-
-.btn-primary:focus {
-    box-shadow: 0 0 0 0.2rem  #ee77a9;
 }
 
 .btn-outline-primary {
@@ -248,13 +243,6 @@ background-color: rgb(232, 243, 253);
     color: white;
 }
 
-/* Our Story page */
-
-.card-ourstory {
-    background-color: rgb(255, 240, 248);
-    border-radius: 5%;
-}
-
 /* Button for infinity scrolling */
 
 .scroll-button {
@@ -301,6 +289,10 @@ footer {
         font-size: 14px; 
     }
 
+    .carousel-item {
+        height: 20vh;
+    }
+
 }
 
 @media screen and (min-width: 500px){
@@ -311,4 +303,5 @@ footer {
     a, li, p {
         font-size: 20px;
     }
+
 }
