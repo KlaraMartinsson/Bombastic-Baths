@@ -70,7 +70,7 @@
                             </div>
                         </div>
                         <div class="p-4 bg-light d-flex justify-content-center">
-                            <a href="{% url 'product-details' product.slug %}" aria-label="View product details"><button class="pink-white-btn" aria-label="More info">More Info</button></a>
+                            <a href="{% url 'product-details' product.slug %}" aria-label="View product details" class="pink-white-btn btn">More Info</a>
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
 
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
         $('#sort-selector').change(function() {
             var selector = $(this);
             var currentUrl = new URL(window.location);

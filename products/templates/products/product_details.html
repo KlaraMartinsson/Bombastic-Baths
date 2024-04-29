@@ -5,7 +5,7 @@
 <div class="bg-pink p-3"></div>
 <!-- product_details.html content starts here -->
 <section class="py-5">
-    <div class="container card p-5 mt-5">
+    <div class="container card p-5 mt-5 rounded">
         <div class="row gx-5">
             <div class="col-lg-6">
                 <div class="border rounded-4 mb-3 d-flex justify-content-center shadow">
@@ -56,9 +56,9 @@
                     <input type="submit" class="btn pink-btn text-black text-white" value="Add to Cart">
                     <!-- Wishlist button-->
                     {% if product in wishlist.products.all %}
-                    <a href="{% url 'remove_from_wishlist' product.slug %}"class="btn wishlist-btn" aria-label="Remove product from Wishlist"><i class="pe-2 fa-solid fa-heart fa-lg text-white"></i></i> Wishlist </a>
+                    <a href="{% url 'remove_from_wishlist' product.slug %}" class="btn wishlist-btn" aria-label="Remove product from Wishlist"><i class="pe-2 fa-solid fa-heart fa-lg text-white"></i> Wishlist </a>
                     {% else %}
-                    <a href="{% url 'add_to_wishlist' product.slug %}"class="btn wishlist-btn" aria-label="Add product to Wishlist"><i class="pe-2 fa-regular fa-heart fa-lg text-white"></i></i> Wishlist </a>
+                    <a href="{% url 'add_to_wishlist' product.slug %}" class="btn wishlist-btn" aria-label="Add product to Wishlist"><i class="pe-2 fa-regular fa-heart fa-lg text-white"></i> Wishlist </a>
                     {% endif %}
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </form>
@@ -105,30 +105,30 @@
     </div>
 </section>
 <!--Reviews-->
-<section>
-    <div class="container my-3">
-        {% if request.user.is_authenticated %}
-        <h4 id="reviewHeading">Leave a Product Review</h4>
-        <form action="{% url 'product-details' product.slug %}" method="POST">
-            {% csrf_token %}
-            <p class="mb-0 mt-2">Rate Product</p>
-            <div class="d-flex align-items-center">
-                <select name="rating" class="form-control me-2 w-25">
-                    <option value="1">1 star</option>
-                    <option value="2">2 stars</option>
-                    <option value="3">3 stars</option>
-                    <option value="4">4 stars</option>
-                    <option value="5">5 stars</option>
-                </select>
-                <button type="submit" class="btn btn-review" aria-label="Submit">Submit Rating <i class="fa-solid fa-star" style="color: #FFD43B;"></i></button>
-            </div>
-        </form>
-        {% endif %}
-        <div class="mt-2">
-            {% include "products/includes/product_review.html" %}
+
+<div class="container my-3">
+    {% if request.user.is_authenticated %}
+    <h4 id="reviewHeading">Leave a Product Review</h4>
+    <form action="{% url 'product-details' product.slug %}" method="POST">
+        {% csrf_token %}
+        <p class="mb-0 mt-2">Rate Product</p>
+        <div class="d-flex align-items-center">
+            <select name="rating" class="form-control me-2 w-25">
+                <option value="1">1 star</option>
+                <option value="2">2 stars</option>
+                <option value="3">3 stars</option>
+                <option value="4">4 stars</option>
+                <option value="5">5 stars</option>
+            </select>
+            <button type="submit" class="btn btn-review" aria-label="Submit">Submit Rating <i class="fa-solid fa-star" style="color: #FFD43B;"></i></button>
         </div>
+    </form>
+    {% endif %}
+    <div class="mt-2">
+        {% include "products/includes/product_review.html" %}
     </div>
-</section>
+</div>
+
 <!-- product_details.html content ends here -->
 {% endblock %}
 
