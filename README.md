@@ -163,19 +163,74 @@ Our users also want engaging content that showcases the excitement and relaxatio
 How do we reach out to our users?
 Users on Bombastic Baths can sign up to our newsletter where they can find out about all the news and discounts.
 In the future, we plan to incorporate strategic sales and irresistible discounts into our marketing approach. Whether through collaborations with influencers, promotions on various platforms, or irresistible friend referral programs.
+
 ![Newsletter](/documentation/social_medias/newsletter.jpg)
 
 What marketing practices do other e-commerce businesses that sell similar products employ? Which ones appear to be working best?
 The biggest company's that we found and looked into are called LUSH and BOMB Cosmetic. LUSH static where: Youtube: 409K, Instagram:634K, Tiktok: 207K, Facebook: 1,1 mn, X: 408K. BOMB Cosmetic hade: Facebook: 36K, Instagram:  50K. This gave us a better view on what platforms our users will be on. Hence, we've established our presence on Facebook, Instagram, and TikTok.
 
-
 What are our business goals?
 Our business goals encompass several key objectives. Firstly, we aim to establish ourselves as a leading provider of bath bombs that align with values important to our customers. This includes maintaining our commitment to being vegan-friendly, cruelty-free, and using only simple, wholesome ingredients in our products. Additionally, we strive to increase brand awareness, drive traffic to our online platform, and foster customer loyalty.
 
-
 ### SEO
+By optimizing the e-commerce for search engines, it will increase and reach the right audience, build trust, and stay competitive in the market. 
 
+#### SEO Project planning
+After finalizing the business model, the process of identify target keywords begun. We started by brainstorming keywords and then utilized Google to discover popular search terms associated with bath bombs by conducting searches and analyzing the related queries. Additionally, we conducted keyword research on wordtracker.com. This led to the compilation of a list of both short and long-tail keywords. 
 
+#### Keywords
+After thorough analysis of Google searches and Wordtracker data, we selected these keywords.
+
+##### Short tailed keywords
+- Homemade bath bombs
+- Diy bath bombs
+- Rainbow bath bomb 
+- Bath bomb gift
+- Spa at home
+- Natural ingredients
+- Moisturizing bath bombs
+- Relaxation products
+- Bath bombs ingredients 
+- Bath bomb fizzers
+
+##### Long tailed keywords
+- Get yourself a well deserved bath
+- How do I use a bath bomb
+- Fragrance free bath bombs 
+- Bath bombs with rings
+- Vegan friendly bath bombs
+
+#### Implementation:
+
+Content Integration:
+
+Infuse long tailed keywords into product descriptions, titles, and various content segments. Maintain a seamless narrative while accentuating the distinctive attributes of each product.
+
+Meta Tags and Descriptions:
+
+Embed extensive keywords into meta tags, meta descriptions, and image alt text. This enriches search engine optimization (SEO) efforts and enhances visibility for pertinent search queries.
+
+Header Tags:
+
+Employ header tags to organize content effectively, making it easier for search engine crawlers to understand the structure and context of the page.
+
+Strong Tags (Strong Emphasis):
+
+Utilize the <strong> HTML tag to underscore crucial keywords or phrases. This aids search engines in recognizing the significance of these terms within the content.
+
+Link Descriptions:
+
+Ensure all internal and external links are appropriately labeled. 
+
+Alt Text for Images:
+
+When incorporating images, provide descriptive alt text featuring keywords to enhance accessibility and SEO effectiveness.
+
+##### Sitemap.xml
+A sitemap was generated using xml-sitemaps This was generated using the deployed website. The file is included in the root level of the project.
+
+##### Robots.txt
+Robots.txt file was created at the root level of the project. This file tells the search engine crawlers which URLs they can access on the website.
   
 # Database
 ![Database](placeholder)
