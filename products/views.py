@@ -1,5 +1,5 @@
 from django.db.models import Q
-from django.shortcuts import render, redirect,  get_object_or_404, HttpResponseRedirect
+from django.shortcuts import render, redirect, get_object_or_404, HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
@@ -12,8 +12,8 @@ from wishlist.models import Wishlist
 
 
 def all_products(request):
-    """ 
-    A view to show all products. 
+    """
+    A view to show all products.
     Also includes sorting and search queries.
     """
 
@@ -28,7 +28,6 @@ def all_products(request):
         wishlist, created = Wishlist.objects.get_or_create(user=user)
     else:
         wishlist = None
-    
     # Sorting functionality
     if request.GET:
         if "sort" in request.GET:
@@ -56,10 +55,10 @@ def all_products(request):
             if not query:
                 messages.error(request, "Please, enter search criteria.")
                 return redirect(reverse('products'))
-            
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | Q(
+                description__icontains=query)
             products = products.filter(queries)
-    
+
     current_sorting = f'{sort}_{direction}'
 
     context = {
@@ -71,6 +70,7 @@ def all_products(request):
     }
     return render(request, 'products/products.html', context)
 
+
 def product_details(request, slug):
     """ A view to show individual bath bomb details """
 
@@ -81,7 +81,8 @@ def product_details(request, slug):
 
     if request.user.is_authenticated:
         wishlist, created = Wishlist.objects.get_or_create(user=user)
-        user_rating = Rating.objects.filter(user=request.user, product=product).exists()
+        user_rating = Rating.objects.filter(
+            user=request.user, product=product).exists()
     else:
         wishlist = None
         user_rating = False
@@ -94,11 +95,13 @@ def product_details(request, slug):
                 rating.user = request.user
                 rating.product = product
                 rating.save()
-                messages.success(request,"Product rating submitted.")
-                return HttpResponseRedirect(reverse('product-details', args=[slug]))
+                messages.success(request, "Product rating submitted.")
+                return HttpResponseRedirect(
+                    reverse('product-details', args=[slug]))
             else:
-                messages.error(request, "Error rating product. Please try again.")
-        
+                messages.error(
+                    request, "Error rating product. Please try again.")
+
         if 'review_form' in request.POST:
             review_form = ReviewForm(data=request.POST)
             if review_form.is_valid() and request.user.is_authenticated:
@@ -106,14 +109,16 @@ def product_details(request, slug):
                 review.author = request.user
                 review.product = product
                 review.save()
-                messages.success(request, "Review submitted and awaiting approval.")
-                return HttpResponseRedirect(reverse('product-details', args=[slug]))
+                messages.success(
+                    request, "Review submitted and awaiting approval.")
+                return HttpResponseRedirect(
+                    reverse('product-details', args=[slug]))
             else:
                 messages.error(request, "Error submitting review")
-    
+
     rating_form = RatingForm()
     review_form = ReviewForm()
-        
+
     context = {
         'product': product,
         'wishlist': wishlist,
@@ -122,7 +127,8 @@ def product_details(request, slug):
         'review_form': review_form,
         'product_reviews': product_reviews,
     }
-    return render (request, 'products/product_details.html', context)
+    return render(request, 'products/product_details.html', context)
+
 
 @login_required
 def remove_review(request, slug, review_id):
@@ -135,13 +141,14 @@ def remove_review(request, slug, review_id):
         messages.success(request, "Review removed.")
     else:
         messages.error(request, "You are not the author of this review.")
-    
+
     return HttpResponseRedirect(reverse('product-details', args=[slug]))
+
 
 @login_required
 def edit_review(request, slug, review_id):
     """ A view to edit product reviews """
-    
+
     if request.method == "POST":
         queryset = Product.objects.all()
         product = get_object_or_404(queryset, slug=slug)
@@ -153,9 +160,9 @@ def edit_review(request, slug, review_id):
             review.product = product
             review.approved = False
             review.save()
-            messages.success(request, "Product review edited and awaiting approval")
+            messages.success(
+                request, "Product review edited and awaiting approval")
         else:
             messages.error(request, "Error editing product review")
 
     return HttpResponseRedirect(reverse('product-details', args=[slug]))
-

@@ -48,4 +48,10 @@ All Python files has passed through validation using [PEP 8](https://pep8ci.hero
 |views.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/home-views.py-validation.jpg)</details>| ✅
 |urls.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/home-urls.py-validation.jpg)</details>| ✅
 |apps.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/home-apps.py-validation.jpg)</details>| ✅
-
+| **Products App** |
+|models.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/products-models.py-validation.jpg)</details>| ✅
+|views.py| 1 django import line to long | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/products-views.py-validation.jpg)</details>| ✅
+|urls.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/products-urls.py-validation.jpg)</details>| ✅
+|apps.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/products-apps.py-validation.jpg)</details>| ✅
+|forms.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/products-forms.py-validation.jpg)</details>| ✅
+|admin.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/products-admin.py-validation.jpg)</details>| ✅
