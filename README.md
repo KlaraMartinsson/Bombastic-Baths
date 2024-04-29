@@ -172,7 +172,7 @@ The biggest company's that we found and looked into are called LUSH and BOMB Cos
 What are our business goals?
 Our business goals encompass several key objectives. Firstly, we aim to establish ourselves as a leading provider of bath bombs that align with values important to our customers. This includes maintaining our commitment to being vegan-friendly, cruelty-free, and using only simple, wholesome ingredients in our products. Additionally, we strive to increase brand awareness, drive traffic to our online platform, and foster customer loyalty.
 
-### SEO
+### Search Engine Optimization (SEO)
 By optimizing the e-commerce for search engines, it will increase and reach the right audience, build trust, and stay competitive in the market. 
 
 #### SEO Project planning
@@ -216,7 +216,7 @@ Employ header tags to organize content effectively, making it easier for search 
 
 Strong Tags (Strong Emphasis):
 
-Utilize the <strong> HTML tag to underscore crucial keywords or phrases. This aids search engines in recognizing the significance of these terms within the content.
+Utilize the HTML strong tag to underscore crucial keywords or phrases. This aids search engines in recognizing the significance of these terms within the content.
 
 Link Descriptions:
 
@@ -257,7 +257,7 @@ One of the most important things we put time on was to have a consistency of des
 
 ### Main Colours
 
-![Color scheme](placeholder)
+![Color scheme](/documentation/colour-palette.png)
 Color scheme was made at [coolors.co](https://coolors.co/)
 
 ### Fonts
