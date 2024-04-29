@@ -51,11 +51,11 @@
                     <div id="card-errors" role="alert" class="text-danger mb-3"></div>
                     <input type="hidden" name="client_secret" value="{{ client_secret }}">
                 </fieldset>
-                <div class="row mt-4 submit-button">
+                <div class="row mt-4">
                     <div class="col-6 mb-3 text-start">
-                        <a href="{% url 'cart' %}"><i class="fa-solid fa-left-long fa-lg me-2" style="color: #ea5b96;" aria-label="Adjust cart"></i> Adjust Cart</a>
+                        <a href="{% url 'cart' %}" aria-label="Adjust cart"><i class="fa-solid fa-left-long fa-lg me-2" style="color: #ea5b96;"></i> Adjust Cart</a>
                     </div>
-                    <div class="col-6 text-end" id="submit-button">
+                    <div class="col-6 text-end">
                         <button id="submit-button" class="btn pink-btn" aria-label="Submit">Complete Order<i class="fas fa-lock text-white ps-2"></i></button>
                     </div>
                     <p class="small text-danger">
@@ -73,7 +73,7 @@
                         <a href="{url 'product_detail' item.product.id %}" aria-label="View products details">
                             <div class="position-relative mb-4">
                                 {% if item.product.image %}
-                                <!--<img src="{{ item.product.image.url }}" alt="{{product.name}}" class="img-fluid shadow">-->
+                                <img src="{{ item.product.image.url }}" alt="{{product.name}}" class="img-fluid shadow">
                                 {% else %}
                                 <img class="card-img-top" src="{% static 'images/default_image.png' %}" alt="{{product.name}}">
                                 {% endif %}
@@ -112,11 +112,11 @@
     </div>
 </div>
 <div id="loading-overlay">
-    <h1 class="text-light logo-font loading-spinner">
+    <div class="text-light logo-font loading-spinner h1">
         <span>
             <i class="fas fa-3x fa-sync-alt fa-spin"></i>
         </span>
-    </h1>
+    </div>
 </div>
 {% endblock %}
 

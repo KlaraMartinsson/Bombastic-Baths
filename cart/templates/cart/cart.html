@@ -42,7 +42,7 @@
                                                             <div class="input-group-prepend">
                                                                 <button class="decrement-qty rounded-start" 
                                                                     data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}" aria-label="Decrement">
-                                                                    <span">
+                                                                    <span>
                                                                         <i class="fas fa-minus"></i>
                                                                     </span>
                                                                 </button>
@@ -61,7 +61,7 @@
                                                     </div>
                                                     <div class="mt-3 text-center">
                                                         <button type="submit" class="btn border-secondary mb-2" aria-label="Submit"><i class="fas fa-sync"></i></button>
-                                                        <a href="{% url 'remove_from_cart' item.item_id %}" class="btn border-secondary mb-2" type="button" aria-label="Remove product from cart"><i class="fas fa-trash"></i></a>
+                                                        <a href="{% url 'remove_from_cart' item.item_id %}" class="btn border-secondary mb-2" aria-label="Remove product from cart"><i class="fas fa-trash"></i></a>
                                                     </div>
                                                 </form>
                                             </div>
@@ -85,7 +85,7 @@
         </div>
         {% else %}
         <div class="col-12">
-            <h3 class="display-5 mb-2 text-center">Shopping Cart</h3>
+            <p class="display-5 mb-2 text-center h3">Shopping Cart</p>
             <p class="text-center">Your cart is empty.</p>
             <a href="{% url 'products' %}" aria-label="View Products"><i class="fa-solid fa-left-long fa-lg me-2" style="color: #ea5b96;"></i> Continue Shopping</a>
         </div>
@@ -95,7 +95,7 @@
 <hr>
 <section>
     <div class="container">
-        <h7 class="text-start h4">You may also like..</h7>
+        <p class="text-start h4">You may also like..</p>
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center mt-3">
             {% for product in products %}
                 <div class="col mb-5 product-section">
@@ -115,7 +115,7 @@
                             </div>
                         </div>
                         <div class="p-4 bg-light d-flex justify-content-center">
-                            <a href="{% url 'product-details' product.slug %}" aria-label="Get more info about product"><button class="pink-white-btn">More Info</button></a>
+                            <a href="{% url 'product-details' product.slug %}" aria-label="Get more info about product" class="pink-white-btn btn">More Info</a>
                         </div>
                     </div>
                 </div>
