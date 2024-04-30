@@ -27,7 +27,7 @@
                         </div>
                     </div>
                     <div class="col-3">
-                        <a href="{% url 'product-details' item.product.id %}" aria-label="View products details">
+                        <a href="{% url 'product-details' item.product.slug %}" aria-label="View products details">
                             <div class="position-relative mb-4 mt-2">
                                 {% if item.product.image %}
                                     <img src="{{ item.product.image.url }}" alt="{{product.name}}" class="img-fluid shadow">

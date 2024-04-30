@@ -328,81 +328,72 @@ Wireframes where made at [Balsamiq](https://balsamiq.com/)
 
 <details>
 <summary>Home page</summary>
-<img src="placeholder">
+<img src="/documentation/features/home.jpg">
 </details>
 
 ### Products page
 
 <details>
 <summary>Home page</summary>
-<img src="placeholder">
-</details>
+<img src="/documentation/features/products.jpg"
 
 ### Product details page
 
 <details>
 <summary>Product details page</summary>
-<img src="static/images/readme-images/postdetail.jpg">
+<img src="/documentation/features/productdetails.jpg">
 </details>
 
 ### Profile page
 
 <details>
-<summary>placeholder</summary>
-<img src="placeholder">
+<summary>Profile</summary>
+<img src="/documentation/features/profile.jpg">
 </details>
 
 ### FAQ page
 
 <details>
-<summary>placeholder</summary>
-<img src="placeholder">
+<summary>Faq</summary>
+<img src="/documentation/features/faq.jpg">
 </details>
 
 
 ### Our Story page
 
 <details>
-<summary>placeholder</summary>
-<img src="placeholder">
+<summary>Our story</summary>
+<img src="/documentation/features/ourstory.jpg">
 </details>
 
-### User Account Management
-
-<details>
-<summary>Sign in</summary>
-<img src="placeholder">
-</details>
+### Reviews
 
 <details>
-<summary>Sign up</summary>
-<img src="placeholder">
+<summary>Our story</summary>
+<img src="/documentation/features/reviews.jpg">
 </details>
 
+### Footer
+
 <details>
-<summary>Sign out</summary>
-<img src="placeholder">
+<summary>Our story</summary>
+<img src="/documentation/features/footer.jpg">
 </details>
+
 
 ### Confirmation messages
 
 <details>
 <summary>Confirmation message</summary>
-<img src="placeholder">
+<img src="/documentation/features/message.jpg">
 </details>
 
 ### Navigation
 
 <details>
 <summary>Navigation bar</summary>
-<img src="placeholder">
+<img src="/documentation/features/navbar.jpg">
 </details>
-
-<details>
-<summary>Navbar on smaller devices</summary>
-<img src="placeholder">
-</details>
-
 
 ### Future Implementations
 
@@ -453,12 +444,84 @@ All testing, including both manual and automated testing, was carried out and do
 
 # Deployment
 
+## App Deployment
+For deploying Your app, Heroku is used. Follow these steps:
+
+Create a New App:
+
+Create a new app on Heroku dashboard.
+Configure Settings:
+
+Navigate to "Settings" in new app.
+Config Vars Setup:
+
+In "Config Vars," add PORT as the key and 8000 as its value.
+Add PostgreSQL Database:
+
+Choose PostgreSQL as database.
+
+Example "ElephantSQL" was used in this project
+
+Configure DATABASE_URL:
+
+In "Config Vars," add DATABASE_URL and copy the URL from PostgreSQL dashboard.
+
+Note: If using ElephantSQL as PostgreSQL provider, you can use the URL provided by ElephantSQL.
+
+## Environment Variable Setup:
+
+Create a new file in workspace called env.py.
+Import the os library and set the environment variable for DATABASE_URL to the Heroku address (or ElephantSQL URL)
+Add a secret key using os.environ["SECRET_KEY"] = "your secret key here".
+Heroku Config Vars:
+
+Add the secret key to the Heroku app's config vars in the settings.
+Django Settings:
+
+In settings.py of Django app, import Path from pathlib, os, and dj_database_url.
+Add if os.path.isfile("env.py"): import env to the file.
+Replace the SECRET_KEY with SECRET_KEY = os.environ.get('SECRET_KEY').
+Replace the database section with DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))}.
+Migrate Models:
+
+In workspace terminal, migrate the models to the new database connection.
+Custom Domain configuration
+Register Domain:
+
+## Register a domain with a domain registrar.
+Add Custom Domain in Heroku:
+
+Go to the "Settings" tab of your Heroku app.
+Scroll down to "Domains" and click "Add Domain."
+Enter your custom domain (e.g., www.easykeyboardsmaker.com).
+Copy the provided DNS target. It will look something like shallow-atoll-32t56jvds3s5fhf8767d9a9c.herokudns.com.
+Configure DNS Records:
+
+Log in to your domain registrar.
+Navigate to DNS settings.
+Add a CNAME record:
+Type: CNAME
+Name: www
+Value: Paste Heroku's DNS target
+TTL: Set to default
+Verify Domain Configuration:
+
+Check the "Domains" section in your Heroku dashboard.
+Wait for DNS changes to propagate (up to 48 hours).
+HTTP and HTTPS Forwarding (Optional):
+
+Optionally, configure forwarding in your domain registrar's settings.
+Verify Custom Domain:
+
+After DNS propagation, access your app using the custom domain.
+Add ACCESS_HOSTNAME to your project settings:
+
+Add "www.yourdomain.com" to ALLOWED_HOSTS in your Django app's settings.py file.
+
 # Credits
 
-### Content 
-
-### Media
-
 ### Code used
+A lot of time has been spent on re-watching Code Institutes videos on Agile Methodologies, Django and Python to find solutions to problems. The code for this projcet was influenced by the Code Institute tutorial course on Django projects, "Boutique Ado".
 
 ### Acknowledgements
+My family and friends for checking out the webpage on their screens and giving critic. My  mentor Spencer for giving good advices, trying out the website and checking my code and readme.
