@@ -418,9 +418,12 @@ Some future adaptations the website could have are:
 
 # Issues and Bugs
 
-### Known and unsolved bugs
-
 ### Fixed bugs
+BUG: When placing an order, I don't receive any email confirmation.
+SOLVED: Solved by identifying a typo in the 'confirmation_email_subject' file. It was named 'emails' instead of 'email'.
+
+BUG: Products on all products page comes in order, which creates problem with the sort functionallity. When sorting on price, the bathbombs are seen first with the sorting and after the gifts with sorting.
+SOLVED: The initial implementation of the gift model prevented sorting alongside the products model. To resolve this, I've transformed the gift model into a category, which successfully allows for sorting alongside the products model.
 
 # Technologies Used
 
