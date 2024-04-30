@@ -412,9 +412,9 @@ Wireframes where made at [Balsamiq](https://balsamiq.com/)
 <details>
 <summary>Home page</summary>
 <img src="/documentation/features/products.jpg">
+</details>
 
 ### Product details page
-
 <details>
 <summary>Product details page</summary>
 <img src="/documentation/features/productdetails.jpg">
