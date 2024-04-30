@@ -78,5 +78,12 @@ All Python files has passed through validation using [PEP 8](https://pep8ci.hero
 |apps.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/profiles-apps.py-validation.jpg)</details>| ✅
 |admin.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/profiles-admin.py-validation.jpg)</details>| ✅
 |forms.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/profiles-forms.py-validation.jpg)</details>| ✅
+| **Wishlist App** |
+|models.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/wishlist-models.py-validation.jpg)</details>| ✅
+|views.py| All clear, no errors found  | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/wishlist-views.py-validation.jpg)</details>| ✅
+|urls.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/wishlist-urls.py-validation.jpg)</details>| ✅
+|admin.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/wishlist-admin.py-validation.jpg)</details>| ✅
+|apps.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/wishlist-apps.py-validation.jpg)</details>| ✅
+
 
 
