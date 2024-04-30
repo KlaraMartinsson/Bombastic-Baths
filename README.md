@@ -352,7 +352,6 @@ The images that are displaying on Bombastic Baths where generated on [leonardo.i
 
 ### Favicon
 The favicon where made at [favicon.io](https://favicon.io/) with Bombastic Baths pink colour.
-![Favicon](/static/images/logotype.png)
 
 ### Wireframes
 
