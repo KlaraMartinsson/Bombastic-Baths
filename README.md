@@ -315,7 +315,6 @@ When creating the database structure schema for this project, I utilized the [db
 ![Database](/documentation/database.jpg)
 
 
-
 # Design (UI)
 
 ### Building a User-Friendly E-commerce Platform
@@ -412,7 +411,7 @@ Wireframes where made at [Balsamiq](https://balsamiq.com/)
 
 <details>
 <summary>Home page</summary>
-<img src="/documentation/features/products.jpg"
+<img src="/documentation/features/products.jpg">
 
 ### Product details page
 
