@@ -233,7 +233,10 @@ A sitemap was generated using xml-sitemaps This was generated using the deployed
 Robots.txt file was created at the root level of the project. This file tells the search engine crawlers which URLs they can access on the website.
   
 # Database
-![Database](placeholder)
+When creating the database structure schema for this project, I utilized the [dbdiagram.io](https://dbdiagram.io/) website. This online tool allowed me to visually design and document the database schema, making it easier to plan and implement the database. This database schema defines the structure and relationships for an e-commerce, including users, products, reviews, user profiles, cart, payment checkout and more.
+
+![Database](/documentation/database.jpg)
+
 
 
 # Design (UI)
