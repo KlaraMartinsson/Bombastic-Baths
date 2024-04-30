@@ -1,5 +1,5 @@
 # Bombastic Baths
-![Home page](placeholder)
+![Home page](/documentation/features/home.jpg)
 
 
 <div align="center">
