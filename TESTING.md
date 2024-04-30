@@ -123,6 +123,48 @@ I received a low score for the index.html file due to the large carousel header.
 ## Performing tests on various devices
 
 ## Manual Testing
+| Functionality | What's being tested | Result |
+|------|-------------|--------|
+| Registration | A new user can create an account successfully. | Pass |
+|  | The website displays an appropriate error message with hint when validation fails. | Pass |
+|  | The website displays an appropriate success message if registration worked | Pass |
+|  | User is signed in automatically when click confirm button | Pass |
+|Login | A registered user can log in successfully. | Pass |
+|  | The website displays an appropriate error message when a user enters an incorrect email or password. | Pass |
+|  | The website displays an appropriate success message if registration worked | Pass |
+|  | A logged-in user can sign out successfully. | Pass |
+|Profile | A logged-in user can access their profile | Pass |
+|  | User can view their order history in their profile | Pass |
+|  | User can change their delivery details in profile | Pass |
+|  | User can delete their account | Pass |
+|  | A user cannot edit or delete another user's profile | Pass |
+| Admin Panel | Admin can login to admin panel. | Pass |
+|  | Admin can add, edit and delete products. | Pass |
+|  | Admin can add, edit and delete users. | Pass |
+|  | Admin can add, edit and delete users reviews. | Pass |
+|Products CRUD | Verify that a user can add products, edit and delete products from the shopping cart | Pass |
+|  | Confirmation message is displayed when a product is added, updated or deleted | Pass |
+|Reviews CRUD | Verify that a user can add, edit and delete their reviews| Pass |
+|  | Confirmation message is displayed when a review is added, updated or deleted | Pass |
+|Ratings | Verify that a user can add a rating to a product. | Pass |
+|Wishlist | Verify that a user can add to their wishlist. | Pass |
+|  | Verify that a user can remove an item in their wishlist. | Pass |
+|Sort functionality | Verify that sort functionality works. | Pass |
+|Search functionality | Verify that search functionality works. | Pass |
+|Confirmation messages | Verify that user gets success/error messages after an action. | Pass |
+|Checkout | Verify that form is valid, have to be an email address, have to have a name, number, address, country. | Pass |
+|  | Verify that a user can put in their credit cards | Pass |
+|  | Verify that a user get an error message if card info is wrong | Pass |
+|  | Verify that a user redirects to confirmation page after an order been made | Pass |
+|  | Verify that the order is on users profile order history | Pass |
+
+
+
+
+
+
+
+
 
 ## Testing User Stories
 
