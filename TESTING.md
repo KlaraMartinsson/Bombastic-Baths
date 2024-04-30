@@ -1,3 +1,19 @@
+# Testing
+
+- [Code Validation](#code-validation)
+  * [HTML Validation](#html-validation)
+  * [CSS Validation](#css-validation)
+  * [Python Validation](#python-validation)
+- [Accessibility](#accessibility)
+- [Performance](#performance)
+  * [Desktop Performance](#desktop-performance)
+  * [Mobile Performance](#mobile-performance)
+- [Performing tests on various devices](#performing-tests-on-various-devices)
+- [Manual Testing](#manual-testing)
+- [Performing tests on various devices](#performing-tests-on-various-devices-1)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 ## Code Validation
 The Bombastic Baths website have been through a lot of manual testing by myself, friends, mentors and family. This includes code validation, performance testing, cross-device testing, testing if user stories are completed and feedback messages for users.
 
