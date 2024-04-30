@@ -55,7 +55,7 @@
                         {% endif %}
                         <a href="{% url 'product-details' product.slug %}" aria-label="View product">
                             {% if product.image %}
-                               <!-- <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}"> -->
+                               <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
                             {% else %}
                                 <img class="card-img-top" src="{% static 'images/default_image.png' %}" alt="{{product.name}}">
                             {% endif %}
