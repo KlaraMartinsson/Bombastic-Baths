@@ -257,15 +257,26 @@ The user should always get a positive emotional response when interacting with t
 One of the most important things we put time on was to have a consistency of design through all of the websites pages/sections. We been doing this by colours, fonts and layout.
 
 ### Accessibility
+- High-Contrast Design: We employed color combinations with sufficient contrast between text and background for better readability.
+- We designed a clean and consistent layout with predictable placement of elements, making the website intuitive to navigate
 
 ### Main Colours
-
 ![Color scheme](/documentation/colour-palette.png)
 Color scheme was made at [coolors.co](https://coolors.co/)
 
+We thought about what kind of mood we wanted to create for the website. Purple and pink together is a good balance. Purple can lean luxurious and sophisticated, while pink adds a touch of playfulness and energy.
+
+We used black and white to create good contrast , they also help make the purple and pink pop even more."
+
 ### Fonts
+The Bombastic Baths website are using the default fonts due to its cleanness and readability.
 
 ### Images
+The images that are displaying on Bombastic Baths where generated on [leonardo.io](https://leonardo.ai/). I used an image that the ai generator could have as guidance, which gave me consistent product images. The hero images in the header on the home page are taken from [freepik.com](https://www.freepik.com/)
+
+### Favicon
+The favicon where made at [favicon.io](https://favicon.io/) with Bombastic Baths pink colour.
+![Favicon](/static/images/logotype.png)
 
 ### Wireframes
 
