@@ -109,7 +109,7 @@ I got contrast errors that where for the email address text in the footer, I wil
 <details>[Result](/documentation/validation/wave.jpg)</details>
 
 I also used [Googles lighthouse](https://developer.chrome.com/docs/lighthouse/) for testing the accessibility. The website got overall good score for accessibility.
-<details>[Result](/documentation/validation/index-lighthouse-mobile.jpg)</details>
+<details>[Result](/documentation/validation/index-llighthouse-desktop.jpg)</details>
 
 The code where also tested to use keyboard navigation and seemed to work everywhere. 
 
@@ -121,12 +121,12 @@ I received a low score for the index.html file due to the large carousel header.
 ### Desktop Performance
 | **Tested** | **Performance score** | **View Result** | **Pass** |
 --- | --- | --- | :---:
-|index.html| 80/100 | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/index-lighthouse-desktop.jpg)</details>| ✅
+|index.html| 80/100 | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/index-llighthouse-desktop.jpg)</details>| ✅
 
 ### Mobile Performance
 | **Tested** | **Performance score** | **View Result** | **Pass** |
 --- | --- | --- | :---:
-|index.html| 47/100 | <details><summary>Screenshot of result</summary>![Result](/documentation/index-lighthouse-mobile/.jpg)</details>| ✅
+|index.html| 47/100 | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/index-lighthouse-mobile.jpg)</details>| ✅
 
 
 <details>
