@@ -105,15 +105,12 @@ I received a low score for the index.html file due to the large carousel header.
 ### Desktop Performance
 | **Tested** | **Performance score** | **View Result** | **Pass** |
 --- | --- | --- | :---:
-| **Home App** |
 |index.html| 80/100 | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/index-lighthouse-desktop.jpg)</details>| ✅
 
 ### Mobile Performance
 | **Tested** | **Performance score** | **View Result** | **Pass** |
 --- | --- | --- | :---:
-| **Home App** |
 |index.html| 47/100 | <details><summary>Screenshot of result</summary>![Result](/documentation/index-lighthouse-mobile/.jpg)</details>| ✅
-
 
 
 <details>
@@ -169,10 +166,5 @@ I received a low score for the index.html file due to the large carousel header.
 |Emails | Verify that user gets an email confirmation when a order been made. | Pass |
 |  | Verify that users can successfully sign up to newsletter| Pass |
 
-
-
-
-## Testing User Stories
-
-Testing of the User stories for the project.
-All User Stories can be found [Here](https://github.com/users/KlaraMartinsson/projects/5)
+## Performing tests on various devices
+ The website was tested using the Google Chrome Developer Tools Device Toggling option for all available device options.
