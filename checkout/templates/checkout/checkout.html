@@ -6,125 +6,129 @@
 {% endblock %}
 
 {% block content %}
-<!--Checkout.html starts here-->
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <h1 class="display-5 mt-3 text-center">Checkout</h1>
-            <hr>
+<!-- Checkout.html content starts here -->
+<section>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col text-center">
+                <h2 class="display-5 mt-4 h1">Checkout</h2>
+                <hr>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-12 col-lg-6">
-            <form method="POST" action="{% url 'checkout' %}" id="payment-form">
-                {% csrf_token %}
-                <fieldset class="rounded px-3 mb-5">
-                    <legend class="fs-5 px-2">Contact Information:</legend>
-                    {{ order_form.full_name | as_crispy_field }}
-                    {{ order_form.email | as_crispy_field }}
-                    {{ order_form.phone_number | as_crispy_field }}
-                </fieldset>
-                <fieldset class="rounded px-3 mb-5">
-                    <legend class="fs-5 px-2">Delivery:</legend>
-                    {{ order_form.street_address1 | as_crispy_field }}
-                    {{ order_form.street_address2 | as_crispy_field }}
-                    {{ order_form.town_or_city | as_crispy_field }}
-                    {{ order_form.postcode | as_crispy_field }}
-                    {{ order_form.county | as_crispy_field }}
-                    {{ order_form.country | as_crispy_field }}
-                    <div class="form-check form-check-inline mt-3">
-                        {% if user.is_authenticated %}
-                            <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
-                            <input class="form-check-input" type="checkbox" id="id-save-info" name="save-info" checked>
-                        {% else %}
-                            <label class="form-check-label" for="id-save-info">
-                                <a class="text-info" href="{% url 'account_signup' %}" aria-label="Create account">Create an account</a> or
-                                <a class="text-info" href="{% url 'account_login' %}" aria-label="Login">login</a> to save this information
-                            </label>
-                        {% endif %}
+        <div class="row">
+            <div class="col-12 col-lg-6 order-lg-last mb-5">
+                <p class="text-muted">Order Summary ({{ product_count }})</p>
+                {% for item in cart_items %}
+                    <div class="row">
+                        <div class="col-3 mb-3 text-center">
+                            <a href="{% url 'product-details' item.product.id %}" aria-label="View products details">
+                                <div class="position-relative mb-4">
+                                    {% if item.product.image %}
+                                        <img src="{{ item.product.image.url }}" alt="{{product.name}}" class="img-fluid shadow">
+                                    {% else %}
+                                        <img class="card-img-top" src="{% static 'images/default_image.png' %}" alt="{{product.name}}">
+                                    {% endif %}
+                                    <span
+                                      class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-pink">{{ item.quantity }}
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-5 mt-2">
+                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                        </div>
+                        <div class="col-4 mt-2">
+                            <p class="my-0">£{{ item.product.price }}</p>
+                        </div>
                     </div>
-                </fieldset>
-                <fieldset class="rounded px-3 mb-5">
-                    <legend class="fs-5 px-2">Payment:</legend>
-                    <!-- A Stripe Element will be inserted here. -->
-                    <div id="card-element" class="mb-3"></div>
-                    <!-- Used to display form errors. -->
-                    <div id="card-errors" role="alert" class="text-danger mb-3"></div>
-                    <input type="hidden" name="client_secret" value="{{ client_secret }}">
-                </fieldset>
-                <div class="row mt-4">
-                    <div class="col-6 mb-3 text-start">
-                        <a href="{% url 'cart' %}" aria-label="Adjust cart"><i class="fa-solid fa-left-long fa-lg me-2" style="color: #ea5b96;"></i> Adjust Cart</a>
+                {% endfor %}
+                <hr>
+                <div class="row text-end">
+                    <div class="col-7 offset-2">
+                        <p class="my-0">Order Total:</p>
+                        <p class="my-0">Delivery:</p>
+                        <p class="my-0"><strong>Grand Total:</strong></p>
                     </div>
-                    <div class="col-6 text-end">
-                        <button id="submit-button" class="btn pink-btn" aria-label="Submit">Complete Order<i class="fas fa-lock text-white ps-2"></i></button>
-                    </div>
-                    <p class="small text-danger">
-                        <i class="fas fa-exclamation-circle"></i>
-                        <span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
-                    </p>
-                </div>
-            </form>
-        </div>
-        <div class="col-12 col-lg-6">
-            <p>Order Summary ({{ product_count }})</p>
-            {% for item in cart_items %}
-                <div class="row">
                     <div class="col-3">
-                        <a href="{% url 'product-details' item.product.id %}" aria-label="View products details">
-                            <div class="position-relative mb-4">
-                                {% if item.product.image %}
-                                    <img src="{{ item.product.image.url }}" alt="{{product.name}}" class="img-fluid shadow">
-                                {% else %}
-                                    <img class="card-img-top" src="{% static 'images/default_image.png' %}" alt="{{product.name}}">
-                                {% endif %}
-                                <span
-                                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-pink">{{ item.quantity }}
-                                </span>
+                        <p class="my-0">${{ total | floatformat:2 }}</p>
+                        <p class="my-0">${{ delivery | floatformat:2 }}</p>
+                        <p class="my-0"><strong>${{ grand_total | floatformat:2 }}</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <p class="text-muted">Please fill out the form below to complete your order.</p>
+                <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+                    {% csrf_token %}
+                    <fieldset class="rounded px-3 mb-5">
+                        <legend class="fs-5 px-2">Contact Information:</legend>
+                        {{ order_form.full_name | as_crispy_field }}
+                        {{ order_form.email | as_crispy_field }}
+                        {{ order_form.phone_number | as_crispy_field }}
+                    </fieldset>
+                    <fieldset class="rounded px-3 mb-5">
+                        <legend class="fs-5 px-2">Delivery:</legend>
+                        {{ order_form.street_address1 | as_crispy_field }}
+                        {{ order_form.street_address2 | as_crispy_field }}
+                        {{ order_form.town_or_city | as_crispy_field }}
+                        {{ order_form.county | as_crispy_field }}
+                        {{ order_form.postcode | as_crispy_field }}
+                        {{ order_form.country | as_crispy_field }}
+                        <div class="form-check form-check-inline mt-3">
+							{% if user.is_authenticated %}
+                                <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
+                                <input class="form-check-input" type="checkbox" id="id-save-info" name="save-info" checked>
+                            {% else %}
+                                <label class="form-check-label" for="id-save-info">
+                                    <a class="text-info" href="{% url 'account_signup' %}" aria-label="Create account">Create an account</a> or
+                                    <a class="text-info" href="{% url 'account_login' %}" aria-label="Login">login</a> to save this information
+                                </label>
+                            {% endif %}
+						</div>
+                    </fieldset>
+                    <fieldset class="rounded px-3 mb-5">
+                        <legend class="fs-5 px-2">Payment:</legend>
+                        <!-- A Stripe Element will be inserted here. -->
+                        <div id="card-element" class="mb-3"></div>
+                        <!-- Used to display form errors. -->
+                        <div id="card-errors" role="alert" class="text-danger mb-3"></div>
+                        <input type="hidden" name="client_secret" value="{{ client_secret }}">
+                    </fieldset>
+                    <div class="row mt-4">
+                        <div class="mb-3 text-start">                    
+                            <div class="col-6 mb-3 text-start">
+                                <a href="{% url 'cart' %}" aria-label="Adjust cart"><i class="fa-solid fa-left-long fa-lg me-2" style="color: #ea5b96;"></i> Adjust Cart</a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="col-6">
-                        <div>
-                            <h3 class="h6">{{ item.product.name }}</h3>
+                            <div class="col-6 text-end">
+                                <button id="submit-button" class="btn pink-btn" aria-label="Submit">Complete Order<i class="fas fa-lock text-white ps-2"></i></button>
+                            </div>
+                            <p class="small text-danger mt-2">
+                                <span><i class="fas fa-exclamation-circle me-2"></i>Your card will be charged 
+                                    <strong>£{{ grand_total|floatformat:2 }}</strong></span>
+                            </p>
                         </div>
                     </div>
-                    <div class="col-3 text-end">
-                        <div>
-                            <p class="h6"> €{{ item.product.price }}</p>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-            <hr>
-            <div class="row text-end">
-                <div class="col-7 offset-2">
-                    <p class="my-0">Order Total:</p>
-                    <p class="my-0">Delivery:</p>
-                    <p class="my-0"><strong>Grand Total:</strong></p>
-                </div>
-                <div class="col-3">
-                    <p class="my-0">${{ total | floatformat:2 }}</p>
-                    <p class="my-0">${{ delivery | floatformat:2 }}</p>
-                    <p class="my-0"><strong>${{ grand_total | floatformat:2 }}</strong></p>
-                </div>
+                </form>
             </div>
         </div>
     </div>
-</div>
+</section>
+
+<!-- Loading overlay -->
 <div id="loading-overlay">
-    <div class="text-light logo-font loading-spinner h1">
-        <span>
+    <h1 class="text-light logo-font loading-spinner">
+        <span class="icon">
             <i class="fas fa-3x fa-sync-alt fa-spin"></i>
         </span>
-    </div>
+    </h1>
 </div>
-<!--Checkout.html ends here-->
+
+<!-- checkout.html content ends here -->
 {% endblock %}
 
 {% block postloadjs %}
     {{ block.super }}
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
     {{ client_secret|json_script:"id_client_secret" }}
-    <script src="{% static 'js/stripe.js' %}"></script>
+    <script src="{% static 'js/stripe_elements.js' %}"></script>
 {% endblock %}
