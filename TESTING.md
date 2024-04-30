@@ -91,6 +91,23 @@ All Python files has passed through validation using [PEP 8](https://pep8ci.hero
 
 
 ## Performance
+All pages where tested on [Googles lighthouse](https://developer.chrome.com/docs/lighthouse/).
+I received a low score for the index.html file due to the large carousel header. Because of its contribution to the design, I've chosen to retain it. However, I'll explore ways to enhance its performance for better optimization in the future. 
+ The performance scores were assessed for both desktop and mobile devices. Below are the summarized results:
+
+### Desktop Performance
+| **Tested** | **Performance score** | **View Result** | **Pass** |
+--- | --- | --- | :---:
+| **Home App** |
+|index.html| 80/100 | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/index-lighthouse-desktop.jpg)</details>| ✅
+
+### Mobile Performance
+| **Tested** | **Performance score** | **View Result** | **Pass** |
+--- | --- | --- | :---:
+| **Home App** |
+|index.html| 47/100 | <details><summary>Screenshot of result</summary>![Result](/documentation/index-lighthouse-mobile/.jpg)</details>| ✅
+
+
 
 <details>
 <summary>Desktop</summary>
