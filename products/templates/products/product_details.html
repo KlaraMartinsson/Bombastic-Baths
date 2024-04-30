@@ -104,13 +104,14 @@
         </div>
     </div>
 </section>
-<!--Reviews-->
 
+<!--Reviews-->
 <div class="container my-3">
     {% if request.user.is_authenticated %}
     <h4 id="reviewHeading">Leave a Product Review</h4>
     <form action="{% url 'product-details' product.slug %}" method="POST">
         {% csrf_token %}
+        <input type="hidden" name="rating_form" value="rating_form">
         <p class="mb-0 mt-2">Rate Product</p>
         <div class="d-flex align-items-center">
             <select name="rating" class="form-control me-2 w-25">

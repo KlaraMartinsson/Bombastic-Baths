@@ -433,60 +433,9 @@ Some future adaptations the website could have are:
 - Heroku: Heroku is a cloud platform that I used for deployment to make this project into a live server.
 
 # Testing
+The Bombastic Baths e-commerce website underwent a thorough testing procedure to ensure it works well for everyone and performs smoothly. This involved examining the code, such as code validation, accessibility assessment, performance testing, cross-device testing, verification of browser compatibility, assessment of user stories, and the integration of user feedback to enhance the overall user experience. 
 
-#### Lighthouse result
-
-<details>
-<summary>Desktop</summary>
-<img src="placeholder">
-</details>
-
-<details>
-<summary>Mobile</summary>
-<img src="placeholder">
-</details>
-
-### Code Validation
-
-#### HTML
-
-<details>
-<summary>HTML Validation</summary>
-<img src="placeholder">
-</details>
-
-#### CSS
-
-<details>
-<summary>Whole page</summary>
-<img src="placeholder">
-</details>
-
-<details>
-<summary>CSS file</summary>
-<img src="placeholder">
-</details>
-
-#### Python
-
-<details>
-<summary>placeholder</summary>
-<img src="placeholder">
-</details>
-
-<details>
-<summary>placeholder</summary>
-<img src="placeholder">
-</details>
-
-## Testing User Stories
-
-Testing of the User stories for the project.
-All User Stories can be found [Here](https://github.com/users/KlaraMartinsson/projects/5)
-
-### Manual testing
-
-### Automated testing
+All testing, including both manual and automated testing, was carried out and documented in [TESTING.md.](/TESTING.md)
 
 # Deployment
 

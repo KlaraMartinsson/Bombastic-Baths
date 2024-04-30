@@ -40,6 +40,8 @@ All CSS files has passed through validation using [W3C Jigsaw](https://jigsaw.w3
 |profile.css| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/profile.css-validation.jpg)</details>| ✅
 | **Checkout.css** |
 |checkout.css| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/checkout.css-validation.jpg)</details>| ✅
+| **Whole page** |
+|Whole page| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/wholepage.css-validation.jpg)</details>| ✅
 
 ### Python Validation
 All Python files has passed through validation using [PEP 8](https://pep8ci.herokuapp.com/) and shows no errors:
@@ -85,5 +87,27 @@ All Python files has passed through validation using [PEP 8](https://pep8ci.hero
 |admin.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/wishlist-admin.py-validation.jpg)</details>| ✅
 |apps.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/wishlist-apps.py-validation.jpg)</details>| ✅
 
+## Accessibility
 
 
+## Performance
+
+<details>
+<summary>Desktop</summary>
+<img src="placeholder">
+</details>
+
+<details>
+<summary>Mobile</summary>
+<img src="placeholder">
+</details>
+
+
+## Performing tests on various devices
+
+## Manual Testing
+
+## Testing User Stories
+
+Testing of the User stories for the project.
+All User Stories can be found [Here](https://github.com/users/KlaraMartinsson/projects/5)
