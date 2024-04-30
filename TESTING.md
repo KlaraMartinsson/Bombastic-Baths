@@ -88,7 +88,13 @@ All Python files has passed through validation using [PEP 8](https://pep8ci.hero
 |apps.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/wishlist-apps.py-validation.jpg)</details>| ✅
 
 ## Accessibility
+The [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/) was used to assess the accessibility of the website. WAVE helps identify potential accessibility issues and provides guidance on how to improve the accessibility of web content.
+I got contrast errors that where for the email address text in the footer, I will look into this in the future. Missing h1 tag that I added in the header with a welcome message.
+[Result](/documentation/validation/wave.jpg)
+I also used [Googles lighthouse](https://developer.chrome.com/docs/lighthouse/) for testing the accessibility. The website got overall good score for accessibility.
+[Result](/documentation/validation/index-lighthouse-mobile.jpg)
 
+The code where also tested to use keyboard navigation and seemed to work everywhere. 
 
 ## Performance
 All pages where tested on [Googles lighthouse](https://developer.chrome.com/docs/lighthouse/).
@@ -157,13 +163,8 @@ I received a low score for the index.html file due to the large carousel header.
 |  | Verify that a user get an error message if card info is wrong | Pass |
 |  | Verify that a user redirects to confirmation page after an order been made | Pass |
 |  | Verify that the order is on users profile order history | Pass |
-
-
-
-
-
-
-
+|403, 404, 405, 500 Page | Verify that user gets to custom error page| Pass |
+|  | Verify that user redirects to home page after clicking on the button| Pass |
 
 
 ## Testing User Stories
