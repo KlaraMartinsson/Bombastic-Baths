@@ -568,7 +568,7 @@ Add Custom Domain in Heroku:
 
 Go to the "Settings" tab of your Heroku app.
 Scroll down to "Domains" and click "Add Domain."
-Enter your custom domain (e.g., www.easykeyboardsmaker.com).
+Enter your custom domain.
 Copy the provided DNS target. It will look something like shallow-atoll-32t56jvds3s5fhf8767d9a9c.herokudns.com.
 Configure DNS Records:
 
