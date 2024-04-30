@@ -282,9 +282,6 @@ The favicon where made at [favicon.io](https://favicon.io/) with Bombastic Baths
 
 Wireframes where made at [Balsamiq](https://balsamiq.com/)
 
-## Thoughts on wirefrasmes, why I used them etc. demonstrate that these have been followed through to implementation.
-
-
 <details>
 <summary>Home page</summary>
 <img src="documentation/wireframes/homepage-wireframe.png">
@@ -297,12 +294,12 @@ Wireframes where made at [Balsamiq](https://balsamiq.com/)
 
 <details>
 <summary>Product Details page</summary>
-<img src="placeholder">
+<img src="documentation/wireframes/productdetails-wireframe.png">
 </details>
 
 <details>
 <summary>Profile page</summary>
-<img src="placeholder">
+<img src="documentation/wireframes/profile-wireframe.png">
 </details>
 
 <details>
@@ -322,7 +319,7 @@ Wireframes where made at [Balsamiq](https://balsamiq.com/)
 
 <details>
 <summary>Check Out page</summary>
-<img src="placeholder">
+<img src="documentation/wireframes/checkout-wireframe.png">
 </details>
 
 # Features
