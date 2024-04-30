@@ -71,5 +71,12 @@ All Python files has passed through validation using [PEP 8](https://pep8ci.hero
 |forms.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/checkout-forms.py-validation.jpg)</details>| ✅
 |webhook_handler.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/checkout-webhookshandler.py-validation.jpg)</details>| ✅
 |webhooks.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/checkout-webhooks.py-validation.jpg)</details>| ✅
+| **Profiles App** |
+|models.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/profiles-models.py-validation.jpg)</details>| ✅
+|views.py| All clear, no errors found  | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/profiles-views.py-validation.jpg)</details>| ✅
+|urls.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/profiles-urls.py-validation.jpg)</details>| ✅
+|apps.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/profiles-apps.py-validation.jpg)</details>| ✅
+|admin.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/profiles-admin.py-validation.jpg)</details>| ✅
+|forms.py| All clear, no errors found | <details><summary>Screenshot of result</summary>![Result](/documentation/validation/profiles-forms.py-validation.jpg)</details>| ✅
 
 
