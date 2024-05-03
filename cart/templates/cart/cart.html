@@ -21,9 +21,13 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-12 col-sm-4 col-md-3">
-                                <div class="text-center">
-                                    <img src="{% static 'images/bathbomb_flower.jpg' %}" class="img-fluid rounded" alt="{{product.name}}">
-                                </div>
+                                <a href="{% url 'product-details' item.product.slug %}" aria-label="View products details">
+                                    {% if item.product.image %}
+                                        <img class="card-img-top" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                    {% else %}
+                                        <img class="card-img-top" src="{% static 'images/default_image.png' %}" alt="{{item.product.name}}">
+                                    {% endif %}
+                                </a>
                             </div>
                             <div class="col-12 col-sm-8 col-md-9">
                                 <div class="row">

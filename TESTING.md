@@ -106,10 +106,10 @@ All Python files has passed through validation using [PEP 8](https://pep8ci.hero
 ## Accessibility
 The [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/) was used to assess the accessibility of the website. WAVE helps identify potential accessibility issues and provides guidance on how to improve the accessibility of web content.
 I got contrast errors that where for the email address text in the footer, I will look into this in the future. Missing h1 tag that I added in the header with a welcome message.
-<details>[Result](/documentation/validation/wave.jpg)</details>
+<details>![Result](/documentation/validation/wave.jpg)</details>
 
 I also used [Googles lighthouse](https://developer.chrome.com/docs/lighthouse/) for testing the accessibility. The website got overall good score for accessibility.
-<details>[Result](/documentation/validation/index-llighthouse-desktop.jpg)</details>
+<details>![Result](/documentation/validation/index-llighthouse-desktop.jpg)</details>
 
 The code where also tested to use keyboard navigation and seemed to work everywhere. 
 

@@ -21,7 +21,7 @@
                 {% for item in cart_items %}
                     <div class="row">
                         <div class="col-3 mb-3 text-center">
-                            <a href="{% url 'product-details' item.product.id %}" aria-label="View products details">
+                            <a href="{% url 'product-details' item.product.slug %}" aria-label="View products details">
                                 <div class="position-relative mb-4">
                                     {% if item.product.image %}
                                         <img src="{{ item.product.image.url }}" alt="{{product.name}}" class="img-fluid shadow">
